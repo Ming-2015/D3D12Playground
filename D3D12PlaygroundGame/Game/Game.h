@@ -4,8 +4,8 @@
 
 #pragma once
 
-#include "DeviceResources.h"
-#include "StepTimer.h"
+#include "Graphics/DeviceResources.h"
+#include "Common/StepTimer.h"
 
 
 // A basic game implementation that creates a D3D12 device and
@@ -59,22 +59,4 @@ private:
 
     // Rendering loop timer.
     DX::StepTimer                               m_timer;
-
-    // If using the DirectX Tool Kit for DX12, uncomment this line:
-    std::unique_ptr<DirectX::GraphicsMemory> m_graphicsMemory;
-
-    // DirectX TK library wrappers for heap
-    std::unique_ptr<DirectX::DescriptorHeap> m_resourceDescriptors;
-    Microsoft::WRL::ComPtr<ID3D12Resource> m_catTexture;
-
-    // all resources used
-    enum class Descriptors
-    {
-        Cat,
-        Count
-    };
-
-    std::unique_ptr<DirectX::SpriteBatch> m_spriteBatch;
-    DirectX::SimpleMath::Vector2 m_screenPos;
-    DirectX::SimpleMath::Vector2 m_origin;
 };

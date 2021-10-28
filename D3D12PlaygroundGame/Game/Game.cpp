@@ -88,25 +88,11 @@ void Game::Render()
     PIXBeginEvent(commandList, PIX_COLOR_DEFAULT, L"Render");
 
     // TODO: Add your rendering code here.
-    ID3D12DescriptorHeap* heaps[] = { m_resourceDescriptors->Heap() };
-    commandList->SetDescriptorHeaps(static_cast<UINT>(std::size(heaps)), heaps);
 
-    m_spriteBatch->Begin(commandList);
-
-    m_spriteBatch->Draw(m_resourceDescriptors->GetGpuHandle(static_cast<int>(Descriptors::Cat)),
-        GetTextureSize(m_catTexture.Get()),
-        m_screenPos, nullptr, Colors::White, 0.f, m_origin);
-
-    m_spriteBatch->End();
-
-    PIXEndEvent(commandList);
 
     // Show the new frame.
     PIXBeginEvent(PIX_COLOR_DEFAULT, L"Present");
     m_deviceResources->Present();
-
-    // If using the DirectX Tool Kit for DX12, uncomment this line:
-    m_graphicsMemory->Commit(m_deviceResources->GetCommandQueue());
 
     PIXEndEvent();
 }
@@ -179,8 +165,8 @@ void Game::OnWindowSizeChanged(int width, int height)
 void Game::GetDefaultSize(int& width, int& height) const noexcept
 {
     // TODO: Change to desired default window size (note minimum size is 320x200).
-    width = 800;
-    height = 600;
+    width = 1600;
+    height = 900;
 }
 #pragma endregion
 
@@ -200,67 +186,17 @@ void Game::CreateDeviceDependentResources()
 #endif
         throw std::runtime_error("Shader Model 6.0 is not supported!");
     }
-
-    // If using the DirectX Tool Kit for DX12, uncomment this line:
-    m_graphicsMemory = std::make_unique<GraphicsMemory>(device);
-
-    // TODO: Initialize device dependent objects here (independent of window size).
-    m_resourceDescriptors = std::make_unique<DirectX::DescriptorHeap>(device,
-        static_cast<int>(Descriptors::Count));
-
-    // DirectX TK library handles the resource upload queue stuff
-    ResourceUploadBatch resourceUpload(device);
-
-    resourceUpload.Begin();
-
-    DX::ThrowIfFailed(
-        CreateDDSTextureFromFile(device, resourceUpload, L"Assets/cat.dds",
-            m_catTexture.ReleaseAndGetAddressOf()));
-
-    // so now we have a SRV for our cat :) 
-    CreateShaderResourceView(device, m_catTexture.Get(),
-        m_resourceDescriptors->GetCpuHandle(static_cast<size_t>(Descriptors::Cat)));
-
-    // RT for the cat..?
-    RenderTargetState rtState(m_deviceResources->GetBackBufferFormat(),
-        m_deviceResources->GetDepthBufferFormat());
-
-    SpriteBatchPipelineStateDescription pd(rtState, &CommonStates::AlphaBlend);
-    m_spriteBatch = std::make_unique<SpriteBatch>(device, resourceUpload, pd);
-
-    XMUINT2 catSize = GetTextureSize(m_catTexture.Get());
-
-    m_origin.x = float(catSize.x / 2);
-    m_origin.y = float(catSize.y / 2);
-
-    auto uploadResourcesFinished = resourceUpload.End(
-        m_deviceResources->GetCommandQueue());
-
-    // sync here. No dealing with streaming (yet)
-    uploadResourcesFinished.wait();
 }
 
 // Allocate all memory resources that change on a window SizeChanged event.
 void Game::CreateWindowSizeDependentResources()
 {
     // TODO: Initialize windows-size dependent objects here.
-    auto viewport = m_deviceResources->GetScreenViewport();
-    m_spriteBatch->SetViewport(viewport);
-
-    auto size = m_deviceResources->GetOutputSize();
-    m_screenPos.x = float(size.right) / 2.f;
-    m_screenPos.y = float(size.bottom) / 2.f;
 }
 
 void Game::OnDeviceLost()
 {
-    // TODO: Add Direct3D resource cleanup here.
-    m_spriteBatch.reset();
-    m_catTexture.Reset();
-    m_resourceDescriptors.reset();
 
-    // If using the DirectX Tool Kit for DX12, uncomment this line:
-    m_graphicsMemory.reset();
 }
 
 void Game::OnDeviceRestored()
