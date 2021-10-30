@@ -14,11 +14,6 @@
 // Use the C++ standard templated min/max
 #define NOMINMAX
 
-// DirectX apps don't need GDI
-#define NODRAWTEXT
-#define NOGDI
-#define NOBITMAP
-
 // Include <mcx.h> if you need this
 #define NOMCX
 
@@ -34,20 +29,6 @@
 #include <wrl/client.h>
 #include <wrl/event.h>
 
-#ifdef USING_DIRECTX_HEADERS
-#include <directx/dxgiformat.h>
-#include <directx/d3d12.h>
-#else
-#include <d3d12.h>
-#endif
-
-#include <dxgi1_6.h>
-
-#include <DirectXMath.h>
-#include <DirectXColors.h>
-
-#include "Common/d3dx12.h"
-
 #include <algorithm>
 #include <cmath>
 #include <cstddef>
@@ -61,39 +42,8 @@
 #include <stdexcept>
 #include <system_error>
 
-// To use graphics and CPU markup events with the latest version of PIX, change this to include <pix3.h>
-// then add the NuGet package WinPixEventRuntime to the project.
-#include <pix3.h>
-
-#ifdef _DEBUG
-#include <dxgidebug.h>
+#ifdef D3D12PLAYGROUNDGRAPHICS_EXPORTS
+#define D3D12PLAYGROUNDGRAPHICS_API __declspec(dllexport)
+#else
+#define D3D12PLAYGROUNDGRAPHICS_API __declspec(dllimport)
 #endif
-
-namespace DX
-{
-    // Helper class for COM exceptions
-    class com_exception : public std::exception
-    {
-    public:
-        com_exception(HRESULT hr) noexcept : result(hr) {}
-
-        const char* what() const override
-        {
-            static char s_str[64] = {};
-            sprintf_s(s_str, "Failure with HRESULT of %08X", static_cast<unsigned int>(result));
-            return s_str;
-        }
-
-    private:
-        HRESULT result;
-    };
-
-    // Helper utility converts D3D API failures into exceptions.
-    inline void ThrowIfFailed(HRESULT hr)
-    {
-        if (FAILED(hr))
-        {
-            throw com_exception(hr);
-        }
-    }
-}

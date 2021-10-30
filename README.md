@@ -64,13 +64,15 @@ A personal project that uses DX12 to implement various render techniques to ulti
 
 ## Open Source Libraries
 ### Integrated
-1. DirectX Tool Kit for DirectX12, by Microsoft
 1. D3D12 Memory Allocator, by AMD GPUOpen
+1. Mini Engine, by Microsoft
+    - This open source DX12 engine is used as a jump-start for the project
 
 ### To be integrated (depending on the needs of feature implementation)
 1. Assimp, for model loading
 1. Imgui, for debug UI
 1. Cluster Culling, for GPU culling
+1. DirectX Tool Kit for DirectX12, by Microsoft
 
 ## Documents, Papers, Literature, yada yada
 A list of useful, information sources referenced, implicitly or explicitly, in the implementation of this project
