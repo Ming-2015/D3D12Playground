@@ -455,7 +455,6 @@
     <ClInclude Include="Private\Model\Renderer.h" />
     <ClInclude Include="Private\Model\SponzaRenderer.h" />
     <ClInclude Include="Private\Model\TextureConvert.h" />
-    <ClInclude Include="ExportHeader.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />
@@ -537,7 +536,6 @@
     <ClCompile Include="Private\Model\Renderer.cpp" />
     <ClCompile Include="Private\Model\SponzaRenderer.cpp" />
     <ClCompile Include="Private\Model\TextureConvert.cpp" />
-    <ClCompile Include="ExportHeader.cpp" />
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="Shaders\AdaptExposureCS.hlsl" />

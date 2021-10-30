@@ -14,7 +14,6 @@
 #pragma once
 
 #include "pch.h"
-#include "../../ExportHeader.h"
 
 namespace GameCore
 {

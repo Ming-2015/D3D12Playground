@@ -129,7 +129,6 @@
     <ClInclude Include="Private\Core\UploadBuffer.h" />
     <ClInclude Include="Private\Core\Utility.h" />
     <ClInclude Include="Private\Core\VectorMath.h" />
-    <ClInclude Include="ExportHeader.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
@@ -206,7 +205,6 @@
     <ClCompile Include="Private\Core\UploadBuffer.cpp" />
     <ClCompile Include="Private\Core\Utility.cpp" />
     <ClCompile Include="Private\Model\ModelConvert.cpp" />
-    <ClCompile Include="ExportHeader.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Public">
