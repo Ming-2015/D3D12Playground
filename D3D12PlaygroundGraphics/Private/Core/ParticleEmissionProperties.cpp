@@ -12,8 +12,10 @@
 
 #pragma once
 #include "pch.h"
-#include "ParticleShaderStructs.h"
+#include "Public/Core/ParticleShaderStructs.h"
 
+namespace Playground
+{
 EmissionProperties* CreateEmissionProperties()
 {
     EmissionProperties* emitProps = new EmissionProperties;    
@@ -29,3 +31,4 @@ EmissionProperties* CreateEmissionProperties()
     emitProps->MaxParticles = 500;
     return emitProps;
 };
+}

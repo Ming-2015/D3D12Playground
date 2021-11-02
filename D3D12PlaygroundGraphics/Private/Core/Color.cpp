@@ -12,10 +12,13 @@
 //
 
 #include "pch.h"
-#include "Color.h"
+#include "Public/Core/Color.h"
+#include "Public/Core/VectorMath.h"
 
 using DirectX::XMVECTORU32;
 
+namespace Playground
+{
 uint32_t Color::R11G11B10F(bool RoundToEven) const
 {
 #if 1
@@ -149,4 +152,5 @@ uint32_t Color::R9G9B9E5() const
     return ret.u[3] | ret.u[2] << 18 | ret.u[1] << 9 | ret.u[0] & 511;
 
 #endif
+}
 }

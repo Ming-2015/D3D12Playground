@@ -12,23 +12,24 @@
 //
 
 #include "pch.h"
-#include "CommandContext.h"
-#include "ColorBuffer.h"
+#include "Public/Core/CommandContext.h"
+#include "Public/Core/ColorBuffer.h"
 #include "DepthBuffer.h"
-#include "GraphicsCore.h"
+#include "Public/Core/GraphicsCore.h"
 #include "DescriptorHeap.h"
 #include "EngineProfiling.h"
 #include "UploadBuffer.h"
-#include "ReadbackBuffer.h"
+#include "Public/Core/ReadbackBuffer.h"
 
 #pragma warning(push)
 #pragma warning(disable:4100) // unreferenced formal parameters in PIXCopyEventArguments() (WinPixEventRuntime.1.0.200127001)
 #include <pix3.h>
 #pragma warning(pop)
 
-using namespace Graphics;
+using namespace Playground::Graphics;
 
-
+namespace Playground
+{
 void ContextManager::DestroyAllContexts(void)
 {
     for (uint32_t i = 0; i < 4; ++i)
@@ -617,4 +618,5 @@ void CommandContext::PIXSetMarker(const wchar_t* label)
 #else
 	::PIXSetMarker(m_CommandList, 0, label);
 #endif
+}
 }

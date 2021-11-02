@@ -16,6 +16,8 @@
 #include "pch.h"
 #include "GpuResource.h"
 
+namespace Playground
+{
 class CommandContext;
 class EsramAllocator;
 class UploadBuffer;
@@ -148,3 +150,4 @@ protected:
     DXGI_FORMAT m_DataFormat;
 };
 
+}

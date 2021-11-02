@@ -13,17 +13,19 @@
 
 #pragma once
 
-#include "../Core/GpuBuffer.h"
-#include "../Core/VectorMath.h"
-#include "../Core/Camera.h"
-#include "../Core/CommandContext.h"
-#include "../Core/UploadBuffer.h"
-#include "../Core/TextureManager.h"
+#include "Private/Core/GpuBuffer.h"
+#include "Public/Core/VectorMath.h"
+#include "Public/Core/Camera.h"
+#include "Public/Core/CommandContext.h"
+#include "Private/Core/UploadBuffer.h"
+#include "Public/Core/TextureManager.h"
 #include <cstdint>
 #include <vector>
 
 #include <d3d12.h>
 
+namespace Playground
+{
 class GraphicsPSO;
 class RootSignature;
 class DescriptorHeap;
@@ -154,3 +156,4 @@ namespace Renderer
 	};
 
 } // namespace Renderer
+}

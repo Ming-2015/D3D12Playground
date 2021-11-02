@@ -13,12 +13,12 @@
 
 #include "pch.h"
 #include "BitonicSort.h"
-#include "RootSignature.h"
-#include "PipelineState.h"
-#include "CommandContext.h"
-#include "ReadbackBuffer.h"
-#include "Math/Common.h"
-#include "Math/Random.h"
+#include "Public/Core/RootSignature.h"
+#include "Public/Core/PipelineState.h"
+#include "Public/Core/CommandContext.h"
+#include "Public/Core/ReadbackBuffer.h"
+#include "Public/Core/Math/Common.h"
+#include "Public/Core/Math/Random.h"
 
 #include "CompiledShaders/BitonicIndirectArgsCS.h"
 #include "CompiledShaders/Bitonic32PreSortCS.h"
@@ -28,7 +28,7 @@
 #include "CompiledShaders/Bitonic64InnerSortCS.h"
 #include "CompiledShaders/Bitonic64OuterSortCS.h"
 
-namespace BitonicSort
+namespace Playground::BitonicSort
 {
     IndirectArgsBuffer s_DispatchArgs;
 
@@ -40,12 +40,10 @@ namespace BitonicSort
     ComputePSO s_Bitonic64PreSortCS(L"Bitonic Sort: 64 Pre Sort CS");
     ComputePSO s_Bitonic64InnerSortCS(L"Bitonic Sort: 64 Inner Sort CS");
     ComputePSO s_Bitonic64OuterSortCS(L"Bitonic Sort: 64 Outer Sort CS");
-
-    // Called once by Core to initialize shaders
-    void Initialize(void);
-    void Shutdown(void);
 }
 
+namespace Playground
+{
 void BitonicSort::Initialize( void )
 {	
     s_DispatchArgs.Create(L"Bitonic sort dispatch args", 22*23/2, 12);
@@ -242,4 +240,5 @@ void BitonicSort::Test( void )
         TestBitonicSort(ListSize, false, true);
         TestBitonicSort(ListSize, false, false);
     }
+}
 }

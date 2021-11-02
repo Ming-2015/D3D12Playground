@@ -13,10 +13,12 @@
 
 #include "pch.h"
 #include "UploadBuffer.h"
-#include "GraphicsCore.h"
+#include "Public/Core/GraphicsCore.h"
 
-using namespace Graphics;
+using namespace Playground::Graphics;
 
+namespace Playground
+{
 void UploadBuffer::Create( const std::wstring& name, size_t BufferSize )
 {
     Destroy();
@@ -68,4 +70,5 @@ void* UploadBuffer::Map(void)
 void UploadBuffer::Unmap(size_t begin, size_t end)
 {
     m_pResource->Unmap(0, &CD3DX12_RANGE(begin, std::min(end, m_BufferSize)));
+}
 }

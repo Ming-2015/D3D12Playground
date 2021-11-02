@@ -14,14 +14,14 @@
 #include "pch.h"
 #include "Renderer.h"
 #include "Model.h"
-#include "Private/Core/TextureManager.h"
+#include "Public/Core/TextureManager.h"
 #include "ConstantBuffers.h"
 #include "LightManager.h"
-#include "Private/Core/RootSignature.h"
-#include "Private/Core/PipelineState.h"
-#include "Private/Core/GraphicsCommon.h"
+#include "Public/Core/RootSignature.h"
+#include "Public/Core/PipelineState.h"
+#include "Public/Core/GraphicsCommon.h"
 #include "Private/Core/BufferManager.h"
-#include "Private/Core/ShadowCamera.h"
+#include "Public/Core/ShadowCamera.h"
 
 #include "CompiledShaders/DefaultVS.h"
 #include "CompiledShaders/DefaultSkinVS.h"
@@ -45,6 +45,8 @@
 
 #pragma warning(disable:4319) // '~': zero extending 'uint32_t' to 'uint64_t' of greater size
 
+namespace Playground
+{
 using namespace Math;
 using namespace Graphics;
 using namespace Renderer;
@@ -694,4 +696,5 @@ void MeshSorter::RenderMeshes(
 	{
 		context.TransitionResource(*m_DSV, D3D12_RESOURCE_STATE_PIXEL_SHADER_RESOURCE);
 	}
+}
 }

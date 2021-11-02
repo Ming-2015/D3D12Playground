@@ -13,11 +13,13 @@
 //
 
 #include "pch.h"
-#include "SamplerManager.h"
-#include "GraphicsCore.h"
-#include "Hash.h"
+#include "Public/Core/SamplerManager.h"
+#include "Public/Core/GraphicsCore.h"
+#include "Public/Core/Hash.h"
 #include <map>
 
+namespace Playground
+{
 using namespace std;
 using namespace Graphics;
 
@@ -44,4 +46,5 @@ void SamplerDesc::CreateDescriptor( D3D12_CPU_DESCRIPTOR_HANDLE Handle )
 {
     ASSERT(Handle.ptr != 0 && Handle.ptr != -1);
     g_Device->CreateSampler(this, Handle);
+}
 }

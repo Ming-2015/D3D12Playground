@@ -16,7 +16,7 @@
 
 // modified from original source to improve performance (especially in debug builds), memory allocations, etc.
 
-#include "../Core/Utility.h"
+#include "Public/Core/Utility.h"
 
 #include "pch.h"
 #include <stdint.h>

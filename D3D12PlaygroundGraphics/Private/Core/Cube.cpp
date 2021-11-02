@@ -14,7 +14,7 @@
 #include "pch.h"
 #include "Cube.h"
 
-namespace Graphics
+namespace Playground::Graphics
 {
     namespace Shapes
     {

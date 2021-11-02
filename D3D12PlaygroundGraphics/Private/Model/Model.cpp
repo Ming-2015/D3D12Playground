@@ -16,6 +16,8 @@
 #include "Renderer.h"
 #include "ConstantBuffers.h"
 
+namespace Playground
+{
 using namespace Math;
 using namespace Renderer;
 
@@ -279,4 +281,5 @@ Math::OrientedBox ModelInstance::GetBoundingBox() const
         return AxisAlignedBox(Vector3(kZero), Vector3(kZero));
 
     return m_Locator * m_Model->m_BoundingBox;
+}
 }

@@ -72,7 +72,7 @@
 
 #include "GpuBuffer.h"
 
-namespace BitonicSort
+namespace Playground::BitonicSort
 {
     void Sort(
         // An existing compute context
@@ -99,5 +99,9 @@ namespace BitonicSort
     );
 
     void Test( void );
+
+    // Called once by Core to initialize shaders
+    void Initialize(void);
+    void Shutdown(void);
 
 } // namespace BitonicSort

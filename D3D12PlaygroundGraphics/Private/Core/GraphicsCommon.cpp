@@ -12,13 +12,13 @@
 //
 
 #include "pch.h"
-#include "GraphicsCommon.h"
-#include "SamplerManager.h"
+#include "Public/Core/GraphicsCommon.h"
+#include "Public/Core/SamplerManager.h"
 #include "CommandSignature.h"
 #include "BitonicSort.h"
-#include "Texture.h"
-#include "PipelineState.h"
-#include "RootSignature.h"
+#include "Public/Core/Texture.h"
+#include "Public/Core/PipelineState.h"
+#include "Public/Core/RootSignature.h"
 #include "BufferManager.h"
 
 #include "CompiledShaders/GenerateMipsLinearCS.h"
@@ -33,7 +33,7 @@
 #include "CompiledShaders/ScreenQuadCommonVS.h"
 #include "CompiledShaders/DownsampleDepthPS.h"
 
-namespace Graphics
+namespace Playground::Graphics
 {
     SamplerDesc SamplerLinearWrapDesc;
     SamplerDesc SamplerAnisoWrapDesc;
@@ -112,6 +112,8 @@ namespace BitonicSort
     void Shutdown(void);
 }
 
+namespace Playground
+{
 void Graphics::InitializeCommonState(void)
 {
     SamplerLinearWrapDesc.Filter = D3D12_FILTER_MIN_MAG_MIP_LINEAR;
@@ -308,4 +310,5 @@ void Graphics::DestroyCommonState(void)
     DrawIndirectCommandSignature.Destroy();
     
     BitonicSort::Shutdown();
+}
 }

@@ -12,16 +12,18 @@
 //
 
 #include "pch.h"
-#include "PixelBuffer.h"
+#include "Public/Core/PixelBuffer.h"
 #include "EsramAllocator.h"
-#include "GraphicsCore.h"
+#include "Public/Core/GraphicsCore.h"
 #include "BufferManager.h"
-#include "CommandContext.h"
-#include "ReadbackBuffer.h"
+#include "Public/Core/CommandContext.h"
+#include "Public/Core/ReadbackBuffer.h"
 #include <fstream>
 
-using namespace Graphics;
+using namespace Playground::Graphics;
 
+namespace Playground
+{
 DXGI_FORMAT PixelBuffer::GetBaseFormat( DXGI_FORMAT defaultFormat )
 {
     switch (defaultFormat)
@@ -407,4 +409,5 @@ void PixelBuffer::ExportToFile( const std::wstring& FilePath )
 
     // No values were written to the buffer, so use a null range when unmapping.
     TempBuffer.Unmap();
+}
 }

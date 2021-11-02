@@ -13,9 +13,9 @@
 
 #include "pch.h"
 #include "GpuTimeManager.h"
-#include "GraphicsCore.h"
-#include "CommandContext.h"
-#include "CommandListManager.h"
+#include "Public/Core/GraphicsCore.h"
+#include "Public/Core/CommandContext.h"
+#include "Public/Core/CommandListManager.h"
 
 namespace
 {
@@ -30,6 +30,7 @@ namespace
     double sm_GpuTickDelta = 0.0;
 }
 
+using namespace Playground;
 void GpuTimeManager::Initialize(uint32_t MaxNumTimers)
 {
     uint64_t GpuFrequency;

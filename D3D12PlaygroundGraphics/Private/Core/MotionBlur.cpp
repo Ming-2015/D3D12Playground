@@ -12,16 +12,16 @@
 //
 
 #include "pch.h"
-#include "MotionBlur.h"
-#include "Camera.h"
+#include "Public/Core/MotionBlur.h"
+#include "Public/Core/Camera.h"
 #include "BufferManager.h"
-#include "GraphicsCore.h"
-#include "GraphicsCommon.h"
-#include "CommandContext.h"
-#include "Camera.h"
-#include "TemporalEffects.h"
-#include "PostEffects.h"
-#include "SystemTime.h"
+#include "Public/Core/GraphicsCore.h"
+#include "Public/Core/GraphicsCommon.h"
+#include "Public/Core/CommandContext.h"
+#include "Public/Core/Camera.h"
+#include "Public/Core/TemporalEffects.h"
+#include "Public/Core/PostEffects.h"
+#include "Public/Core/SystemTime.h"
 
 #include "CompiledShaders/ScreenQuadCommonVS.h"
 #include "CompiledShaders/CameraMotionBlurPrePassCS.h"
@@ -33,6 +33,8 @@
 #include "CompiledShaders/TemporalBlendCS.h"
 #include "CompiledShaders/BoundNeighborhoodCS.h"
 
+namespace Playground
+{
 using namespace Graphics;
 using namespace Math;
 
@@ -305,3 +307,4 @@ void MotionBlur::RenderObjectBlur( CommandContext& BaseContext, ColorBuffer& vel
     }
 }
 
+}

@@ -13,14 +13,14 @@
 
 #include "pch.h"
 #include "Display.h"
-#include "GraphicsCore.h"
+#include "Public/Core/GraphicsCore.h"
 #include "BufferManager.h"
-#include "ColorBuffer.h"
-#include "SystemTime.h"
-#include "CommandContext.h"
-#include "RootSignature.h"
-#include "ImageScaling.h"
-#include "TemporalEffects.h"
+#include "Public/Core/ColorBuffer.h"
+#include "Public/Core/SystemTime.h"
+#include "Public/Core/CommandContext.h"
+#include "Public/Core/RootSignature.h"
+#include "Public/Core/ImageScaling.h"
+#include "Public/Core/TemporalEffects.h"
 
 #pragma comment(lib, "dxgi.lib") 
 
@@ -28,7 +28,7 @@
 // Currently, with HDR display enabled, the pixel magnfication functionality is broken.
 #define CONDITIONALLY_ENABLE_HDR_OUTPUT 1
 
-namespace GameCore { extern HWND g_hWnd; }
+namespace Playground::GameCore { extern HWND g_hWnd; }
 
 #include "CompiledShaders/ScreenQuadPresentVS.h"
 #include "CompiledShaders/BufferCopyPS.h"
@@ -53,9 +53,9 @@ namespace GameCore { extern HWND g_hWnd; }
 
 DXGI_FORMAT SwapChainFormat = DXGI_FORMAT_R10G10B10A2_UNORM;
 
-using namespace Math;
-using namespace ImageScaling;
-using namespace Graphics;
+using namespace Playground::Math;
+using namespace Playground::ImageScaling;
+using namespace Playground::Graphics;
 
 namespace
 {
@@ -63,12 +63,12 @@ namespace
     uint64_t s_FrameIndex = 0;
     int64_t s_FrameStartTick = 0;
 
-    BoolVar s_EnableVSync("Timing/VSync", true);
-    BoolVar s_LimitTo30Hz("Timing/Limit To 30Hz", false);
-    BoolVar s_DropRandomFrames("Timing/Drop Random Frames", false);
+    Playground::BoolVar s_EnableVSync("Timing/VSync", true);
+    Playground::BoolVar s_LimitTo30Hz("Timing/Limit To 30Hz", false);
+    Playground::BoolVar s_DropRandomFrames("Timing/Drop Random Frames", false);
 }
 
-namespace Graphics
+namespace Playground::Graphics
 {
     void PreparePresentSDR();
     void PreparePresentHDR();
@@ -192,6 +192,8 @@ namespace Graphics
     EnumVar DebugZoom("Graphics/Display/Magnify Pixels", kDebugZoomOff, kDebugZoomCount, DebugZoomLabels);
 }
 
+namespace Playground
+{
 void Display::Resize(uint32_t width, uint32_t height)
 {
     g_CommandManager.IdleGPU();
@@ -542,4 +544,5 @@ float Graphics::GetFrameTime(void)
 float Graphics::GetFrameRate(void)
 {
     return s_FrameTime == 0.0f ? 0.0f : 1.0f / s_FrameTime;
+}
 }

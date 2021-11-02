@@ -12,11 +12,13 @@
 //
 
 #include "pch.h"
-#include "ColorBuffer.h"
-#include "GraphicsCommon.h"
-#include "CommandContext.h"
+#include "Public/Core/ColorBuffer.h"
+#include "Public/Core/GraphicsCommon.h"
+#include "Public/Core/CommandContext.h"
 #include "EsramAllocator.h"
 
+namespace Playground
+{
 using namespace Graphics;
 
 void ColorBuffer::CreateDerivedViews(ID3D12Device* Device, DXGI_FORMAT Format, uint32_t ArraySize, uint32_t NumMips)
@@ -218,4 +220,5 @@ void ColorBuffer::GenerateMipMaps(CommandContext& BaseContext)
 
     Context.TransitionResource(*this, D3D12_RESOURCE_STATE_PIXEL_SHADER_RESOURCE |
         D3D12_RESOURCE_STATE_NON_PIXEL_SHADER_RESOURCE);
+}
 }

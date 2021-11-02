@@ -12,13 +12,15 @@
 //
 
 #include "pch.h"
-#include "CameraController.h"
-#include "Camera.h"
-#include "GameInput.h"
+#include "Public/Core/CameraController.h"
+#include "Public/Core/Camera.h"
+#include "Public/Core/GameInput.h"
 
-using namespace Math;
-using namespace GameCore;
+using namespace Playground::Math;
+using namespace Playground::GameCore;
 
+namespace Playground
+{
 FlyingFPSCamera::FlyingFPSCamera( Camera& camera, Vector3 worldUp ) : CameraController( camera )
 {
     m_WorldUp = Normalize(worldUp);
@@ -209,3 +211,4 @@ void OrbitCamera::Update( float deltaTime )
     m_TargetCamera.SetTransform(AffineTransform(orientation, position + m_ModelBounds.GetCenter()));
     m_TargetCamera.Update();
 }
+}   

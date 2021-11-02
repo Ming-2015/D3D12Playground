@@ -15,32 +15,35 @@
 
 #include "pch.h"
 
+namespace Playground
+{
+extern D3D12PLAYGROUNDGRAPHICS_API bool gIsSupending;
+
 namespace GameCore
 {
-    extern D3D12PLAYGROUNDGRAPHICS_API bool gIsSupending;
-
     class D3D12PLAYGROUNDGRAPHICS_API IGameApp
     {
     public:
         // This function can be used to initialize application state and will run after essential
         // hardware resources are allocated.  Some state that does not depend on these resources
         // should still be initialized in the constructor such as pointers and flags.
-        virtual void Startup( void ) = 0;
-        virtual void Cleanup( void ) = 0;
+        virtual void Startup(void) = 0;
+        virtual void Cleanup(void) = 0;
 
         // Decide if you want the app to exit.  By default, app continues until the 'ESC' key is pressed.
-        virtual bool IsDone( void );
+        virtual bool IsDone(void);
 
         // The update method will be invoked once per frame.  Both state updating and scene
         // rendering should be handled by this method.
-        virtual void Update( float deltaT ) = 0;
+        virtual void Update(float deltaT) = 0;
 
         // Official rendering pass
-        virtual void RenderScene( void ) = 0;
+        virtual void RenderScene(void) = 0;
 
         // Optional UI (overlay) rendering pass.  This is LDR.  The buffer is already cleared.
         virtual void RenderUI();
     };
 
     int D3D12PLAYGROUNDGRAPHICS_API RunApplication(IGameApp& app, const wchar_t* className, HINSTANCE hInst, int nCmdShow);
+}
 }

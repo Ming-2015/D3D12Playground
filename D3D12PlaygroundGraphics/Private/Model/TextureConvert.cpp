@@ -16,7 +16,7 @@
 
 #include "pch.h"
 #include "TextureConvert.h"
-#include "../Core/Utility.h"
+#include "Public/Core/Utility.h"
 #include "DirectXTex.h"
 
 using namespace DirectX;

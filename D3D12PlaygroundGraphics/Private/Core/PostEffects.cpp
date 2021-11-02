@@ -13,17 +13,17 @@
 
 #include "pch.h"
 
-#include "PostEffects.h"
+#include "Public/Core/PostEffects.h"
 #include "Public/Core/GameCore.h"
-#include "CommandContext.h"
-#include "RootSignature.h"
-#include "PipelineState.h"
+#include "Public/Core/CommandContext.h"
+#include "Public/Core/RootSignature.h"
+#include "Public/Core/PipelineState.h"
 #include "Display.h"
 #include "BufferManager.h"
-#include "MotionBlur.h"
+#include "Public/Core/MotionBlur.h"
 #include "DepthOfField.h"
-#include "FXAA.h"
-#include "Math/Random.h"
+#include "Public/Core/FXAA.h"
+#include "Public/Core/Math/Random.h"
 
 #include "CompiledShaders/ToneMapCS.h"
 #include "CompiledShaders/ToneMap2CS.h"
@@ -48,6 +48,8 @@
 #include "CompiledShaders/AverageLumaCS.h"
 #include "CompiledShaders/CopyBackPostBufferCS.h"
 
+namespace Playground
+{
 using namespace Graphics;
 
 namespace SSAO
@@ -518,4 +520,5 @@ void PostEffects::Render( void )
     }
 
     Context.Finish();
+}
 }

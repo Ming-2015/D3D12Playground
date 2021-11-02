@@ -12,9 +12,9 @@
 //
 
 #include "pch.h"
-#include "ImageScaling.h"
+#include "Public/Core/ImageScaling.h"
 #include "BufferManager.h"
-#include "CommandContext.h"
+#include "Public/Core/CommandContext.h"
 
 #include "CompiledShaders/ScreenQuadPresentVS.h"
 
@@ -34,14 +34,14 @@
 #include "CompiledShaders/LanczosFast24CS.h"
 #include "CompiledShaders/LanczosFast32CS.h"
 
-using namespace Graphics;
+using namespace Playground::Graphics;
 
-namespace Graphics
+namespace Playground::Graphics
 {
     extern RootSignature s_PresentRS;
 }
 
-namespace ImageScaling
+namespace Playground::ImageScaling
 {
     GraphicsPSO SharpeningUpsamplePS(L"Image Scaling: Sharpen Upsample PSO");
     GraphicsPSO BicubicHorizontalUpsamplePS(L"Image Scaling: Bicubic Horizontal Upsample PSO");
@@ -248,6 +248,8 @@ namespace ImageScaling
     }
 }
 
+namespace Playground
+{
 void ImageScaling::Initialize(DXGI_FORMAT DestFormat )
 {
     BilinearUpsamplePS.SetRootSignature(s_PresentRS);
@@ -329,4 +331,5 @@ void ImageScaling::Upscale(GraphicsContext& Context, ColorBuffer& dest, ColorBuf
     case kBilinear: return BilinearScale(Context, dest, source);
     case kLanczos: return LanczosScale(Context, dest, source);
     }
+}
 }

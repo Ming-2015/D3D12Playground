@@ -13,11 +13,13 @@
 //
 
 #include "pch.h"
-#include "LinearAllocator.h"
-#include "GraphicsCore.h"
-#include "CommandListManager.h"
+#include "Public/Core/LinearAllocator.h"
+#include "Public/Core/GraphicsCore.h"
+#include "Public/Core/CommandListManager.h"
 #include <thread>
 
+namespace Playground
+{
 using namespace Graphics;
 using namespace std;
 
@@ -190,4 +192,5 @@ DynAlloc LinearAllocator::Allocate(size_t SizeInBytes, size_t Alignment)
     m_CurOffset += AlignedSize;
 
     return ret;
+}
 }

@@ -14,9 +14,9 @@
 #include "pch.h"
 #include "Animation.h"
 #include "Model.h"
-#include "../Core/Utility.h"
-#include "../Core/Math/Common.h"
-#include "../Core/Math/Quaternion.h"
+#include "Public/Core/Utility.h"
+#include "Public/Core/Math/Common.h"
+#include "Public/Core/Math/Quaternion.h"
 
 using Math::Quaternion;
 using Math::Vector4;

@@ -13,12 +13,14 @@
 
 #include "pch.h"
 #include "DepthBuffer.h"
-#include "GraphicsCore.h"
+#include "Public/Core/GraphicsCore.h"
 #include "EsramAllocator.h"
 #include "DescriptorHeap.h"
 
-using namespace Graphics;
+using namespace Playground::Graphics;
 
+namespace Playground
+{
 void DepthBuffer::Create( const std::wstring& Name, uint32_t Width, uint32_t Height, DXGI_FORMAT Format, D3D12_GPU_VIRTUAL_ADDRESS VidMemPtr )
 {
     Create(Name, Width, Height, 1, Format, VidMemPtr);
@@ -120,4 +122,5 @@ void DepthBuffer::CreateDerivedViews( ID3D12Device* Device, DXGI_FORMAT Format )
         SRVDesc.Format = stencilReadFormat;
         Device->CreateShaderResourceView( Resource, &SRVDesc, m_hStencilSRV );
     }
+}
 }

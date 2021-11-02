@@ -12,10 +12,10 @@
 //
 
 #include "pch.h"
-#include "FXAA.h"
-#include "GraphicsCore.h"
+#include "Public/Core/FXAA.h"
+#include "Public/Core/GraphicsCore.h"
 #include "BufferManager.h"
-#include "CommandContext.h"
+#include "Public/Core/CommandContext.h"
 
 #include "CompiledShaders/FXAAPass1_RGB_CS.h"
 #include "CompiledShaders/FXAAPass1_Luma_CS.h"
@@ -35,9 +35,9 @@
 #include "CompiledShaders/FXAAResolveWorkQueueCS.h"
 
 
-using namespace Graphics;
+using namespace Playground::Graphics;
 
-namespace FXAA
+namespace Playground::FXAA
 {
     RootSignature RootSig;
     ComputePSO Pass1HdrCS(L"FXAA: Pass 1 HDR CS");
@@ -64,6 +64,8 @@ namespace FXAA
     BoolVar ForceOffPreComputedLuma("Graphics/AA/FXAA/Always Recompute Log-Luma", false);
 }
 
+namespace Playground
+{
 void FXAA::Initialize( void )
 {
     RootSig.Reset(3, 1);
@@ -219,4 +221,5 @@ void FXAA::Render( ComputeContext& Context, bool bUsePreComputedLuma )
             Context.InsertUAVBarrier(Target);
         }
     }
+}
 }

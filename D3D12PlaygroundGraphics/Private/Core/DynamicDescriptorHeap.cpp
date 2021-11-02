@@ -13,17 +13,19 @@
 
 #include "pch.h"
 #include "DynamicDescriptorHeap.h"
-#include "CommandContext.h"
-#include "GraphicsCore.h"
-#include "CommandListManager.h"
-#include "RootSignature.h"
+#include "Public/Core/CommandContext.h"
+#include "Public/Core/GraphicsCore.h"
+#include "Public/Core/CommandListManager.h"
+#include "Public/Core/RootSignature.h"
 
-using namespace Graphics;
+using namespace Playground::Graphics;
 
 //
 // DynamicDescriptorHeap Implementation
 //
 
+namespace Playground
+{
 std::mutex DynamicDescriptorHeap::sm_Mutex;
 std::vector<Microsoft::WRL::ComPtr<ID3D12DescriptorHeap>> DynamicDescriptorHeap::sm_DescriptorHeapPool[2];
 std::queue<std::pair<uint64_t, ID3D12DescriptorHeap*>> DynamicDescriptorHeap::sm_RetiredDescriptorHeaps[2];
@@ -343,4 +345,5 @@ void DynamicDescriptorHeap::DescriptorHandleCache::ParseRootSignature( D3D12_DES
     m_MaxCachedDescriptors = CurrentOffset;
 
     ASSERT(m_MaxCachedDescriptors <= kMaxNumDescriptors, "Exceeded user-supplied maximum cache size");
+}
 }

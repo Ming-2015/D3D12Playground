@@ -13,13 +13,15 @@
 
 #include "pch.h"
 #include "BuddyAllocator.h"
-#include "GraphicsCore.h"
-#include "CommandListManager.h"
-#include "CommandContext.h"
+#include "Public/Core/GraphicsCore.h"
+#include "Public/Core/CommandListManager.h"
+#include "Public/Core/CommandContext.h"
 
-using namespace Graphics;
+using namespace Playground::Graphics;
 using namespace std;
 
+namespace Playground
+{
 BuddyBlock::BuddyBlock(uint32_t heapOffset, uint32_t totalSize, uint32_t unpaddedSize) :
     m_pBuffer(nullptr)
     , m_pBackingHeap(nullptr)
@@ -262,3 +264,4 @@ void BuddyAllocator::CleanUpAllocations()
         DeallocateInternal(pBlock);
     }
 }*/
+}

@@ -13,14 +13,16 @@
 //
 
 #include "pch.h"
-#include "ParticleEffect.h"
-#include "CommandContext.h"
-#include "GraphicsCore.h"
+#include "Public/Core/ParticleEffect.h"
+#include "Public/Core/CommandContext.h"
+#include "Public/Core/GraphicsCore.h"
 #include "BufferManager.h"
-#include "ParticleEffectManager.h"
-#include "GameInput.h"
-#include "Math/Random.h"
+#include "Public/Core/ParticleEffectManager.h"
+#include "Public/Core/GameInput.h"
+#include "Public/Core/Math/Random.h"
 
+namespace Playground
+{
 using namespace Math;
 using namespace ParticleEffectManager;
 
@@ -163,4 +165,5 @@ void ParticleEffect::Update(ComputeContext& CompContext,  float timeDelta)
 void ParticleEffect::Reset()
 {
     m_EffectProperties = m_OriginalEffectProperties;
+}
 }

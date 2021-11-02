@@ -12,9 +12,9 @@
 //
 
 #include "pch.h"
-#include "BoundingSphere.h"
+#include "Public/Core/Math/BoundingSphere.h"
 
-using namespace Math;
+using namespace Playground::Math;
 
 BoundingSphere BoundingSphere::Union( const BoundingSphere& rhs )
 {

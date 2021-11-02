@@ -14,6 +14,8 @@
 #include "pch.h"
 #include "CommandAllocatorPool.h"
 
+namespace Playground
+{
 CommandAllocatorPool::CommandAllocatorPool(D3D12_COMMAND_LIST_TYPE Type) :
     m_cCommandListType(Type),
     m_Device(nullptr)
@@ -75,4 +77,5 @@ void CommandAllocatorPool::DiscardAllocator(uint64_t FenceValue, ID3D12CommandAl
 
     // That fence value indicates we are free to reset the allocator
     m_ReadyAllocators.push(std::make_pair(FenceValue, Allocator));
+}
 }

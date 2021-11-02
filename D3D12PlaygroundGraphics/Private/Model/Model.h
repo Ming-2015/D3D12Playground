@@ -14,16 +14,18 @@
 #pragma once
 
 #include "Animation.h"
-#include "../Core/GpuBuffer.h"
-#include "../Core/VectorMath.h"
-#include "../Core/Camera.h"
-#include "../Core/CommandContext.h"
-#include "../Core/UploadBuffer.h"
-#include "../Core/TextureManager.h"
-#include "../Core/Math/BoundingBox.h"
-#include "../Core/Math/BoundingSphere.h"
+#include "Private/Core/GpuBuffer.h"
+#include "Public/Core/VectorMath.h"
+#include "Public/Core/Camera.h"
+#include "Public/Core/CommandContext.h"
+#include "Private/Core/UploadBuffer.h"
+#include "Public/Core/TextureManager.h"
+#include "Public/Core/Math/BoundingBox.h"
+#include "Public/Core/Math/BoundingSphere.h"
 #include <cstdint>
 
+namespace Playground
+{
 namespace Renderer
 {
     class MeshSorter;
@@ -173,3 +175,4 @@ private:
     std::vector<AnimationState> m_AnimState;    // Per-animation (not per-curve)
     std::unique_ptr<Joint[]> m_Skeleton;
 };
+}

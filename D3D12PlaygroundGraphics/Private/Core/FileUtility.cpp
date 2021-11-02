@@ -12,19 +12,21 @@
 //
 
 #include "pch.h"
-#include "FileUtility.h"
+#include "Public/Core/FileUtility.h"
 #include <fstream>
 #include <mutex>
 #include <zlib.h> // From NuGet package 
 
+using namespace Playground::Utility;
 using namespace std;
-using namespace Utility;
 
-namespace Utility
+namespace Playground::Utility
 {
-    ByteArray NullFile = make_shared<vector<byte> > (vector<byte>() );
+    ByteArray NullFile = make_shared<vector<std::byte>> (vector<std::byte>() );
 }
 
+namespace Playground
+{
 ByteArray DecompressZippedFile( wstring& fileName );
 
 ByteArray ReadFileHelper(const wstring& fileName)
@@ -38,7 +40,7 @@ ByteArray ReadFileHelper(const wstring& fileName)
     if (!file)
         return NullFile;
 
-    Utility::ByteArray byteArray = make_shared<vector<byte> >( fileStat.st_size );
+    Utility::ByteArray byteArray = make_shared<vector<std::byte> >( fileStat.st_size );
     file.read( (char*)byteArray->data(), byteArray->size() );
     file.close();
 
@@ -58,20 +60,20 @@ ByteArray ReadFileHelperEx( shared_ptr<wstring> fileName)
 ByteArray Inflate(ByteArray CompressedSource, int& err, uint32_t ChunkSize = 0x100000 ) 
 {
     // Create a dynamic buffer to hold compressed blocks
-    vector<unique_ptr<byte> > blocks;
+    vector<unique_ptr<std::byte> > blocks;
 
     z_stream strm  = {};
     strm.data_type = Z_BINARY;
     strm.total_in  = strm.avail_in  = (uInt)CompressedSource->size();
-    strm.next_in   = CompressedSource->data();
+    strm.next_in   = reinterpret_cast<Bytef*>(CompressedSource->data());
 
     err = inflateInit2(&strm, (15 + 32)); //15 window bits, and the +32 tells zlib to to detect if using gzip or zlib
 
     while (err == Z_OK || err == Z_BUF_ERROR)
     {
         strm.avail_out = ChunkSize;
-        strm.next_out = (byte*)malloc(ChunkSize);
-        blocks.emplace_back(strm.next_out);
+        strm.next_out = (Bytef*)malloc(ChunkSize);
+        blocks.emplace_back(reinterpret_cast<std::byte*>(strm.next_out));
         err = inflate(&strm, Z_NO_FLUSH);
     }
 
@@ -83,7 +85,7 @@ ByteArray Inflate(ByteArray CompressedSource, int& err, uint32_t ChunkSize = 0x1
 
     ASSERT(strm.total_out > 0, "Nothing to decompress");
 
-    Utility::ByteArray byteArray = make_shared<vector<byte> >( strm.total_out );
+    Utility::ByteArray byteArray = make_shared<vector<std::byte> >( strm.total_out );
 
     // Allocate actual memory for this.
     // copy the bits into that RAM.
@@ -98,7 +100,7 @@ ByteArray Inflate(ByteArray CompressedSource, int& err, uint32_t ChunkSize = 0x1
         size_t CopySize = remaining < ChunkSize ? remaining : ChunkSize;
 
         memcpy(curDest, blocks[i].get(), CopySize);
-        curDest = (byte*)curDest + CopySize;
+        curDest = (std::byte*)curDest + CopySize;
         remaining -= CopySize;
     }
 
@@ -133,4 +135,5 @@ task<ByteArray> Utility::ReadFileAsync(const wstring& fileName)
 {
     shared_ptr<wstring> SharedPtr = make_shared<wstring>(fileName);
     return create_task( [=] { return ReadFileHelperEx(SharedPtr); } );
+}
 }

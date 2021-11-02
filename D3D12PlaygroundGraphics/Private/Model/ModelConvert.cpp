@@ -20,10 +20,10 @@
 #include "glTF.h"
 #include "TextureConvert.h"
 #include "MeshConvert.h"
-#include "Private/Core/TextureManager.h"
-#include "Private/Core/GraphicsCommon.h"
-#include "Private/Core/Utility.h"
-#include "Private/Core/Math/Common.h"
+#include "Public/Core/TextureManager.h"
+#include "Public/Core/GraphicsCommon.h"
+#include "Public/Core/Utility.h"
+#include "Public/Core/Math/Common.h"
 
 #include <fstream>
 #include <map>

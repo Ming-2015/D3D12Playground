@@ -15,15 +15,15 @@
 #include "pch.h"
 #include "BufferManager.h"
 #include "BitonicSort.h"
-#include "Camera.h"
-#include "ColorBuffer.h"
-#include "CommandContext.h"
+#include "Public/Core/Camera.h"
+#include "Public/Core/ColorBuffer.h"
+#include "Public/Core/CommandContext.h"
 #include "Public/Core/GameCore.h"
-#include "GraphicsCore.h"
-#include "Math/Random.h"
-#include "ParticleEffectManager.h"
-#include "ParticleEffect.h"
-#include "ParticleEffectProperties.h"
+#include "Public/Core/GraphicsCore.h"
+#include "Public/Core/Math/Random.h"
+#include "Public/Core/ParticleEffectManager.h"
+#include "Public/Core/ParticleEffect.h"
+#include "Public/Core/ParticleEffectProperties.h"
 #include <mutex>
 
 #include "CompiledShaders/ParticleSpawnCS.h"
@@ -69,6 +69,8 @@
 #define TILES_PER_BIN_Y (BIN_SIZE_Y / TILE_SIZE)
 #define TILES_PER_BIN (TILES_PER_BIN_X * TILES_PER_BIN_Y)
 
+namespace Playground
+{
 using namespace Graphics;
 using namespace Math;
 using namespace ParticleEffectManager;
@@ -724,4 +726,5 @@ float ParticleEffectManager::GetCurrentLife(EffectHandle EffectID)
         return -1.0;
     
     return ParticleEffectsActive[EffectID]->GetElapsedTime();
+}
 }

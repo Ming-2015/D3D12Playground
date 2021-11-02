@@ -13,11 +13,13 @@
 
 #include "pch.h"
 #include "CommandSignature.h"
-#include "RootSignature.h"
-#include "GraphicsCore.h"
+#include "Public/Core/RootSignature.h"
+#include "Public/Core/GraphicsCore.h"
 
-using namespace Graphics;
+using namespace Playground::Graphics;
 
+namespace Playground
+{
 void CommandSignature::Finalize( const RootSignature* RootSignature )
 {
     if (m_Finalized)
@@ -82,4 +84,5 @@ void CommandSignature::Finalize( const RootSignature* RootSignature )
     m_Signature->SetName(L"CommandSignature");
 
     m_Finalized = TRUE;
+}
 }

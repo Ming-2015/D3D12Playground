@@ -13,7 +13,7 @@
 
 #include "pch.h"
 #include "Public/Core/GameCore.h"
-#include "GameInput.h"
+#include "Public/Core/GameInput.h"
 
 #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
 
@@ -27,7 +27,7 @@
 #pragma comment(lib, "dinput8.lib")
 #pragma comment(lib, "dxguid.lib")
 
-namespace GameCore
+namespace Playground::GameCore
 {
     extern HWND g_hWnd;
 }
@@ -49,6 +49,8 @@ struct DIMOUSESTATE2
 
 namespace
 {
+    using namespace Playground;
+
     bool s_Buttons[2][GameInput::kNumDigitalInputs];
     float s_HoldDuration[GameInput::kNumDigitalInputs] = { 0.0f };
     float s_Analogs[GameInput::kNumAnalogInputs];

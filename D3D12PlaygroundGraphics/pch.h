@@ -46,7 +46,7 @@
 #include <DirectXMath.h>
 #include <DirectXColors.h>
 
-#include "Private/Core/d3dx12.h"
+#include "Private/Internal/d3dx12.h"
 
 #include <algorithm>
 #include <cmath>
@@ -75,8 +75,8 @@
 #include <ppltasks.h>
 #include <functional>
 
-#include "Private/Core/Utility.h"
-#include "Private/Core/VectorMath.h"
+#include "Public/Core/Utility.h"
+#include "Public/Core/VectorMath.h"
 #include "Private/Core/EngineTuning.h"
 #include "Private/Core/EngineProfiling.h"
 #include "Private/Core/Util/CommandLineArg.h"

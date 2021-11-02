@@ -12,21 +12,23 @@
 //
 
 #include "pch.h"
-#include "Texture.h"
+#include "Public/Core/Texture.h"
 #include "DDSTextureLoader.h"
-#include "FileUtility.h"
-#include "GraphicsCore.h"
-#include "CommandContext.h"
+#include "Public/Core/FileUtility.h"
+#include "Public/Core/GraphicsCore.h"
+#include "Public/Core/CommandContext.h"
 #include <map>
 #include <thread>
-
-using namespace std;
-using namespace Graphics;
 
 //--------------------------------------------------------------------------------------
 // Return the BPP for a particular format
 //--------------------------------------------------------------------------------------
-size_t BitsPerPixel( _In_ DXGI_FORMAT fmt );
+size_t BitsPerPixel(_In_ DXGI_FORMAT fmt);
+
+namespace Playground
+{
+using namespace std;
+using namespace Graphics;
 
 static UINT BytesPerPixel( DXGI_FORMAT Format )
 {
@@ -212,4 +214,5 @@ void Texture::CreatePIXImageFromMemory( const void* memBuffer, size_t fileSize )
         "Raw PIX image dump has an invalid file size");
 
     Create2D(header.Pitch, header.Width, header.Height, header.Format, (uint8_t*)memBuffer + sizeof(Header));
+}
 }

@@ -12,19 +12,21 @@
 //
 
 #include "pch.h"
-#include "RootSignature.h"
-#include "GraphicsCore.h"
-#include "Hash.h"
+#include "Public/Core/RootSignature.h"
+#include "Public/Core/GraphicsCore.h"
+#include "Public/Core/Hash.h"
 #include <map>
 #include <thread>
 #include <mutex>
 
-using namespace Graphics;
+using namespace Playground::Graphics;
 using namespace std;
 using Microsoft::WRL::ComPtr;
 
 static std::map< size_t, ComPtr<ID3D12RootSignature> > s_RootSignatureHashMap;
 
+namespace Playground
+{
 void RootSignature::DestroyAll(void)
 {
     s_RootSignatureHashMap.clear();
@@ -171,4 +173,5 @@ void RootSignature::Finalize(const std::wstring& name, D3D12_ROOT_SIGNATURE_FLAG
     }
 
     m_Finalized = TRUE;
+}
 }

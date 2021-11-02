@@ -14,9 +14,9 @@
 #pragma once
 
 #include "GpuBuffer.h"
-#include "GraphicsCore.h"
+#include "Public/Core/GraphicsCore.h"
 
-namespace Graphics
+namespace Playground::Graphics
 {
     namespace Shapes
     {

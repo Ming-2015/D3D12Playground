@@ -13,6 +13,8 @@
 
 #pragma once
 
+namespace Playground
+{
 class GpuResource
 {
     friend class CommandContext;
@@ -66,3 +68,4 @@ protected:
     // Used to identify when a resource changes so descriptors can be copied etc.
     uint32_t m_VersionID = 0;
 };
+}

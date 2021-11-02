@@ -12,12 +12,12 @@
 //
 
 #include "pch.h"
-#include "SSAO.h"
+#include "Public/Core/SSAO.h"
 #include "BufferManager.h"
-#include "GraphicsCore.h"
-#include "CommandContext.h"
-#include "Camera.h"
-#include "TemporalEffects.h"
+#include "Public/Core/GraphicsCore.h"
+#include "Public/Core/CommandContext.h"
+#include "Public/Core/Camera.h"
+#include "Public/Core/TemporalEffects.h"
 
 #include "CompiledShaders/AoPrepareDepthBuffers1CS.h"
 #include "CompiledShaders/AoPrepareDepthBuffers2CS.h"
@@ -30,6 +30,8 @@
 #include "CompiledShaders/AoBlurUpsampleCS.h"
 #include "CompiledShaders/AoBlurUpsamplePreMinCS.h"
 
+namespace Playground
+{
 using namespace Graphics;
 using namespace Math;
 
@@ -539,4 +541,5 @@ void SSAO::Render( GraphicsContext& GfxContext, const float* ProjMat, float Near
         CC.SetDynamicDescriptors(3, 0, 1, &g_SSAOFullScreen.GetSRV());
         CC.Dispatch2D(g_SSAOFullScreen.GetWidth(), g_SSAOFullScreen.GetHeight());
     }
+}
 }

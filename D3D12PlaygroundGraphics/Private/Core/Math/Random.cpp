@@ -12,9 +12,11 @@
 //
 
 #include "pch.h"
-#include "Random.h"
+#include "Public/Core/Math/Random.h"
 
-namespace Math
+using namespace Playground::Math;
+
+namespace Playground::Math
 {
     RandomNumberGenerator g_RNG;
 }

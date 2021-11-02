@@ -12,10 +12,10 @@
 //
 
 #include "pch.h"
-#include "Frustum.h"
-#include "Private/Core/Camera.h"
+#include "Public/Core/Math/Frustum.h"
+#include "Public/Core/Camera.h"
 
-using namespace Math;
+using namespace Playground::Math;
 
 void Frustum::ConstructPerspectiveFrustum( float HTan, float VTan, float NearClip, float FarClip )
 {
