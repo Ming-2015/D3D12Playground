@@ -1,5 +1,7 @@
 # D3D12Playground (Real Time)
 
+Note: Project currently suspended in favor of a new side project using UE5 to develop an Action RPG project ( starting in baby steps though (: )
+
 A personal project that uses DX12 to implement various render techniques to ultimately create breathtaking real-time visuals. 
 
 ## Features to implement
