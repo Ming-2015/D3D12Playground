@@ -18,11 +18,12 @@
 
 #pragma once
 
+#include "D3D12PlaygroundGraphics/libdefs.h"
 #include "GpuResource.h"
 
 namespace Playground
 {
-    class UploadBuffer : public GpuResource
+    class D3D12PLAYGROUNDGRAPHICS_API UploadBuffer : public GpuResource
     {
     public:
         virtual ~UploadBuffer() { Destroy(); }

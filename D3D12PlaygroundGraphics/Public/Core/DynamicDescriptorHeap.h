@@ -28,7 +28,7 @@ namespace Playground
 // This class is a linear allocation system for dynamically generated descriptor tables.  It internally caches
 // CPU descriptor handles so that when not enough space is available in the current heap, necessary descriptors
 // can be re-copied to the new heap.
-class DynamicDescriptorHeap
+class D3D12PLAYGROUNDGRAPHICS_API DynamicDescriptorHeap
 {
 public:
     DynamicDescriptorHeap(CommandContext& OwningContext, D3D12_DESCRIPTOR_HEAP_TYPE HeapType);

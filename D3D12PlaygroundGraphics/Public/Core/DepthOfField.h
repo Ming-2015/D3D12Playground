@@ -19,8 +19,8 @@ namespace Playground::DepthOfField
 {
     extern BoolVar Enable;
 
-    void Initialize( void );
-    void Shutdown( void );
+    D3D12PLAYGROUNDGRAPHICS_API void Initialize( void );
+    D3D12PLAYGROUNDGRAPHICS_API void Shutdown( void );
 
-    void Render( CommandContext& BaseContext, float NearClipDist, float FarClipDist );
+    D3D12PLAYGROUNDGRAPHICS_API void Render( CommandContext& BaseContext, float NearClipDist, float FarClipDist );
 }

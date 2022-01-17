@@ -21,7 +21,7 @@
 
 namespace Playground
 {
-class CommandAllocatorPool
+class D3D12PLAYGROUNDGRAPHICS_API CommandAllocatorPool
 {
 public:
     CommandAllocatorPool(D3D12_COMMAND_LIST_TYPE Type);

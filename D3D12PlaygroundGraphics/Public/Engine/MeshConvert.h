@@ -49,5 +49,5 @@ namespace Renderer
     };
 }
 
-void OptimizeMesh( Renderer::Primitive& outPrim, const glTF::Primitive& inPrim, const Math::Matrix4& localToObject );
+D3D12PLAYGROUNDGRAPHICS_API void OptimizeMesh( Renderer::Primitive& outPrim, const glTF::Primitive& inPrim, const Math::Matrix4& localToObject );
 }

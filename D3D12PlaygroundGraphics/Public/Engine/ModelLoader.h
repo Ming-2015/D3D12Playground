@@ -13,6 +13,7 @@
 
 #pragma once
 
+#include "D3D12PlaygroundGraphics/libdefs.h"
 #include "Animation.h"
 #include "ConstantBuffers.h"
 #include "Model.h"
@@ -90,7 +91,7 @@ namespace Renderer
         float    maxPos[3];
     };
 
-    void CompileMesh(
+    D3D12PLAYGROUNDGRAPHICS_API void CompileMesh(
         std::vector<Mesh*>& meshList,
         std::vector<Byte>& bufferMemory,
         glTF::Mesh& srcMesh,
@@ -100,9 +101,9 @@ namespace Renderer
         Math::AxisAlignedBox& boundingBox
     );
 
-    bool BuildModel( ModelData& model, const glTF::Asset& asset, int sceneIdx = -1 );
-    bool SaveModel( const std::wstring& filePath, const ModelData& model );
+    D3D12PLAYGROUNDGRAPHICS_API bool BuildModel( ModelData& model, const glTF::Asset& asset, int sceneIdx = -1 );
+    D3D12PLAYGROUNDGRAPHICS_API bool SaveModel( const std::wstring& filePath, const ModelData& model );
     
-    std::shared_ptr<Model> LoadModel( const std::wstring& filePath, bool forceRebuild = false );
+    D3D12PLAYGROUNDGRAPHICS_API std::shared_ptr<Model> LoadModel( const std::wstring& filePath, bool forceRebuild = false );
 }
 }

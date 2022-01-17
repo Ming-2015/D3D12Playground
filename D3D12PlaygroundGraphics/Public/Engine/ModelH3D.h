@@ -29,7 +29,7 @@ namespace Renderer
     struct ModelData;
 }
 
-class ModelH3D
+class D3D12PLAYGROUNDGRAPHICS_API ModelH3D
 {
 public:
 

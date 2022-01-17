@@ -22,7 +22,7 @@
 
 namespace Playground
 {
-class CommandQueue
+class D3D12PLAYGROUNDGRAPHICS_API CommandQueue
 {
     friend class CommandListManager;
     friend class CommandContext;
@@ -72,7 +72,7 @@ private:
 
 };
 
-class CommandListManager
+class D3D12PLAYGROUNDGRAPHICS_API CommandListManager
 {
     friend class CommandContext;
 

@@ -23,15 +23,15 @@ namespace Playground
 
 namespace Playground::EngineProfiling
 {
-    void Update();
+    D3D12PLAYGROUNDGRAPHICS_API void Update();
 
-    void BeginBlock(const std::wstring& name, CommandContext* Context = nullptr);
-    void EndBlock(CommandContext* Context = nullptr);
+    D3D12PLAYGROUNDGRAPHICS_API void BeginBlock(const std::wstring& name, CommandContext* Context = nullptr);
+    D3D12PLAYGROUNDGRAPHICS_API void EndBlock(CommandContext* Context = nullptr);
 
-    void DisplayFrameRate(TextContext& Text);
-    void DisplayPerfGraph(GraphicsContext& Text);
-    void Display(TextContext& Text, float x, float y, float w, float h);
-    bool IsPaused();
+    D3D12PLAYGROUNDGRAPHICS_API void DisplayFrameRate(TextContext& Text);
+    D3D12PLAYGROUNDGRAPHICS_API void DisplayPerfGraph(GraphicsContext& Text);
+    D3D12PLAYGROUNDGRAPHICS_API void Display(TextContext& Text, float x, float y, float w, float h);
+    D3D12PLAYGROUNDGRAPHICS_API bool IsPaused();
 }
 
 namespace Playground
@@ -44,7 +44,7 @@ public:
     ScopedTimer(const std::wstring&, CommandContext&) {}
 };
 #else
-class ScopedTimer
+class D3D12PLAYGROUNDGRAPHICS_API ScopedTimer
 {
 public:
     ScopedTimer( const std::wstring& name ) : m_Context(nullptr)

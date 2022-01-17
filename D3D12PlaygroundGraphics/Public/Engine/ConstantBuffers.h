@@ -13,6 +13,8 @@
 
 #pragma once
 
+#include "D3D12PlaygroundGraphics/libdefs.h"
+
 #include <D3D12PlaygroundCommon/Math/Matrix3.h>
 #include <D3D12PlaygroundCommon/Math/Matrix4.h>
 #include <cstdint>

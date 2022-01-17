@@ -35,7 +35,7 @@
 namespace Playground
 {
 // Various types of allocations may contain NULL pointers.  Check before dereferencing if you are unsure.
-struct DynAlloc
+struct D3D12PLAYGROUNDGRAPHICS_API DynAlloc
 {
     DynAlloc(GpuResource& BaseResource, size_t ThisOffset, size_t ThisSize)
         : Buffer(BaseResource), Offset(ThisOffset), Size(ThisSize) {}
@@ -84,7 +84,7 @@ public:
     D3D12_GPU_VIRTUAL_ADDRESS m_GpuVirtualAddress;
 };
 
-enum LinearAllocatorType
+enum D3D12PLAYGROUNDGRAPHICS_API LinearAllocatorType
 {
     kInvalidAllocator = -1,
 

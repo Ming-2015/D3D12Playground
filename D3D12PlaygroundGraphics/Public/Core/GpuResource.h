@@ -19,7 +19,7 @@
 
 namespace Playground
 {
-class GpuResource
+class D3D12PLAYGROUNDGRAPHICS_API GpuResource
 {
     friend class CommandContext;
     friend class GraphicsContext;

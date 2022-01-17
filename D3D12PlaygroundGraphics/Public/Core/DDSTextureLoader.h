@@ -20,6 +20,7 @@
 
 #pragma once
 
+#include "D3D12PlaygroundGraphics/libdefs.h"
 #include <d3d12.h>
 
 #pragma warning(push)
@@ -27,7 +28,7 @@
 #include <stdint.h>
 #pragma warning(pop)
 
-enum DDS_ALPHA_MODE
+enum D3D12PLAYGROUNDGRAPHICS_API DDS_ALPHA_MODE
 {
     DDS_ALPHA_MODE_UNKNOWN       = 0,
     DDS_ALPHA_MODE_STRAIGHT      = 1,
@@ -36,7 +37,7 @@ enum DDS_ALPHA_MODE
     DDS_ALPHA_MODE_CUSTOM        = 4,
 };
 
-HRESULT __cdecl CreateDDSTextureFromMemory( _In_ ID3D12Device* d3dDevice,
+D3D12PLAYGROUNDGRAPHICS_API HRESULT __cdecl CreateDDSTextureFromMemory( _In_ ID3D12Device* d3dDevice,
                                                 _In_reads_bytes_(ddsDataSize) const uint8_t* ddsData,
                                                 _In_ size_t ddsDataSize,
                                                 _In_ size_t maxsize,
@@ -46,7 +47,7 @@ HRESULT __cdecl CreateDDSTextureFromMemory( _In_ ID3D12Device* d3dDevice,
                                                 _Out_opt_ DDS_ALPHA_MODE* alphaMode = nullptr
                                             );
 
-HRESULT __cdecl CreateDDSTextureFromFile( _In_ ID3D12Device* d3dDevice,
+D3D12PLAYGROUNDGRAPHICS_API HRESULT __cdecl CreateDDSTextureFromFile( _In_ ID3D12Device* d3dDevice,
                                             _In_z_ const wchar_t* szFileName,
                                             _In_ size_t maxsize,
                                             _In_ bool forceSRGB,
@@ -55,4 +56,4 @@ HRESULT __cdecl CreateDDSTextureFromFile( _In_ ID3D12Device* d3dDevice,
                                             _Out_opt_ DDS_ALPHA_MODE* alphaMode = nullptr
                                             );
 
-size_t BitsPerPixel(_In_ DXGI_FORMAT fmt);
+D3D12PLAYGROUNDGRAPHICS_API size_t BitsPerPixel(_In_ DXGI_FORMAT fmt);

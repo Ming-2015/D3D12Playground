@@ -50,7 +50,7 @@ namespace Renderer
     extern DescriptorHeap s_SamplerHeap;
     extern DescriptorHandle m_CommonTextures;
 
-    enum RootBindings
+    enum D3D12PLAYGROUNDGRAPHICS_API RootBindings
     {
         kMeshConstants,
         kMaterialConstants,
@@ -63,16 +63,16 @@ namespace Renderer
         kNumRootBindings
     };
 
-    void Initialize(void);
-    void Shutdown(void);
+    D3D12PLAYGROUNDGRAPHICS_API void Initialize(void);
+    D3D12PLAYGROUNDGRAPHICS_API void Shutdown(void);
 
-    uint8_t GetPSO(uint16_t psoFlags);
-    void SetIBLTextures(TextureRef diffuseIBL, TextureRef specularIBL);
-    void SetIBLBias(float LODBias);
-    void UpdateGlobalDescriptors(void);
-    void DrawSkybox( GraphicsContext& gfxContext, const Camera& camera, const D3D12_VIEWPORT& viewport, const D3D12_RECT& scissor );
+    D3D12PLAYGROUNDGRAPHICS_API uint8_t GetPSO(uint16_t psoFlags);
+    D3D12PLAYGROUNDGRAPHICS_API void SetIBLTextures(TextureRef diffuseIBL, TextureRef specularIBL);
+    D3D12PLAYGROUNDGRAPHICS_API void SetIBLBias(float LODBias);
+    D3D12PLAYGROUNDGRAPHICS_API void UpdateGlobalDescriptors(void);
+    D3D12PLAYGROUNDGRAPHICS_API void DrawSkybox( GraphicsContext& gfxContext, const Camera& camera, const D3D12_VIEWPORT& viewport, const D3D12_RECT& scissor );
 
-    class MeshSorter
+    class D3D12PLAYGROUNDGRAPHICS_API MeshSorter
     {
     public:
 		enum BatchType { kDefault, kShadows };

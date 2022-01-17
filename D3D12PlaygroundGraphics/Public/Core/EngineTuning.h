@@ -13,6 +13,8 @@
 
 #pragma once
 
+#include "D3D12PlaygroundGraphics/libdefs.h"
+
 #include <string>
 #include <stdint.h>
 #include <float.h>
@@ -24,7 +26,7 @@ namespace Playground
 class VariableGroup;
 class TextContext;
 
-class EngineVar
+class D3D12PLAYGROUNDGRAPHICS_API EngineVar
 {
 public:
 
@@ -67,7 +69,7 @@ private:
     ActionCallback m_ActionCallback;
 };
 
-class BoolVar : public EngineVar
+class D3D12PLAYGROUNDGRAPHICS_API BoolVar : public EngineVar
 {
 public:
     BoolVar( const std::string& path, bool val, ActionCallback pfnCallback = EngineVar::DefaultActionHandler );
@@ -86,7 +88,7 @@ private:
     bool m_Flag;
 };
 
-class NumVar : public EngineVar
+class D3D12PLAYGROUNDGRAPHICS_API NumVar : public EngineVar
 {
 public:
     NumVar( const std::string& path, float val, float minValue = -FLT_MAX, float maxValue = FLT_MAX, float stepSize = 1.0f, ActionCallback pfnCallback = EngineVar::DefaultActionHandler);
@@ -109,7 +111,7 @@ protected:
     float m_StepSize;
 };
 
-class ExpVar : public NumVar
+class D3D12PLAYGROUNDGRAPHICS_API ExpVar : public NumVar
 {
 public:
     ExpVar( const std::string& path, float val, float minExp = -FLT_MAX, float maxExp = FLT_MAX, float expStepSize = 1.0f, ActionCallback pfnCallback = EngineVar::DefaultActionHandler);
@@ -122,7 +124,7 @@ public:
 
 };
 
-class IntVar : public EngineVar
+class D3D12PLAYGROUNDGRAPHICS_API IntVar : public EngineVar
 {
 public:
     IntVar( const std::string& path, int32_t val, int32_t minValue = 0, int32_t maxValue = (1 << 24) - 1, int32_t stepSize = 1, ActionCallback pfnCallback = EngineVar::DefaultActionHandler);
@@ -145,7 +147,7 @@ protected:
     int32_t m_StepSize;
 };
 
-class EnumVar : public EngineVar
+class D3D12PLAYGROUNDGRAPHICS_API EnumVar : public EngineVar
 {
 public:
     EnumVar( const std::string& path, int32_t initialVal, int32_t listLength, const char** listLabels, ActionCallback pfnCallback = EngineVar::DefaultActionHandler);
@@ -169,7 +171,7 @@ private:
     const char** m_EnumLabels;
 };
 
-class DynamicEnumVar : public EngineVar
+class D3D12PLAYGROUNDGRAPHICS_API DynamicEnumVar : public EngineVar
 {
 public:
     DynamicEnumVar( const std::string& path, ActionCallback pfnCallback = EngineVar::DefaultActionHandler);
@@ -193,7 +195,7 @@ private:
     std::vector<std::wstring> m_EnumLabels;
 };
 
-class CallbackTrigger : public EngineVar
+class D3D12PLAYGROUNDGRAPHICS_API CallbackTrigger : public EngineVar
 {
 public:
     CallbackTrigger( const std::string& path, std::function<void (void*)> callback, void* args = nullptr );
@@ -213,10 +215,9 @@ class GraphicsContext;
 
 namespace EngineTuning
 {
-    void Initialize( void );
-    void Update( float frameTime );
-    void Display( GraphicsContext& Context, float x, float y, float w, float h );
-    bool IsFocused( void );
-
+    D3D12PLAYGROUNDGRAPHICS_API void Initialize( void );
+    D3D12PLAYGROUNDGRAPHICS_API void Update( float frameTime );
+    D3D12PLAYGROUNDGRAPHICS_API void Display( GraphicsContext& Context, float x, float y, float w, float h );
+    D3D12PLAYGROUNDGRAPHICS_API bool IsFocused( void );
 } // namespace EngineTuning
 }

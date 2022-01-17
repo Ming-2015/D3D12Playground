@@ -22,7 +22,7 @@ namespace Playground::Graphics
     {
         namespace Cube
         {
-            struct CubeVertex
+            struct D3D12PLAYGROUNDGRAPHICS_API CubeVertex
             {
                 XMFLOAT3 position;
                 XMFLOAT2 texcoord;
@@ -35,8 +35,8 @@ namespace Playground::Graphics
             extern uint32_t g_NumVerts;
             extern uint32_t g_NumIndicies;
 
-            void InitializeCubeBuffers();
-            void DestroyCubeBuffers();
+            D3D12PLAYGROUNDGRAPHICS_API void InitializeCubeBuffers();
+            D3D12PLAYGROUNDGRAPHICS_API void DestroyCubeBuffers();
         }
     }
 }

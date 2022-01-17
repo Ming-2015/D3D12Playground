@@ -30,10 +30,10 @@ namespace Math
 
 namespace Sponza
 {
-    void Startup( Math::Camera& camera );
-    void Cleanup( void );
+    D3D12PLAYGROUNDGRAPHICS_API void Startup( Math::Camera& camera );
+    D3D12PLAYGROUNDGRAPHICS_API void Cleanup( void );
 
-    void RenderScene(
+    D3D12PLAYGROUNDGRAPHICS_API void RenderScene(
         GraphicsContext& gfxContext,
         const Math::Camera& camera,
         const D3D12_VIEWPORT& viewport,
@@ -41,12 +41,11 @@ namespace Sponza
         bool skipDiffusePass = false,
         bool skipShadowMap = false );
 
-    const ModelH3D& GetModel();
+    D3D12PLAYGROUNDGRAPHICS_API const ModelH3D& GetModel();
 
     extern Math::Vector3 m_SunDirection;
     extern ShadowCamera m_SunShadow;
     extern ExpVar m_AmbientIntensity;
     extern ExpVar m_SunLightIntensity;
-
 }
 }

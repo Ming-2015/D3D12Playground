@@ -17,7 +17,7 @@
 
 namespace Playground
 {
-class EsramAllocator
+class D3D12PLAYGROUNDGRAPHICS_API EsramAllocator
 {
 public:
     EsramAllocator() {}

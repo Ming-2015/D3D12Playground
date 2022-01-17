@@ -13,11 +13,11 @@
 
 #pragma once
 
-#include "Public/Core/ColorBuffer.h"
+#include "ColorBuffer.h"
 #include "DepthBuffer.h"
-#include "Public/Core/ShadowBuffer.h"
 #include "GpuBuffer.h"
-#include "Public/Core/GraphicsCore.h"
+#include "GraphicsCore.h"
+#include "ShadowBuffer.h"
 
 namespace Playground::Graphics
 {
@@ -81,8 +81,8 @@ namespace Playground::Graphics
     extern ByteAddressBuffer g_FXAAWorkQueue;
     extern TypedBuffer g_FXAAColorQueue;
 
-    void InitializeRenderingBuffers(uint32_t NativeWidth, uint32_t NativeHeight );
-    void ResizeDisplayDependentBuffers(uint32_t NativeWidth, uint32_t NativeHeight);
-    void DestroyRenderingBuffers();
+    D3D12PLAYGROUNDGRAPHICS_API void InitializeRenderingBuffers(uint32_t NativeWidth, uint32_t NativeHeight );
+    D3D12PLAYGROUNDGRAPHICS_API void ResizeDisplayDependentBuffers(uint32_t NativeWidth, uint32_t NativeHeight);
+    D3D12PLAYGROUNDGRAPHICS_API void DestroyRenderingBuffers();
 
 } // namespace Graphics

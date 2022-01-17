@@ -49,9 +49,9 @@ namespace Lighting
     extern ShadowBuffer m_LightShadowTempBuffer;
     extern Math::Matrix4 m_LightShadowMatrix[MaxLights];
 
-    void InitializeResources(void);
-    void CreateRandomLights(const Math::Vector3 minBound, const Math::Vector3 maxBound);
-    void FillLightGrid(GraphicsContext& gfxContext, const Math::Camera& camera);
-    void Shutdown(void);
+    D3D12PLAYGROUNDGRAPHICS_API void InitializeResources(void);
+    D3D12PLAYGROUNDGRAPHICS_API void CreateRandomLights(const Math::Vector3 minBound, const Math::Vector3 maxBound);
+    D3D12PLAYGROUNDGRAPHICS_API void FillLightGrid(GraphicsContext& gfxContext, const Math::Camera& camera);
+    D3D12PLAYGROUNDGRAPHICS_API void Shutdown(void);
 }
 }

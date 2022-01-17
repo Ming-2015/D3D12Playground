@@ -17,10 +17,10 @@
 
 namespace Playground::Display
 {
-    void Initialize(void);
-    void Shutdown(void);
-    void Resize(uint32_t width, uint32_t height);
-    void Present(void);
+    D3D12PLAYGROUNDGRAPHICS_API void Initialize(void);
+    D3D12PLAYGROUNDGRAPHICS_API void Shutdown(void);
+    D3D12PLAYGROUNDGRAPHICS_API void Resize(uint32_t width, uint32_t height);
+    D3D12PLAYGROUNDGRAPHICS_API void Present(void);
 }
 
 namespace Playground::Graphics
@@ -30,15 +30,15 @@ namespace Playground::Graphics
     extern bool g_bEnableHDROutput;
 
     // Returns the number of elapsed frames since application start
-    uint64_t GetFrameCount(void);
+    D3D12PLAYGROUNDGRAPHICS_API uint64_t GetFrameCount(void);
 
     // The amount of time elapsed during the last completed frame.  The CPU and/or
     // GPU may be idle during parts of the frame.  The frame time measures the time
     // between calls to present each frame.
-    float GetFrameTime(void);
+    D3D12PLAYGROUNDGRAPHICS_API float GetFrameTime(void);
 
     // The total number of frames per second
-    float GetFrameRate(void);
+    D3D12PLAYGROUNDGRAPHICS_API float GetFrameRate(void);
 
     extern bool g_bEnableHDROutput;
 }

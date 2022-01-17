@@ -22,7 +22,7 @@ class CommandContext;
 class EsramAllocator;
 class UploadBuffer;
 
-class GpuBuffer : public GpuResource
+class D3D12PLAYGROUNDGRAPHICS_API GpuBuffer : public GpuResource
 {
 public:
     virtual ~GpuBuffer() { Destroy(); }
@@ -88,7 +88,7 @@ protected:
     D3D12_RESOURCE_FLAGS m_ResourceFlags;
 };
 
-inline D3D12_VERTEX_BUFFER_VIEW GpuBuffer::VertexBufferView(size_t Offset, uint32_t Size, uint32_t Stride) const
+inline D3D12PLAYGROUNDGRAPHICS_API D3D12_VERTEX_BUFFER_VIEW GpuBuffer::VertexBufferView(size_t Offset, uint32_t Size, uint32_t Stride) const
 {
     D3D12_VERTEX_BUFFER_VIEW VBView;
     VBView.BufferLocation = m_GpuVirtualAddress + Offset;
@@ -97,7 +97,7 @@ inline D3D12_VERTEX_BUFFER_VIEW GpuBuffer::VertexBufferView(size_t Offset, uint3
     return VBView;
 }
 
-inline D3D12_INDEX_BUFFER_VIEW GpuBuffer::IndexBufferView(size_t Offset, uint32_t Size, bool b32Bit) const
+inline D3D12PLAYGROUNDGRAPHICS_API D3D12_INDEX_BUFFER_VIEW GpuBuffer::IndexBufferView(size_t Offset, uint32_t Size, bool b32Bit) const
 {
     D3D12_INDEX_BUFFER_VIEW IBView;
     IBView.BufferLocation = m_GpuVirtualAddress + Offset;
@@ -106,13 +106,13 @@ inline D3D12_INDEX_BUFFER_VIEW GpuBuffer::IndexBufferView(size_t Offset, uint32_
     return IBView;
 }
 
-class ByteAddressBuffer : public GpuBuffer
+class D3D12PLAYGROUNDGRAPHICS_API ByteAddressBuffer : public GpuBuffer
 {
 public:
     virtual void CreateDerivedViews(void) override;
 };
 
-class IndirectArgsBuffer : public ByteAddressBuffer
+class D3D12PLAYGROUNDGRAPHICS_API IndirectArgsBuffer : public ByteAddressBuffer
 {
 public:
     IndirectArgsBuffer(void)
@@ -120,7 +120,7 @@ public:
     }
 };
 
-class StructuredBuffer : public GpuBuffer
+class D3D12PLAYGROUNDGRAPHICS_API StructuredBuffer : public GpuBuffer
 {
 public:
     virtual void Destroy(void) override
@@ -140,7 +140,7 @@ private:
     ByteAddressBuffer m_CounterBuffer;
 };
 
-class TypedBuffer : public GpuBuffer
+class D3D12PLAYGROUNDGRAPHICS_API TypedBuffer : public GpuBuffer
 {
 public:
     TypedBuffer( DXGI_FORMAT Format ) : m_DataFormat(Format) {}

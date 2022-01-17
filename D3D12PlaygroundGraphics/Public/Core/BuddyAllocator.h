@@ -21,10 +21,11 @@
 #pragma once
 
 #include "GpuBuffer.h"
-#include <vector>
+
 #include <queue>
 #include <mutex>
 #include <set>
+#include <vector>
 
 // Unfortunately the api restricts the minimum size of a placed buffer resource to 64k
 #define MIN_PLACED_BUFFER_SIZE (64 * 1024)
@@ -39,7 +40,7 @@
 
 namespace Playground
 {
-enum kBuddyAllocationStrategy
+enum D3D12PLAYGROUNDGRAPHICS_API kBuddyAllocationStrategy
 {
     // This strategy uses Placed Resources to sub-allocate a buffer out of an underlying ID3D12Heap.
     // The benefit of this is that each buffer can have it's own resource state and can be treated
@@ -53,7 +54,7 @@ enum kBuddyAllocationStrategy
     kManualSubAllocationStrategy
 };
 
-struct BuddyBlock
+struct D3D12PLAYGROUNDGRAPHICS_API BuddyBlock
 {
     ByteAddressBuffer* m_pBuffer;
     ID3D12Heap* m_pBackingHeap;
@@ -77,7 +78,7 @@ struct BuddyBlock
     void Destroy();
 };
 
-class BuddyAllocator
+class D3D12PLAYGROUNDGRAPHICS_API BuddyAllocator
 {
 public:
 

@@ -29,18 +29,18 @@ enum TexConversionFlags
     kFlipVertical = 64,
 };
 
-inline uint8_t TextureOptions(bool sRGB, bool hasAlpha=false, bool invertY=false)
+D3D12PLAYGROUNDGRAPHICS_API inline uint8_t TextureOptions(bool sRGB, bool hasAlpha=false, bool invertY=false)
 {
     return (sRGB ? kSRGB : 0) | (hasAlpha ? kPreserveAlpha : 0) | (invertY ? kFlipVertical : 0);
 }
 
 // If the DDS version of the texture specified does not exist or is older than the source texture, reconvert it.
-void CompileTextureOnDemand(const std::wstring& originalFile, uint32_t flags);
+D3D12PLAYGROUNDGRAPHICS_API void CompileTextureOnDemand(const std::wstring& originalFile, uint32_t flags);
 
 // Loads a non-DDS texture such as TGA, PNG, or JPG, then converts it to a more optimal
 // DDS format with a full mip chain.  Resultant file has the same path with the file extension
 // changed to "DDS".
-bool ConvertToDDS(
+D3D12PLAYGROUNDGRAPHICS_API bool ConvertToDDS(
     const std::wstring& filePath,	// UTF8-encoded path to source file
     uint32_t Flags                  // flags ORed together
 );

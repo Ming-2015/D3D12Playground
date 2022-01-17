@@ -23,7 +23,7 @@ namespace Playground
 // This is an unbounded resource descriptor allocator.  It is intended to provide space for CPU-visible
 // resource descriptors as resources are created.  For those that need to be made shader-visible, they
 // will need to be copied to a DescriptorHeap or a DynamicDescriptorHeap.
-class DescriptorAllocator
+class D3D12PLAYGROUNDGRAPHICS_API DescriptorAllocator
 {
 public:
     DescriptorAllocator(D3D12_DESCRIPTOR_HEAP_TYPE Type) : 
@@ -51,7 +51,7 @@ protected:
 };
 
 // This handle refers to a descriptor or a descriptor table (contiguous descriptors) that is shader visible.
-class DescriptorHandle
+class D3D12PLAYGROUNDGRAPHICS_API DescriptorHandle
 {
 public:
     DescriptorHandle()
@@ -103,7 +103,7 @@ private:
     D3D12_GPU_DESCRIPTOR_HANDLE m_GpuHandle;
 };
 
-class DescriptorHeap
+class D3D12PLAYGROUNDGRAPHICS_API DescriptorHeap
 {
 public:
 

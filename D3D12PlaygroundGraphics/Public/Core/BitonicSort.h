@@ -70,11 +70,12 @@
 
 #pragma once
 
+#include "D3D12PlaygroundGraphics/libdefs.h"
 #include "GpuBuffer.h"
 
 namespace Playground::BitonicSort
 {
-    void Sort(
+    D3D12PLAYGROUNDGRAPHICS_API void Sort(
         // An existing compute context
         ComputeContext& Context,
 
@@ -98,10 +99,10 @@ namespace Playground::BitonicSort
         bool SortAscending
     );
 
-    void Test( void );
+    D3D12PLAYGROUNDGRAPHICS_API void Test( void );
 
     // Called once by Core to initialize shaders
-    void Initialize(void);
-    void Shutdown(void);
+    D3D12PLAYGROUNDGRAPHICS_API void Initialize(void);
+    D3D12PLAYGROUNDGRAPHICS_API void Shutdown(void);
 
 } // namespace BitonicSort

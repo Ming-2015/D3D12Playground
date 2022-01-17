@@ -238,7 +238,7 @@ namespace glTF
         std::vector<AnimSampler> m_samplers;
     };
 
-    class Asset
+    class D3D12PLAYGROUNDGRAPHICS_API Asset
     {
     public:
         Asset() : m_scene(nullptr) {}
@@ -280,7 +280,5 @@ namespace glTF
         void FindAttribute( Primitive& prim, json& attributes, Primitive::eAttribType type, const std::string& name);
         uint32_t ReadTextureInfo( json& info_json, glTF::Texture* &info );
     };
-
-
 } // namespace glTF
 }

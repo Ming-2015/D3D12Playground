@@ -101,7 +101,7 @@ struct Joint
     Math::Matrix3 nrmXform;
 };
 
-class Model
+class D3D12PLAYGROUNDGRAPHICS_API Model
 {
 public:
 
@@ -133,7 +133,7 @@ protected:
     void Destroy();
 };
 
-class ModelInstance
+class D3D12PLAYGROUNDGRAPHICS_API ModelInstance
 {
 public:
     ModelInstance() {}

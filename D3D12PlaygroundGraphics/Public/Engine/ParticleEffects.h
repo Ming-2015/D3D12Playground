@@ -17,5 +17,5 @@
 
 namespace Playground::ParticleEffects
 {
-    void InitFromJSON(const std::wstring& InitJsonFile);
+    D3D12PLAYGROUNDGRAPHICS_API void InitFromJSON(const std::wstring& InitJsonFile);
 }

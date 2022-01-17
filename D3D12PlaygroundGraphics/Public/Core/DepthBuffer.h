@@ -19,7 +19,7 @@ namespace Playground
 {
 class EsramAllocator;
 
-class DepthBuffer : public PixelBuffer
+class D3D12PLAYGROUNDGRAPHICS_API DepthBuffer : public PixelBuffer
 {
 public:
     DepthBuffer( float ClearDepth = 0.0f, uint8_t ClearStencil = 0 )

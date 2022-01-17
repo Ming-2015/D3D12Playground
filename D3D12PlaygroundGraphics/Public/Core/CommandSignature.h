@@ -20,7 +20,7 @@ namespace Playground
 {
 class RootSignature;
 
-class IndirectParameter
+class D3D12PLAYGROUNDGRAPHICS_API IndirectParameter
 {
     friend class CommandSignature;
 public:
@@ -89,7 +89,7 @@ protected:
     D3D12_INDIRECT_ARGUMENT_DESC m_IndirectParam;
 };
 
-class CommandSignature
+class D3D12PLAYGROUNDGRAPHICS_API CommandSignature
 {
 public:
 
