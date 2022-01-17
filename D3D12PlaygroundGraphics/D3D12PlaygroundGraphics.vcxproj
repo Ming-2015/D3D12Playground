@@ -134,16 +134,18 @@
       <ConformanceMode>false</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(OutDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <CompileAsManaged>
       </CompileAsManaged>
-      <LanguageStandard>stdcpp14</LanguageStandard>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <DisableSpecificWarnings>26812;26495;26819</DisableSpecificWarnings>
+      <AdditionalIncludeDirectories>$(OutDir);$(ProjectDir);$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalDependencies>d3d12.lib;dxgi.lib;dxguid.lib;uuid.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>d3d12.lib;dxgi.lib;dxguid.lib;uuid.lib;D3D12PlaygroundCommon.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <FxCompile>
       <ShaderType>Compute</ShaderType>
@@ -166,19 +168,21 @@
       <ConformanceMode>false</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(OutDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <CompileAsManaged>
       </CompileAsManaged>
-      <LanguageStandard>stdcpp14</LanguageStandard>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <DisableSpecificWarnings>26812;26495;26819</DisableSpecificWarnings>
+      <AdditionalIncludeDirectories>$(OutDir);$(ProjectDir);$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalDependencies>d3d12.lib;dxgi.lib;dxguid.lib;uuid.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>d3d12.lib;dxgi.lib;dxguid.lib;uuid.lib;D3D12PlaygroundCommon.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <FxCompile>
       <ShaderType>Compute</ShaderType>
@@ -205,12 +209,13 @@
       <ConformanceMode>false</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(OutDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <CompileAsManaged>
       </CompileAsManaged>
-      <LanguageStandard>stdcpp14</LanguageStandard>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <DisableSpecificWarnings>26812;26495;26819</DisableSpecificWarnings>
+      <AdditionalIncludeDirectories>$(OutDir);$(ProjectDir);$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -218,7 +223,8 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalDependencies>d3d12.lib;dxgi.lib;dxguid.lib;uuid.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>d3d12.lib;dxgi.lib;dxguid.lib;uuid.lib;D3D12PlaygroundCommon.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <FxCompile>
       <ShaderType>Compute</ShaderType>
@@ -238,16 +244,18 @@
       <ConformanceMode>false</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(OutDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <CompileAsManaged>
       </CompileAsManaged>
-      <LanguageStandard>stdcpp14</LanguageStandard>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <DisableSpecificWarnings>26812;26495;26819</DisableSpecificWarnings>
+      <AdditionalIncludeDirectories>$(OutDir);$(ProjectDir);$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalDependencies>d3d12.lib;dxgi.lib;dxguid.lib;uuid.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>D3D12PlaygroundCommon.lib;d3d12.lib;dxgi.lib;dxguid.lib;uuid.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <FxCompile>
       <ShaderModel>6.2</ShaderModel>
@@ -268,19 +276,21 @@
       <ConformanceMode>false</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(OutDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>MaxSpeed</Optimization>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <CompileAsManaged>
       </CompileAsManaged>
-      <LanguageStandard>stdcpp14</LanguageStandard>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <DisableSpecificWarnings>26812;26495;26819</DisableSpecificWarnings>
+      <AdditionalIncludeDirectories>$(OutDir);$(ProjectDir);$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalDependencies>d3d12.lib;dxgi.lib;dxguid.lib;uuid.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>D3D12PlaygroundCommon.lib;d3d12.lib;dxgi.lib;dxguid.lib;uuid.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <FxCompile>
       <ShaderModel>6.2</ShaderModel>
@@ -305,12 +315,13 @@
       <ConformanceMode>false</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <AdditionalIncludeDirectories>$(ProjectDir);$(OutDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <CompileAsManaged>
       </CompileAsManaged>
-      <LanguageStandard>stdcpp14</LanguageStandard>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <DisableSpecificWarnings>26812;26495;26819</DisableSpecificWarnings>
+      <AdditionalIncludeDirectories>$(OutDir);$(ProjectDir);$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -318,7 +329,8 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalDependencies>d3d12.lib;dxgi.lib;dxguid.lib;uuid.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>D3D12PlaygroundCommon.lib;d3d12.lib;dxgi.lib;dxguid.lib;uuid.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <FxCompile>
       <ShaderModel>6.2</ShaderModel>
@@ -331,7 +343,6 @@
   <ItemGroup>
     <None Include="cpp.hint" />
     <None Include="packages.config" />
-    <None Include="Private\Core\Math\Functions.inl" />
     <None Include="Shaders\AoBlurAndUpsampleCS.hlsli" />
     <None Include="Shaders\AoRenderCS.hlsli" />
     <None Include="Shaders\BicubicFilterFunctions.hlsli" />
@@ -367,21 +378,36 @@
     <None Include="Shaders\Lighting.hlsli" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="libdefs.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Private\Core\BitonicSort.h" />
     <ClInclude Include="Private\Core\BuddyAllocator.h" />
     <ClInclude Include="Private\Core\BufferManager.h" />
-    <ClInclude Include="Private\Core\Camera.h" />
-    <ClInclude Include="Private\Core\CameraController.h" />
-    <ClInclude Include="Private\Core\Color.h" />
-    <ClInclude Include="Private\Core\ColorBuffer.h" />
+    <ClInclude Include="Private\Internal\json.hpp" />
+    <ClInclude Include="Private\Engine\Animation.h" />
+    <ClInclude Include="Private\Engine\ConstantBuffers.h" />
+    <ClInclude Include="Private\Engine\glTF.h" />
+    <ClInclude Include="Private\Engine\IndexOptimizePostTransform.h" />
+    <ClInclude Include="Private\Engine\LightManager.h" />
+    <ClInclude Include="Private\Engine\MeshConvert.h" />
+    <ClInclude Include="Private\Engine\Model.h" />
+    <ClInclude Include="Private\Engine\ModelH3D.h" />
+    <ClInclude Include="Private\Engine\ModelLoader.h" />
+    <ClInclude Include="Private\Engine\ParticleEffects.h" />
+    <ClInclude Include="Private\Engine\Renderer.h" />
+    <ClInclude Include="Private\Engine\SponzaRenderer.h" />
+    <ClInclude Include="Private\Engine\TextureConvert.h" />
+    <ClInclude Include="Public\Core\Camera.h" />
+    <ClInclude Include="Public\Core\CameraController.h" />
+    <ClInclude Include="Public\Core\Color.h" />
+    <ClInclude Include="Public\Core\ColorBuffer.h" />
     <ClInclude Include="Private\Core\CommandAllocatorPool.h" />
-    <ClInclude Include="Private\Core\CommandContext.h" />
-    <ClInclude Include="Private\Core\CommandListManager.h" />
+    <ClInclude Include="Public\Core\CommandContext.h" />
+    <ClInclude Include="Public\Core\CommandListManager.h" />
     <ClInclude Include="Private\Core\CommandSignature.h" />
     <ClInclude Include="Private\Core\Cube.h" />
-    <ClInclude Include="Private\Core\d3dx12.h" />
-    <ClInclude Include="Private\Core\dds.h" />
+    <ClInclude Include="Private\Internal\d3dx12.h" />
+    <ClInclude Include="Private\Internal\dds.h" />
     <ClInclude Include="Private\Core\DDSTextureLoader.h" />
     <ClInclude Include="Private\Core\DepthBuffer.h" />
     <ClInclude Include="Private\Core\DepthOfField.h" />
@@ -391,73 +417,45 @@
     <ClInclude Include="Private\Core\EngineProfiling.h" />
     <ClInclude Include="Private\Core\EngineTuning.h" />
     <ClInclude Include="Private\Core\EsramAllocator.h" />
-    <ClInclude Include="Private\Core\FileUtility.h" />
     <ClInclude Include="Private\Core\Fonts\consola24.h" />
-    <ClInclude Include="Private\Core\FXAA.h" />
+    <ClInclude Include="Public\Core\FXAA.h" />
     <ClInclude Include="Public\Core\GameCore.h" />
-    <ClInclude Include="Private\Core\GameInput.h" />
+    <ClInclude Include="Public\Core\GameInput.h" />
     <ClInclude Include="Private\Core\GpuBuffer.h" />
     <ClInclude Include="Private\Core\GpuResource.h" />
     <ClInclude Include="Private\Core\GpuTimeManager.h" />
-    <ClInclude Include="Private\Core\GraphicsCommon.h" />
-    <ClInclude Include="Private\Core\GraphicsCore.h" />
-    <ClInclude Include="Private\Core\GraphRenderer.h" />
-    <ClInclude Include="Private\Core\Hash.h" />
-    <ClInclude Include="Private\Core\ImageScaling.h" />
-    <ClInclude Include="Private\Core\LinearAllocator.h" />
-    <ClInclude Include="Private\Core\Math\BoundingBox.h" />
-    <ClInclude Include="Private\Core\Math\BoundingPlane.h" />
-    <ClInclude Include="Private\Core\Math\BoundingSphere.h" />
-    <ClInclude Include="Private\Core\Math\Common.h" />
-    <ClInclude Include="Private\Core\Math\Frustum.h" />
-    <ClInclude Include="Private\Core\Math\Matrix3.h" />
-    <ClInclude Include="Private\Core\Math\Matrix4.h" />
-    <ClInclude Include="Private\Core\Math\Quaternion.h" />
-    <ClInclude Include="Private\Core\Math\Random.h" />
-    <ClInclude Include="Private\Core\Math\Scalar.h" />
-    <ClInclude Include="Private\Core\Math\Transform.h" />
-    <ClInclude Include="Private\Core\Math\Vector.h" />
-    <ClInclude Include="Private\Core\MotionBlur.h" />
-    <ClInclude Include="Private\Core\ParticleEffect.h" />
-    <ClInclude Include="Private\Core\ParticleEffectManager.h" />
-    <ClInclude Include="Private\Core\ParticleEffectProperties.h" />
-    <ClInclude Include="Private\Core\ParticleShaderStructs.h" />
-    <ClInclude Include="Private\Core\PipelineState.h" />
-    <ClInclude Include="Private\Core\PixelBuffer.h" />
-    <ClInclude Include="Private\Core\PostEffects.h" />
-    <ClInclude Include="Private\Core\ReadbackBuffer.h" />
-    <ClInclude Include="Private\Core\RootSignature.h" />
-    <ClInclude Include="Private\Core\SamplerManager.h" />
-    <ClInclude Include="Private\Core\ShadowBuffer.h" />
-    <ClInclude Include="Private\Core\ShadowCamera.h" />
-    <ClInclude Include="Private\Core\SSAO.h" />
-    <ClInclude Include="Private\Core\SystemTime.h" />
-    <ClInclude Include="Private\Core\TemporalEffects.h" />
-    <ClInclude Include="Private\Core\TextRenderer.h" />
-    <ClInclude Include="Private\Core\Texture.h" />
-    <ClInclude Include="Private\Core\TextureManager.h" />
+    <ClInclude Include="Public\Core\GraphicsCommon.h" />
+    <ClInclude Include="Public\Core\GraphicsCore.h" />
+    <ClInclude Include="Public\Core\GraphRenderer.h" />
+    <ClInclude Include="Public\Core\Hash.h" />
+    <ClInclude Include="Public\Core\ImageScaling.h" />
+    <ClInclude Include="Public\Core\LinearAllocator.h" />
+    <ClInclude Include="Public\Core\MotionBlur.h" />
+    <ClInclude Include="Public\Core\ParticleEffect.h" />
+    <ClInclude Include="Public\Core\ParticleEffectManager.h" />
+    <ClInclude Include="Public\Core\ParticleEffectProperties.h" />
+    <ClInclude Include="Public\Core\ParticleShaderStructs.h" />
+    <ClInclude Include="Public\Core\PipelineState.h" />
+    <ClInclude Include="Public\Core\PixelBuffer.h" />
+    <ClInclude Include="Public\Core\PostEffects.h" />
+    <ClInclude Include="Public\Core\ReadbackBuffer.h" />
+    <ClInclude Include="Public\Core\RootSignature.h" />
+    <ClInclude Include="Public\Core\SamplerManager.h" />
+    <ClInclude Include="Public\Core\ShadowBuffer.h" />
+    <ClInclude Include="Public\Core\ShadowCamera.h" />
+    <ClInclude Include="Public\Core\SSAO.h" />
+    <ClInclude Include="Public\Core\SystemTime.h" />
+    <ClInclude Include="Public\Core\TemporalEffects.h" />
+    <ClInclude Include="Public\Core\TextRenderer.h" />
+    <ClInclude Include="Public\Core\Texture.h" />
+    <ClInclude Include="Public\Core\TextureManager.h" />
     <ClInclude Include="Private\Core\UploadBuffer.h" />
-    <ClInclude Include="Private\Core\Utility.h" />
     <ClInclude Include="Private\Core\Util\CommandLineArg.h" />
-    <ClInclude Include="Private\Core\VectorMath.h" />
     <ClInclude Include="Private\Internal\D3D12MemAlloc.h" />
-    <ClInclude Include="Private\Model\Animation.h" />
-    <ClInclude Include="Private\Model\ConstantBuffers.h" />
-    <ClInclude Include="Private\Model\glTF.h" />
-    <ClInclude Include="Private\Model\IndexOptimizePostTransform.h" />
-    <ClInclude Include="Private\Model\json.hpp" />
-    <ClInclude Include="Private\Model\LightManager.h" />
-    <ClInclude Include="Private\Model\MeshConvert.h" />
-    <ClInclude Include="Private\Model\Model.h" />
-    <ClInclude Include="Private\Model\ModelH3D.h" />
-    <ClInclude Include="Private\Model\ModelLoader.h" />
-    <ClInclude Include="Private\Model\ParticleEffects.h" />
-    <ClInclude Include="Private\Model\Renderer.h" />
-    <ClInclude Include="Private\Model\SponzaRenderer.h" />
-    <ClInclude Include="Private\Model\TextureConvert.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="libdefs.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">Create</PrecompiledHeader>
@@ -486,7 +484,6 @@
     <ClCompile Include="Private\Core\DynamicDescriptorHeap.cpp" />
     <ClCompile Include="Private\Core\EngineProfiling.cpp" />
     <ClCompile Include="Private\Core\EngineTuning.cpp" />
-    <ClCompile Include="Private\Core\FileUtility.cpp" />
     <ClCompile Include="Private\Core\FXAA.cpp" />
     <ClCompile Include="Private\Core\GameCore.cpp" />
     <ClCompile Include="Private\Core\GameInput.cpp" />
@@ -497,9 +494,6 @@
     <ClCompile Include="Private\Core\GraphRenderer.cpp" />
     <ClCompile Include="Private\Core\ImageScaling.cpp" />
     <ClCompile Include="Private\Core\LinearAllocator.cpp" />
-    <ClCompile Include="Private\Core\Math\BoundingSphere.cpp" />
-    <ClCompile Include="Private\Core\Math\Frustum.cpp" />
-    <ClCompile Include="Private\Core\Math\Random.cpp" />
     <ClCompile Include="Private\Core\MotionBlur.cpp" />
     <ClCompile Include="Private\Core\ParticleEffect.cpp" />
     <ClCompile Include="Private\Core\ParticleEffectManager.cpp" />
@@ -519,23 +513,22 @@
     <ClCompile Include="Private\Core\Texture.cpp" />
     <ClCompile Include="Private\Core\TextureManager.cpp" />
     <ClCompile Include="Private\Core\UploadBuffer.cpp" />
-    <ClCompile Include="Private\Core\Utility.cpp" />
     <ClCompile Include="Private\Core\Util\CommandLineArg.cpp" />
     <ClCompile Include="Private\Internal\D3D12MemAlloc.cpp" />
-    <ClCompile Include="Private\Model\Animation.cpp" />
-    <ClCompile Include="Private\Model\BuildH3D.cpp" />
-    <ClCompile Include="Private\Model\glTF.cpp" />
-    <ClCompile Include="Private\Model\IndexOptimizePostTransform.cpp" />
-    <ClCompile Include="Private\Model\LightManager.cpp" />
-    <ClCompile Include="Private\Model\MeshConvert.cpp" />
-    <ClCompile Include="Private\Model\Model.cpp" />
-    <ClCompile Include="Private\Model\ModelConvert.cpp" />
-    <ClCompile Include="Private\Model\ModelH3D.cpp" />
-    <ClCompile Include="Private\Model\ModelLoader.cpp" />
-    <ClCompile Include="Private\Model\ParticleEffects.cpp" />
-    <ClCompile Include="Private\Model\Renderer.cpp" />
-    <ClCompile Include="Private\Model\SponzaRenderer.cpp" />
-    <ClCompile Include="Private\Model\TextureConvert.cpp" />
+    <ClCompile Include="Private\Engine\Animation.cpp" />
+    <ClCompile Include="Private\Engine\BuildH3D.cpp" />
+    <ClCompile Include="Private\Engine\glTF.cpp" />
+    <ClCompile Include="Private\Engine\IndexOptimizePostTransform.cpp" />
+    <ClCompile Include="Private\Engine\LightManager.cpp" />
+    <ClCompile Include="Private\Engine\MeshConvert.cpp" />
+    <ClCompile Include="Private\Engine\Model.cpp" />
+    <ClCompile Include="Private\Engine\ModelConvert.cpp" />
+    <ClCompile Include="Private\Engine\ModelH3D.cpp" />
+    <ClCompile Include="Private\Engine\ModelLoader.cpp" />
+    <ClCompile Include="Private\Engine\ParticleEffects.cpp" />
+    <ClCompile Include="Private\Engine\Renderer.cpp" />
+    <ClCompile Include="Private\Engine\SponzaRenderer.cpp" />
+    <ClCompile Include="Private\Engine\TextureConvert.cpp" />
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="Shaders\AdaptExposureCS.hlsl" />

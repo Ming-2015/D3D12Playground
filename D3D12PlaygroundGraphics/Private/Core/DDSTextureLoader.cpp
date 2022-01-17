@@ -22,11 +22,11 @@
 
 #include "DDSTextureLoader.h"
 
-#include "dds.h"
+#include "Private/Internal/dds.h"
 #include "GpuResource.h"
-#include "GraphicsCore.h"
-#include "CommandContext.h"
-#include "Utility.h"
+#include "Public/Core/GraphicsCore.h"
+#include "Public/Core/CommandContext.h"
+#include "D3D12PlaygroundCommon/Utils/Utility.h"
 
 struct handle_closer { void operator()(HANDLE h) { if (h) CloseHandle(h); } };
 typedef public std::unique_ptr<void, handle_closer> ScopedHandle;
@@ -1184,8 +1184,8 @@ static HRESULT CreateTextureFromDDS( _In_ ID3D12Device* d3dDevice,
 
         if (SUCCEEDED(hr))
         {
-            GpuResource DestTexture(*texture, D3D12_RESOURCE_STATE_COPY_DEST);
-            CommandContext::InitializeTexture(DestTexture, subresourceCount, initData.get());
+            Playground::GpuResource DestTexture(*texture, D3D12_RESOURCE_STATE_COPY_DEST);
+            Playground::CommandContext::InitializeTexture(DestTexture, subresourceCount, initData.get());
         }
     }
 

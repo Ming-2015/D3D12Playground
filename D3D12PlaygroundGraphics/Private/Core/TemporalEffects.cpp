@@ -12,19 +12,21 @@
 //
 
 #include "pch.h"
-#include "TemporalEffects.h"
+#include "Public/Core/TemporalEffects.h"
 #include "BufferManager.h"
-#include "GraphicsCore.h"
-#include "GraphicsCommon.h"
-#include "CommandContext.h"
-#include "SystemTime.h"
-#include "PostEffects.h"
+#include "Public/Core/GraphicsCore.h"
+#include "Public/Core/GraphicsCommon.h"
+#include "Public/Core/CommandContext.h"
+#include "Public/Core/SystemTime.h"
+#include "Public/Core/PostEffects.h"
 
 #include "CompiledShaders/TemporalBlendCS.h"
 #include "CompiledShaders/BoundNeighborhoodCS.h"
 #include "CompiledShaders/ResolveTAACS.h"
 #include "CompiledShaders/SharpenTAACS.h"
 
+namespace Playground
+{
 using namespace Graphics;
 using namespace Math;
 using namespace TemporalEffects;
@@ -219,4 +221,5 @@ void TemporalEffects::SharpenImage(ComputeContext& Context, ColorBuffer& Tempora
     Context.SetDynamicDescriptor(1, 0, TemporalColor.GetSRV());
     Context.SetDynamicDescriptor(2, 0, g_SceneColorBuffer.GetUAV());
     Context.Dispatch2D(g_SceneColorBuffer.GetWidth(), g_SceneColorBuffer.GetHeight());
+}
 }

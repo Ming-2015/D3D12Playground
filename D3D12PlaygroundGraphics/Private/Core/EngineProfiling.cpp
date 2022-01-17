@@ -12,28 +12,30 @@
 //
 
 #include "pch.h"
-#include "SystemTime.h"
+#include "Public/Core/SystemTime.h"
 #include "Display.h"
-#include "TextRenderer.h"
-#include "GraphRenderer.h"
-#include "GameInput.h"
+#include "Public/Core/TextRenderer.h"
+#include "Public/Core/GraphRenderer.h"
+#include "Public/Core/GameInput.h"
 #include "GpuTimeManager.h"
-#include "CommandContext.h"
+#include "Public/Core/CommandContext.h"
 #include <vector>
 #include <unordered_map>
 #include <array>
 
-using namespace Graphics;
-using namespace GraphRenderer;
-using namespace Math;
+using namespace Playground::Graphics;
+using namespace Playground::GraphRenderer;
+using namespace Playground::Math;
 using namespace std;
 
 #define PERF_GRAPH_ERROR uint32_t(0xFFFFFFFF)
-namespace EngineProfiling
+namespace Playground::EngineProfiling
 {
     bool Paused = false;
 }
 
+namespace Playground
+{
 class StatHistory
 {
 public:
@@ -610,4 +612,5 @@ void NestedTimingTree::StoreToGraph(void)
 
     for (auto node : m_Children)
         node->StoreToGraph();
+}
 }

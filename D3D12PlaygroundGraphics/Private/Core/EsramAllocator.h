@@ -15,6 +15,8 @@
 
 #include "pch.h"
 
+namespace Playground
+{
 class EsramAllocator
 {
 public:
@@ -35,3 +37,4 @@ public:
     }
 
 };
+}

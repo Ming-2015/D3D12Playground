@@ -13,13 +13,15 @@
 
 
 #include "pch.h"
-#include "TextRenderer.h"
-#include "GameInput.h"
-#include "Color.h"
+#include "Public/Core/TextRenderer.h"
+#include "Public/Core/GameInput.h"
+#include "Public/Core/Color.h"
 #include "Display.h"
-#include "CommandContext.h"
-#include "GraphRenderer.h"
+#include "Public/Core/CommandContext.h"
+#include "Public/Core/GraphRenderer.h"
 
+namespace Playground
+{
 using namespace std;
 using namespace Math;
 using namespace Graphics;
@@ -740,4 +742,5 @@ void EngineTuning::RegisterVariable( const std::string& path, EngineVar& var )
 bool EngineTuning::IsFocused( void )
 {
     return sm_IsVisible;
+}
 }

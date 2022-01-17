@@ -37,6 +37,8 @@
 #define DECREASE_BUDDY_COUNTER(A, B)
 #endif
 
+namespace Playground
+{
 enum kBuddyAllocationStrategy
 {
     // This strategy uses Placed Resources to sub-allocate a buffer out of an underlying ID3D12Heap.
@@ -147,3 +149,4 @@ private:
     size_t m_InternalFragmentation;
 #endif
 };
+}

@@ -18,6 +18,8 @@
 #include <mutex>
 #include <stdint.h>
 
+namespace Playground
+{
 class CommandAllocatorPool
 {
 public:
@@ -40,3 +42,4 @@ private:
     std::queue<std::pair<uint64_t, ID3D12CommandAllocator*>> m_ReadyAllocators;
     std::mutex m_AllocatorMutex;
 };
+}

@@ -19,6 +19,8 @@
 #include <map>
 #include <set>
 
+namespace Playground
+{
 class VariableGroup;
 class TextContext;
 
@@ -217,3 +219,4 @@ namespace EngineTuning
     bool IsFocused( void );
 
 } // namespace EngineTuning
+}

@@ -18,6 +18,8 @@
 #include <queue>
 #include <string>
 
+namespace Playground
+{
 // This is an unbounded resource descriptor allocator.  It is intended to provide space for CPU-visible
 // resource descriptors as resources are created.  For those that need to be made shader-visible, they
 // will need to be copied to a DescriptorHeap or a DynamicDescriptorHeap.
@@ -134,3 +136,4 @@ private:
     DescriptorHandle m_FirstHandle;
     DescriptorHandle m_NextFreeHandle;
 };
+}

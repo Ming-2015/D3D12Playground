@@ -12,10 +12,12 @@
 //
 
 #include "pch.h"
-#include "ShadowBuffer.h"
+#include "Public/Core/ShadowBuffer.h"
 #include "EsramAllocator.h"
-#include "CommandContext.h"
+#include "Public/Core/CommandContext.h"
 
+namespace Playground
+{
 void ShadowBuffer::Create( const std::wstring& Name, uint32_t Width, uint32_t Height, D3D12_GPU_VIRTUAL_ADDRESS VidMemPtr )
 {
     DepthBuffer::Create( Name, Width, Height, DXGI_FORMAT_D16_UNORM, VidMemPtr );
@@ -63,4 +65,5 @@ void ShadowBuffer::BeginRendering( GraphicsContext& Context )
 void ShadowBuffer::EndRendering( GraphicsContext& Context )
 {
     Context.TransitionResource(*this, D3D12_RESOURCE_STATE_PIXEL_SHADER_RESOURCE);
+}
 }

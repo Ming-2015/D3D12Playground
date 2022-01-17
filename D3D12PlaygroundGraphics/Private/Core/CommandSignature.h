@@ -16,6 +16,8 @@
 
 #include "pch.h"
 
+namespace Playground
+{
 class RootSignature;
 
 class IndirectParameter
@@ -135,3 +137,4 @@ protected:
     std::unique_ptr<IndirectParameter[]> m_ParamArray;
     Microsoft::WRL::ComPtr<ID3D12CommandSignature> m_Signature;
 };
+}

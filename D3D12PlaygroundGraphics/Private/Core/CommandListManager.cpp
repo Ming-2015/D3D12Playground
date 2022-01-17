@@ -12,8 +12,10 @@
 //
 
 #include "pch.h"
-#include "CommandListManager.h"
+#include "Public/Core/CommandListManager.h"
 
+namespace Playground
+{
 CommandQueue::CommandQueue(D3D12_COMMAND_LIST_TYPE Type) :
     m_Type(Type),
     m_CommandQueue(nullptr),
@@ -200,4 +202,5 @@ ID3D12CommandAllocator* CommandQueue::RequestAllocator()
 void CommandQueue::DiscardAllocator(uint64_t FenceValue, ID3D12CommandAllocator* Allocator)
 {
     m_AllocatorPool.DiscardAllocator(FenceValue, Allocator);
+}
 }

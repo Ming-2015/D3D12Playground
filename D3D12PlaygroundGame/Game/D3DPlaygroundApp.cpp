@@ -2,7 +2,7 @@
 #include "pch.h"
 #include "D3D12PlaygroundGraphics/Public/Core/GameCore.h"
 
-class D3D12PlaygroundApp : public GameCore::IGameApp
+class D3D12PlaygroundApp : public Playground::GameCore::IGameApp
 {
 public:
 
@@ -39,5 +39,5 @@ void D3D12PlaygroundApp::RenderScene()
 
 int WINAPI wWinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE /*hPrevInstance*/, _In_ LPWSTR /*lpCmdLine*/, _In_ int nCmdShow)
 {
-    return GameCore::RunApplication(D3D12PlaygroundApp(), L"Test", hInstance, nCmdShow);
+    return Playground::GameCore::RunApplication(D3D12PlaygroundApp(), L"Test", hInstance, nCmdShow);
 }

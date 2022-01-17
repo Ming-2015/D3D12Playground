@@ -13,8 +13,10 @@
 
 #pragma once
 
-#include "PixelBuffer.h"
+#include "Public/Core/PixelBuffer.h"
 
+namespace Playground
+{
 class EsramAllocator;
 
 class DepthBuffer : public PixelBuffer
@@ -68,3 +70,4 @@ protected:
     D3D12_CPU_DESCRIPTOR_HANDLE m_hDepthSRV;
     D3D12_CPU_DESCRIPTOR_HANDLE m_hStencilSRV;
 };
+}

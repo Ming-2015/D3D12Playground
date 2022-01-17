@@ -12,11 +12,13 @@
 //
 
 #include "pch.h"
-#include "ReadbackBuffer.h"
-#include "GraphicsCore.h"
+#include "Public/Core/ReadbackBuffer.h"
+#include "Public/Core/GraphicsCore.h"
 
-using namespace Graphics;
+using namespace Playground::Graphics;
 
+namespace Playground
+{
 void ReadbackBuffer::Create( const std::wstring& name, uint32_t NumElements, uint32_t ElementSize )
 {
     Destroy();
@@ -70,4 +72,5 @@ void* ReadbackBuffer::Map(void)
 void ReadbackBuffer::Unmap(void)
 {
     m_pResource->Unmap(0, &CD3DX12_RANGE(0, 0));
+}
 }

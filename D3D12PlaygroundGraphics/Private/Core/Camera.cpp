@@ -12,10 +12,10 @@
 //
 
 #include "pch.h"
-#include "Camera.h"
+#include "Public/Core/Camera.h"
 #include <cmath>
 
-using namespace Math;
+using namespace Playground::Math;
 
 void BaseCamera::SetLookDirection( Vector3 forward, Vector3 up )
 {

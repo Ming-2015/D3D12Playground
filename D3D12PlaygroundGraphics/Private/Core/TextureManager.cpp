@@ -12,20 +12,22 @@
 //
 
 #include "pch.h"
-#include "TextureManager.h"
+#include "Public/Core/TextureManager.h"
 #include "DDSTextureLoader.h"
-#include "Texture.h"
-#include "Utility.h"
-#include "FileUtility.h"
-#include "GraphicsCommon.h"
-#include "CommandContext.h"
+#include "Public/Core/Texture.h"
+#include "Public/Core/GraphicsCommon.h"
+#include "Public/Core/CommandContext.h"
+
+#include <D3D12PlaygroundCommon/Utils/FileUtility.h>
+#include <D3D12PlaygroundCommon/Utils/Utility.h>
 #include <map>
 #include <thread>
 
 using namespace std;
-using namespace Graphics;
-using Utility::ByteArray;
+using namespace Playground::Graphics;
 
+namespace Playground
+{
 //
 // A ManagedTexture allows for multiple threads to request a Texture load of the same
 // file.  It also contains a reference count of the Texture so that it can be freed
@@ -100,7 +102,7 @@ namespace TextureManager
             }
         }
 
-        Utility::ByteArray ba = Utility::ReadFileSync( s_RootPath + fileName );
+        ByteArray ba = Utility::ReadFileSync( s_RootPath + fileName );
         tex->CreateFromMemory(ba, fallback, forceSRGB);
 
         // This was the first time it was requested, so indicate that the caller must read the file
@@ -235,4 +237,5 @@ TextureRef TextureManager::LoadDDSFromFile( const wstring& filePath, eDefaultTex
 TextureRef TextureManager::LoadDDSFromFile( const string& filePath, eDefaultTexture fallback, bool forceSRGB )
 {
     return LoadDDSFromFile(Utility::UTF8ToWideString(filePath), fallback, forceSRGB);
+}
 }

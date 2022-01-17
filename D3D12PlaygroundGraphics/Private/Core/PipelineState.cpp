@@ -11,22 +11,24 @@
 // Author:  James Stanard
 
 #include "pch.h"
-#include "GraphicsCore.h"
-#include "PipelineState.h"
-#include "RootSignature.h"
-#include "Hash.h"
+#include "Public/Core/GraphicsCore.h"
+#include "Public/Core/PipelineState.h"
+#include "Public/Core/RootSignature.h"
+#include "Public/Core/Hash.h"
 #include <map>
 #include <thread>
 #include <mutex>
 
-using Math::IsAligned;
-using namespace Graphics;
+using Playground::Math::IsAligned;
+using namespace Playground::Graphics;
 using Microsoft::WRL::ComPtr;
 using namespace std;
 
 static map< size_t, ComPtr<ID3D12PipelineState> > s_GraphicsPSOHashMap;
 static map< size_t, ComPtr<ID3D12PipelineState> > s_ComputePSOHashMap;
 
+namespace Playground
+{
 void PSO::DestroyAll(void)
 {
     s_GraphicsPSOHashMap.clear();
@@ -202,4 +204,5 @@ ComputePSO::ComputePSO(const wchar_t* Name)
 {
     ZeroMemory(&m_PSODesc, sizeof(m_PSODesc));
     m_PSODesc.NodeMask = 1;
+}
 }

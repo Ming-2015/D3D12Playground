@@ -14,11 +14,14 @@
 #pragma once
 
 #include <string>
-#include "TextRenderer.h"
+#include "Public/Core/TextRenderer.h"
 
-class CommandContext;
+namespace Playground
+{
+    class CommandContext;
+}
 
-namespace EngineProfiling
+namespace Playground::EngineProfiling
 {
     void Update();
 
@@ -31,6 +34,8 @@ namespace EngineProfiling
     bool IsPaused();
 }
 
+namespace Playground
+{
 #ifdef RELEASE
 class ScopedTimer
 {
@@ -59,3 +64,4 @@ private:
     CommandContext* m_Context;
 };
 #endif
+}

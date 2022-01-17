@@ -15,7 +15,7 @@
 
 #include "EngineTuning.h"
 
-namespace DepthOfField
+namespace Playground::DepthOfField
 {
     extern BoolVar Enable;
 

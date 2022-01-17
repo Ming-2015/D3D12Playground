@@ -12,8 +12,10 @@
 //
 
 #include "pch.h"
-#include "SystemTime.h"
+#include "Public/Core/SystemTime.h"
 
+namespace Playground
+{
 double SystemTime::sm_CpuTickDelta = 0.0;
 
 // Query the performance counter frequency
@@ -36,4 +38,5 @@ void SystemTime::BusyLoopSleep( float SleepTime )
 {
     int64_t finalTick = (int64_t)((double)SleepTime / sm_CpuTickDelta) + GetCurrentTick();
     while (GetCurrentTick() < finalTick);
+}
 }

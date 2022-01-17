@@ -13,11 +13,13 @@
 
 #include "pch.h"
 #include "DescriptorHeap.h"
-#include "GraphicsCore.h"
-#include "CommandListManager.h"
+#include "Public/Core/GraphicsCore.h"
+#include "Public/Core/CommandListManager.h"
 
-using namespace Graphics;
+using namespace Playground::Graphics;
 
+namespace Playground
+{
 //
 // DescriptorAllocator implementation
 //
@@ -110,4 +112,5 @@ bool DescriptorHeap::ValidateHandle( const DescriptorHandle& DHandle ) const
         return false;
 
     return true;
+}
 }

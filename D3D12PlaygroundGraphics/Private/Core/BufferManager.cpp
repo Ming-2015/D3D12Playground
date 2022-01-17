@@ -14,11 +14,11 @@
 #include "pch.h"
 #include "BufferManager.h"
 #include "Display.h"
-#include "CommandContext.h"
+#include "Public/Core/CommandContext.h"
 #include "EsramAllocator.h"
-#include "TemporalEffects.h"
+#include "Public/Core/TemporalEffects.h"
 
-namespace Graphics
+namespace Playground::Graphics
 {
     DepthBuffer g_SceneDepthBuffer;
     ColorBuffer g_SceneColorBuffer;
@@ -89,6 +89,8 @@ namespace Graphics
 #define HDR_MOTION_FORMAT DXGI_FORMAT_R16G16B16A16_FLOAT
 #define DSV_FORMAT DXGI_FORMAT_D32_FLOAT
 
+namespace Playground
+{
 void Graphics::InitializeRenderingBuffers( uint32_t bufferWidth, uint32_t bufferHeight )
 {
     GraphicsContext& InitContext = GraphicsContext::Begin();
@@ -313,4 +315,5 @@ void Graphics::DestroyRenderingBuffers()
     g_FXAAColorQueue.Destroy();
 
     g_GenMipsBuffer.Destroy();
+}
 }

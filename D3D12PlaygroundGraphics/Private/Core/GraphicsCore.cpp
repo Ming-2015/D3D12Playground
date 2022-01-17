@@ -12,24 +12,24 @@
 //
 
 #include "pch.h"
-#include "GraphicsCore.h"
+#include "Public/Core/GraphicsCore.h"
 #include "Public/Core/GameCore.h"
 #include "BufferManager.h"
 #include "GpuTimeManager.h"
-#include "PostEffects.h"
-#include "SSAO.h"
-#include "TextRenderer.h"
-#include "ColorBuffer.h"
-#include "SystemTime.h"
-#include "SamplerManager.h"
+#include "Public/Core/PostEffects.h"
+#include "Public/Core/SSAO.h"
+#include "Public/Core/TextRenderer.h"
+#include "Public/Core/ColorBuffer.h"
+#include "Public/Core/SystemTime.h"
+#include "Public/Core/SamplerManager.h"
 #include "DescriptorHeap.h"
-#include "CommandContext.h"
-#include "CommandListManager.h"
-#include "RootSignature.h"
+#include "Public/Core/CommandContext.h"
+#include "Public/Core/CommandListManager.h"
+#include "Public/Core/RootSignature.h"
 #include "CommandSignature.h"
-#include "ParticleEffectManager.h"
-#include "GraphRenderer.h"
-#include "TemporalEffects.h"
+#include "Public/Core/ParticleEffectManager.h"
+#include "Public/Core/GraphRenderer.h"
+#include "Public/Core/TemporalEffects.h"
 #include "Display.h"
 
 #pragma comment(lib, "d3d12.lib") 
@@ -38,9 +38,9 @@
     #include <winreg.h>		// To read the registry
 #endif
 
-using namespace Math;
+using namespace Playground::Math;
 
-namespace Graphics
+namespace Playground::Graphics
 {
 #ifndef RELEASE
     const GUID WKPDID_D3DDebugObjectName = { 0x429b8c22,0x9188,0x4b0c, { 0x87,0x42,0xac,0xb0,0xbf,0x85,0xc2,0x00 }};
@@ -149,6 +149,8 @@ namespace Graphics
     }
 }
 
+namespace Playground
+{
 // Initialize the DirectX resources required to run.
 void Graphics::Initialize(void)
 {
@@ -420,4 +422,5 @@ void Graphics::Shutdown( void )
         g_Device->Release();
         g_Device = nullptr;
     }
+}
 }

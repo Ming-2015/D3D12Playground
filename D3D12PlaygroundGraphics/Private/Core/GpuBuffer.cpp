@@ -13,14 +13,16 @@
 
 #include "pch.h"
 #include "GpuBuffer.h"
-#include "GraphicsCore.h"
+#include "Public/Core/GraphicsCore.h"
 #include "EsramAllocator.h"
-#include "CommandContext.h"
+#include "Public/Core/CommandContext.h"
 #include "BufferManager.h"
 #include "UploadBuffer.h"
 
-using namespace Graphics;
+using namespace Playground::Graphics;
 
+namespace Playground
+{
 void GpuBuffer::Create( const std::wstring& name, uint32_t NumElements, uint32_t ElementSize, const void* initialData )
 {
     Destroy();
@@ -250,4 +252,4 @@ const D3D12_CPU_DESCRIPTOR_HANDLE& StructuredBuffer::GetCounterUAV(CommandContex
     Context.TransitionResource(m_CounterBuffer, D3D12_RESOURCE_STATE_UNORDERED_ACCESS);
     return m_CounterBuffer.GetUAV();
 }
-
+}

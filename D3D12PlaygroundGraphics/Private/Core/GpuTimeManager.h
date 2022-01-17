@@ -17,7 +17,7 @@
 
 class CommandContext;
 
-namespace GpuTimeManager
+namespace Playground::GpuTimeManager
 {
     void Initialize( uint32_t MaxNumTimers = 4096 );
     void Shutdown();

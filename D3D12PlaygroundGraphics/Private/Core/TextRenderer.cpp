@@ -12,25 +12,28 @@
 //
 
 #include "pch.h"
-#include "TextRenderer.h"
-#include "FileUtility.h"
-#include "Texture.h"
-#include "SystemTime.h"
-#include "GraphicsCore.h"
-#include "CommandContext.h"
-#include "PipelineState.h"
-#include "RootSignature.h"
+#include "Public/Core/TextRenderer.h"
+#include "Public/Core/Texture.h"
+#include "Public/Core/SystemTime.h"
+#include "Public/Core/GraphicsCore.h"
+#include "Public/Core/CommandContext.h"
+#include "Public/Core/PipelineState.h"
+#include "Public/Core/RootSignature.h"
 #include "BufferManager.h"
 #include "CompiledShaders/TextVS.h"
 #include "CompiledShaders/TextAntialiasPS.h"
 #include "CompiledShaders/TextShadowPS.h"
 #include "Fonts/consola24.h"
+
+#include <D3D12PlaygroundCommon/Utils/FileUtility.h>
 #include <map>
 #include <string>
 #include <cstdio>
 #include <memory>
 #include <malloc.h>
 
+namespace Playground
+{
 using namespace Graphics;
 using namespace Math;
 using namespace std;
@@ -103,7 +106,7 @@ namespace TextRenderer
 
         bool Load( const wstring& fileName )
         {
-            Utility::ByteArray ba = Utility::ReadFileSync( fileName );
+            ByteArray ba = Utility::ReadFileSync( fileName );
 
             if (ba->size() == 0)
             {
@@ -111,7 +114,7 @@ namespace TextRenderer
                 return false;
             }
 
-            LoadFromBinary( fileName.c_str(), ba->data(), ba->size() );
+            LoadFromBinary( fileName.c_str(), reinterpret_cast<uint8_t*>(ba->data()), ba->size() );
 
             return true;
         }
@@ -540,4 +543,5 @@ void TextContext::DrawFormattedString( const char* format, ... )
     vsprintf_s( buffer, 256, format, ap );
     va_end(ap);
     DrawString( string(buffer) );
+}
 }

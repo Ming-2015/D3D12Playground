@@ -13,11 +13,11 @@
 
 #include "pch.h"
 #include "DepthOfField.h"
-#include "RootSignature.h"
-#include "PipelineState.h"
-#include "CommandContext.h"
+#include "Public/Core/RootSignature.h"
+#include "Public/Core/PipelineState.h"
+#include "Public/Core/CommandContext.h"
 #include "BufferManager.h"
-#include "TemporalEffects.h"
+#include "Public/Core/TemporalEffects.h"
 
 #include "CompiledShaders/DoFPass1CS.h"
 #include "CompiledShaders/DoFTilePassCS.h"
@@ -40,9 +40,11 @@
 #include "CompiledShaders/DoFDebugGreenCS.h"
 #include "CompiledShaders/DoFDebugBlueCS.h"
 
-using namespace Graphics;
+#include <D3D12PlaygroundCommon/Math/Common.h>
 
-namespace DepthOfField
+using namespace Playground::Graphics;
+
+namespace Playground::DepthOfField
 {
     BoolVar Enable("Graphics/Depth of Field/Enable", false);
     BoolVar EnablePreFilter("Graphics/Depth of Field/PreFilter", true);
@@ -86,6 +88,8 @@ namespace DepthOfField
     IndirectArgsBuffer s_IndirectParameters;
 }
 
+namespace Playground
+{
 void DepthOfField::Initialize( void )
 {
     s_RootSignature.Reset(4, 3);
@@ -355,4 +359,5 @@ void DepthOfField::Render( CommandContext& BaseContext, float /*NearClipDist*/, 
 
         Context.InsertUAVBarrier(g_SceneColorBuffer);
     }
+}
 }

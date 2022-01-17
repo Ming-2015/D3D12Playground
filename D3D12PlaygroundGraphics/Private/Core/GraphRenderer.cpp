@@ -12,15 +12,14 @@
 //
 
 #include "pch.h"
-#include "GraphRenderer.h"
-#include "CommandContext.h"
-#include "PipelineState.h"
-#include "RootSignature.h"
+#include "Public/Core/GraphRenderer.h"
+#include "Public/Core/CommandContext.h"
+#include "Public/Core/PipelineState.h"
+#include "Public/Core/RootSignature.h"
 #include "BufferManager.h"
-#include "GameInput.h"
-#include "SystemTime.h"
+#include "Public/Core/GameInput.h"
+#include "Public/Core/SystemTime.h"
 #include "EngineProfiling.h"
-
 #include "CompiledShaders/PerfGraphBackgroundVS.h"
 #include "CompiledShaders/PerfGraphVS.h"
 #include "CompiledShaders/PerfGraphPS.h"
@@ -33,10 +32,10 @@
 #define GLOBAL_NODE_COUNT 512
 #define PROFILE_DEBUG_VAR_COUNT 2
 
-using namespace Graphics;
+using namespace Playground::Graphics;
 using namespace std;
-using namespace GraphRenderer;
-using namespace Math;
+using namespace Playground::GraphRenderer;
+using namespace Playground::Math;
 
 __declspec(align(16)) struct CBGraph
 {	
@@ -46,6 +45,8 @@ __declspec(align(16)) struct CBGraph
     uint32_t FrameID;
 };
 
+namespace Playground
+{
 class GraphVector;
 
 class PerfGraph
@@ -585,4 +586,5 @@ void PerfGraph::RenderGraph( GraphicsContext& Context, uint32_t vertexCount, D3D
         if (debugVarCount > 1)
             viewport.TopLeftY += viewport.Height + topMargin;
     }
+}
 }

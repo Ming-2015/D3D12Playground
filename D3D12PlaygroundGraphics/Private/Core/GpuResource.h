@@ -13,6 +13,12 @@
 
 #pragma once
 
+#include <d3d12.h>
+#include <wrl.h>
+#include "D3D12PlaygroundGraphics/pch.h"
+
+namespace Playground
+{
 class GpuResource
 {
     friend class CommandContext;
@@ -66,3 +72,4 @@ protected:
     // Used to identify when a resource changes so descriptors can be copied etc.
     uint32_t m_VersionID = 0;
 };
+}

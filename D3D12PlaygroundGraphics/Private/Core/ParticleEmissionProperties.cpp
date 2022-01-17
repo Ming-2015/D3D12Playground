@@ -12,8 +12,10 @@
 
 #pragma once
 #include "pch.h"
-#include "ParticleShaderStructs.h"
+#include "Public/Core/ParticleShaderStructs.h"
 
+namespace Playground
+{
 EmissionProperties* CreateEmissionProperties()
 {
     EmissionProperties* emitProps = new EmissionProperties;    
@@ -22,10 +24,11 @@ EmissionProperties* CreateEmissionProperties()
     emitProps->EmitDirW = XMFLOAT3(0.0,0.0,1.0); 
     emitProps->EmitRightW = XMFLOAT3(1.0,0.0,0.0); 
     emitProps->EmitUpW = XMFLOAT3(0.0,1.0,0.0);
-    emitProps->Restitution = 0.6;
-    emitProps->FloorHeight = -0.7;
-    emitProps->EmitSpeed = 1.0;
+    emitProps->Restitution = 0.6f;
+    emitProps->FloorHeight = -0.7f;
+    emitProps->EmitSpeed = 1.0f;
     emitProps->Gravity = XMFLOAT3(0, -5, 0);
     emitProps->MaxParticles = 500;
     return emitProps;
 };
+}

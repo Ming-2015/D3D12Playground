@@ -15,7 +15,7 @@
 
 #include <cstdint>
 
-namespace Display
+namespace Playground::Display
 {
     void Initialize(void);
     void Shutdown(void);
@@ -23,7 +23,7 @@ namespace Display
     void Present(void);
 }
 
-namespace Graphics
+namespace Playground::Graphics
 {
     extern uint32_t g_DisplayWidth;
     extern uint32_t g_DisplayHeight;
