@@ -12,12 +12,14 @@
 //
 
 #include "pch.h"
-#include "Public/Core/RootSignature.h"
-#include "Public/Core/GraphicsCore.h"
+
 #include "Public/Core/Hash.h"
+#include "Public/Core/GraphicsCore.h"
+#include "Public/Core/RootSignature.h"
+
 #include <map>
-#include <thread>
 #include <mutex>
+#include <thread>
 
 using namespace Playground::Graphics;
 using namespace std;

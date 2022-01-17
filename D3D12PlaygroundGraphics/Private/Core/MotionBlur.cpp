@@ -12,26 +12,26 @@
 //
 
 #include "pch.h"
-#include "Public/Core/MotionBlur.h"
-#include "Public/Core/Camera.h"
-#include "BufferManager.h"
-#include "Public/Core/GraphicsCore.h"
-#include "Public/Core/GraphicsCommon.h"
-#include "Public/Core/CommandContext.h"
-#include "Public/Core/Camera.h"
-#include "Public/Core/TemporalEffects.h"
-#include "Public/Core/PostEffects.h"
-#include "Public/Core/SystemTime.h"
 
-#include "CompiledShaders/ScreenQuadCommonVS.h"
+#include "CompiledShaders/BoundNeighborhoodCS.h"
 #include "CompiledShaders/CameraMotionBlurPrePassCS.h"
 #include "CompiledShaders/CameraMotionBlurPrePassLinearZCS.h"
+#include "CompiledShaders/CameraVelocityCS.h"
 #include "CompiledShaders/MotionBlurPrePassCS.h"
 #include "CompiledShaders/MotionBlurFinalPassCS.h"
 #include "CompiledShaders/MotionBlurFinalPassPS.h"
-#include "CompiledShaders/CameraVelocityCS.h"
+#include "CompiledShaders/ScreenQuadCommonVS.h"
 #include "CompiledShaders/TemporalBlendCS.h"
-#include "CompiledShaders/BoundNeighborhoodCS.h"
+
+#include "Public/Core/BufferManager.h"
+#include "Public/Core/Camera.h"
+#include "Public/Core/CommandContext.h"
+#include "Public/Core/GraphicsCommon.h"
+#include "Public/Core/GraphicsCore.h"
+#include "Public/Core/PostEffects.h"
+#include "Public/Core/SystemTime.h"
+#include "Public/Core/TemporalEffects.h"
+#include "Public/Core/MotionBlur.h"
 
 namespace Playground
 {

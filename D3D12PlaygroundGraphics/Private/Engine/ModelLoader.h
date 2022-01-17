@@ -13,10 +13,9 @@
 
 #pragma once
 
-#include "Model.h"
 #include "Animation.h"
 #include "ConstantBuffers.h"
-#include "D3D12PlaygroundGraphics/libdefs.h"
+#include "Model.h"
 
 #include <D3D12PlaygroundCommon/Math/BoundingSphere.h>
 #include <D3D12PlaygroundCommon/Math/BoundingBox.h>

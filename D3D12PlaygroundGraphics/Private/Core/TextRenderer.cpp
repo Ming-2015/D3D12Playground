@@ -12,18 +12,19 @@
 //
 
 #include "pch.h"
-#include "Public/Core/TextRenderer.h"
-#include "Public/Core/Texture.h"
-#include "Public/Core/SystemTime.h"
-#include "Public/Core/GraphicsCore.h"
+#include "Fonts/consola24.h"
+#include "Public/Core/BufferManager.h"
 #include "Public/Core/CommandContext.h"
+#include "Public/Core/GraphicsCore.h"
 #include "Public/Core/PipelineState.h"
 #include "Public/Core/RootSignature.h"
-#include "BufferManager.h"
+#include "Public/Core/SystemTime.h"
+#include "Public/Core/TextRenderer.h"
+#include "Public/Core/Texture.h"
+
 #include "CompiledShaders/TextVS.h"
 #include "CompiledShaders/TextAntialiasPS.h"
 #include "CompiledShaders/TextShadowPS.h"
-#include "Fonts/consola24.h"
 
 #include <D3D12PlaygroundCommon/Utils/FileUtility.h>
 #include <map>

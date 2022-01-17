@@ -15,6 +15,7 @@
 #include "ParticleEffects.h"
 #include "Public/Core/ParticleEffectManager.h"
 #include "Public/Core/TextureManager.h"
+
 #include <fstream>
 
 #pragma warning(push)

@@ -15,17 +15,17 @@
 
 #include "ModelH3D.h"
 
-#include "Public/Core/TextureManager.h"
-#include "Public/Core/GraphicsCore.h"
-#include "Private/Core/DescriptorHeap.h"
 #include "Public/Core/CommandContext.h"
-#include "Private/Core/UploadBuffer.h"
+#include "Public/Core/DescriptorHeap.h"
 #include "Public/Core/GraphicsCommon.h"
+#include "Public/Core/GraphicsCore.h"
+#include "Public/Core/TextureManager.h"
+#include "Public/Core/UploadBuffer.h"
 
+#include <D3D12PlaygroundCommon/Utils/Utility.h>
+#include <float.h>
 #include <fstream>
 #include <string.h>
-#include <float.h>
-#include <D3D12PlaygroundCommon/Utils/Utility.h>
 
 namespace Playground
 {

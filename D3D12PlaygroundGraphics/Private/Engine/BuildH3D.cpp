@@ -1,14 +1,15 @@
 #include "pch.h"
 
+#include "glTF.h"
+#include "MeshConvert.h"
 #include "ModelH3D.h"
 #include "ModelLoader.h"
-#include "MeshConvert.h"
 #include "TextureConvert.h"
-#include "glTF.h"
+
 #include <map>
-#include <vector>
-#include <string>
 #include <locale>
+#include <string>
+#include <vector>
 
 namespace Playground
 {

@@ -8,18 +8,19 @@
 //
 // Developed by Minigraph
 //
-// Author:  Jack Elliott
+// Author:  James Stanard 
 //
 
 #pragma once
 
-namespace Playground
+#include "Public/Core/EngineTuning.h"
+
+namespace Playground::DepthOfField
 {
-    namespace CommandLineArgs
-    {
-        void Initialize(int argc, wchar_t** argv);
-        bool GetInteger(const wchar_t* key, uint32_t& value);
-        bool GetFloat(const wchar_t* key, float& value);
-        bool GetString(const wchar_t* key, std::wstring& value);
-    }
+    extern BoolVar Enable;
+
+    void Initialize( void );
+    void Shutdown( void );
+
+    void Render( CommandContext& BaseContext, float NearClipDist, float FarClipDist );
 }

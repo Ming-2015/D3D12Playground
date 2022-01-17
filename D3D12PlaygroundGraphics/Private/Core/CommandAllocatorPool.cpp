@@ -12,7 +12,7 @@
 //
 
 #include "pch.h"
-#include "CommandAllocatorPool.h"
+#include "Public/Core/CommandAllocatorPool.h"
 
 namespace Playground
 {

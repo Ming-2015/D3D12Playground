@@ -12,10 +12,10 @@
 //
 
 #include "pch.h"
-#include "DepthBuffer.h"
+#include "Public/Core/DepthBuffer.h"
 #include "Public/Core/GraphicsCore.h"
-#include "EsramAllocator.h"
-#include "DescriptorHeap.h"
+#include "Public/Core/EsramAllocator.h"
+#include "Public/Core/DescriptorHeap.h"
 
 using namespace Playground::Graphics;
 

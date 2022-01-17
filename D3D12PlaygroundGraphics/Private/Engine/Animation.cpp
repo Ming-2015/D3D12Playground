@@ -13,12 +13,12 @@
 
 #include "pch.h"
 
+#include "Animation.h"
+#include "Model.h"
+
 #include <D3D12PlaygroundCommon/Math/Common.h>
 #include <D3D12PlaygroundCommon/Math/Quaternion.h>
 #include <D3D12PlaygroundCommon/Utils/Utility.h>
-
-#include "Animation.h"
-#include "Model.h"
 
 namespace Playground
 {

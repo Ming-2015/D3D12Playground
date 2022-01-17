@@ -14,7 +14,7 @@
 #pragma once
 
 #include "PipelineState.h"
-#include "Private/Core/DescriptorHeap.h"
+#include "DescriptorHeap.h"
 #include "RootSignature.h"
 #include "GraphicsCommon.h"
 

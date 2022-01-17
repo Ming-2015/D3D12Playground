@@ -12,7 +12,7 @@
 //
 
 #include "pch.h"
-#include "BuddyAllocator.h"
+#include "Public/Core/BuddyAllocator.h"
 #include "Public/Core/GraphicsCore.h"
 #include "Public/Core/CommandListManager.h"
 #include "Public/Core/CommandContext.h"

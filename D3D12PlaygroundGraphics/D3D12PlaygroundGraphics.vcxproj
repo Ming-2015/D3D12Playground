@@ -380,9 +380,9 @@
   <ItemGroup>
     <ClInclude Include="libdefs.h" />
     <ClInclude Include="pch.h" />
-    <ClInclude Include="Private\Core\BitonicSort.h" />
-    <ClInclude Include="Private\Core\BuddyAllocator.h" />
-    <ClInclude Include="Private\Core\BufferManager.h" />
+    <ClInclude Include="Public\Core\BitonicSort.h" />
+    <ClInclude Include="Public\Core\BuddyAllocator.h" />
+    <ClInclude Include="Public\Core\BufferManager.h" />
     <ClInclude Include="Private\Internal\json.hpp" />
     <ClInclude Include="Private\Engine\Animation.h" />
     <ClInclude Include="Private\Engine\ConstantBuffers.h" />
@@ -401,29 +401,29 @@
     <ClInclude Include="Public\Core\CameraController.h" />
     <ClInclude Include="Public\Core\Color.h" />
     <ClInclude Include="Public\Core\ColorBuffer.h" />
-    <ClInclude Include="Private\Core\CommandAllocatorPool.h" />
+    <ClInclude Include="Public\Core\CommandAllocatorPool.h" />
     <ClInclude Include="Public\Core\CommandContext.h" />
     <ClInclude Include="Public\Core\CommandListManager.h" />
-    <ClInclude Include="Private\Core\CommandSignature.h" />
-    <ClInclude Include="Private\Core\Cube.h" />
+    <ClInclude Include="Public\Core\CommandSignature.h" />
+    <ClInclude Include="Public\Core\Cube.h" />
     <ClInclude Include="Private\Internal\d3dx12.h" />
     <ClInclude Include="Private\Internal\dds.h" />
-    <ClInclude Include="Private\Core\DDSTextureLoader.h" />
-    <ClInclude Include="Private\Core\DepthBuffer.h" />
-    <ClInclude Include="Private\Core\DepthOfField.h" />
-    <ClInclude Include="Private\Core\DescriptorHeap.h" />
-    <ClInclude Include="Private\Core\Display.h" />
-    <ClInclude Include="Private\Core\DynamicDescriptorHeap.h" />
-    <ClInclude Include="Private\Core\EngineProfiling.h" />
-    <ClInclude Include="Private\Core\EngineTuning.h" />
-    <ClInclude Include="Private\Core\EsramAllocator.h" />
+    <ClInclude Include="Public\Core\DDSTextureLoader.h" />
+    <ClInclude Include="Public\Core\DepthBuffer.h" />
+    <ClInclude Include="Public\Core\DepthOfField.h" />
+    <ClInclude Include="Public\Core\DescriptorHeap.h" />
+    <ClInclude Include="Public\Core\Display.h" />
+    <ClInclude Include="Public\Core\DynamicDescriptorHeap.h" />
+    <ClInclude Include="Public\Core\EngineProfiling.h" />
+    <ClInclude Include="Public\Core\EngineTuning.h" />
+    <ClInclude Include="Public\Core\EsramAllocator.h" />
     <ClInclude Include="Private\Core\Fonts\consola24.h" />
     <ClInclude Include="Public\Core\FXAA.h" />
     <ClInclude Include="Public\Core\GameCore.h" />
     <ClInclude Include="Public\Core\GameInput.h" />
-    <ClInclude Include="Private\Core\GpuBuffer.h" />
-    <ClInclude Include="Private\Core\GpuResource.h" />
-    <ClInclude Include="Private\Core\GpuTimeManager.h" />
+    <ClInclude Include="Public\Core\GpuBuffer.h" />
+    <ClInclude Include="Public\Core\GpuResource.h" />
+    <ClInclude Include="Public\Core\GpuTimeManager.h" />
     <ClInclude Include="Public\Core\GraphicsCommon.h" />
     <ClInclude Include="Public\Core\GraphicsCore.h" />
     <ClInclude Include="Public\Core\GraphRenderer.h" />
@@ -449,8 +449,7 @@
     <ClInclude Include="Public\Core\TextRenderer.h" />
     <ClInclude Include="Public\Core\Texture.h" />
     <ClInclude Include="Public\Core\TextureManager.h" />
-    <ClInclude Include="Private\Core\UploadBuffer.h" />
-    <ClInclude Include="Private\Core\Util\CommandLineArg.h" />
+    <ClInclude Include="Public\Core\UploadBuffer.h" />
     <ClInclude Include="Private\Internal\D3D12MemAlloc.h" />
   </ItemGroup>
   <ItemGroup>
@@ -513,7 +512,6 @@
     <ClCompile Include="Private\Core\Texture.cpp" />
     <ClCompile Include="Private\Core\TextureManager.cpp" />
     <ClCompile Include="Private\Core\UploadBuffer.cpp" />
-    <ClCompile Include="Private\Core\Util\CommandLineArg.cpp" />
     <ClCompile Include="Private\Internal\D3D12MemAlloc.cpp" />
     <ClCompile Include="Private\Engine\Animation.cpp" />
     <ClCompile Include="Private\Engine\BuildH3D.cpp" />

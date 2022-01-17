@@ -22,11 +22,12 @@
 
 #pragma once
 
-#include "Private/Core/GpuResource.h"
-#include <vector>
-#include <queue>
-#include <mutex>
 #include "D3D12PlaygroundGraphics/libdefs.h"
+#include "GpuResource.h"
+
+#include <mutex>
+#include <queue>
+#include <vector>
 
 // Constant blocks must be multiples of 16 constants @ 16 bytes each
 #define DEFAULT_ALIGN 256

@@ -12,14 +12,15 @@
 //
 
 #include "pch.h"
-#include "Public/Core/GraphRenderer.h"
+#include "Public/Core/BufferManager.h"
 #include "Public/Core/CommandContext.h"
+#include "Public/Core/EngineProfiling.h"
+#include "Public/Core/GameInput.h"
+#include "Public/Core/GraphRenderer.h"
 #include "Public/Core/PipelineState.h"
 #include "Public/Core/RootSignature.h"
-#include "BufferManager.h"
-#include "Public/Core/GameInput.h"
 #include "Public/Core/SystemTime.h"
-#include "EngineProfiling.h"
+
 #include "CompiledShaders/PerfGraphBackgroundVS.h"
 #include "CompiledShaders/PerfGraphVS.h"
 #include "CompiledShaders/PerfGraphPS.h"

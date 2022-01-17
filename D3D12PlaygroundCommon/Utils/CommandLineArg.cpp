@@ -12,6 +12,7 @@
 //
 
 #include "pch.h"
+#include "CommandLineArg.h"
 #include <unordered_map>
 #include <string>
 #include <sstream>

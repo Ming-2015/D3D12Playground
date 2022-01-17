@@ -14,14 +14,13 @@
 
 #pragma once
 
+#include "Public/Core/DescriptorHeap.h"
+#include "Public/Core/GpuBuffer.h"
+#include "Public/Core/TextureManager.h"
 
 #include <D3D12PlaygroundCommon/Math/BoundingBox.h>
 #include <D3D12PlaygroundCommon/Math/VectorMath.h>
 #include <D3D12PlaygroundCommon/Utils/FileUtility.h>
-
-#include "Public/Core/TextureManager.h"
-#include "Private/Core/GpuBuffer.h"
-#include "Private/Core/DescriptorHeap.h"
 
 namespace Playground
 {

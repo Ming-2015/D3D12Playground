@@ -11,10 +11,10 @@
 // Author:  James Stanard
 
 #include "pch.h"
+#include "Public/Core/Hash.h"
 #include "Public/Core/GraphicsCore.h"
 #include "Public/Core/PipelineState.h"
 #include "Public/Core/RootSignature.h"
-#include "Public/Core/Hash.h"
 #include <map>
 #include <thread>
 #include <mutex>

@@ -14,11 +14,11 @@
 
 #include "pch.h"
 #include "LightManager.h"
+#include "Public/Core/BufferManager.h"
+#include "Public/Core/Camera.h"
+#include "Public/Core/CommandContext.h"
 #include "Public/Core/PipelineState.h"
 #include "Public/Core/RootSignature.h"
-#include "Public/Core/CommandContext.h"
-#include "Public/Core/Camera.h"
-#include "Private/Core/BufferManager.h"
 #include "Public/Core/TemporalEffects.h"
 
 #include "CompiledShaders/FillLightGridCS_8.h"

@@ -13,16 +13,16 @@
 
 #include "pch.h"
 
-#include "Public/Core/PostEffects.h"
-#include "Public/Core/GameCore.h"
+#include "Public/Core/BufferManager.h"
 #include "Public/Core/CommandContext.h"
-#include "Public/Core/RootSignature.h"
-#include "Public/Core/PipelineState.h"
-#include "Display.h"
-#include "BufferManager.h"
-#include "Public/Core/MotionBlur.h"
-#include "DepthOfField.h"
+#include "Public/Core/DepthOfField.h"
+#include "Public/Core/GameCore.h"
+#include "Public/Core/Display.h"
 #include "Public/Core/FXAA.h"
+#include "Public/Core/MotionBlur.h"
+#include "Public/Core/PipelineState.h"
+#include "Public/Core/PostEffects.h"
+#include "Public/Core/RootSignature.h"
 
 #include <D3D12PlaygroundCommon/Math/Random.h>
 

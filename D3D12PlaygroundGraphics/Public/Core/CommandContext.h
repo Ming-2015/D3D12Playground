@@ -14,17 +14,19 @@
 #pragma once
 
 #include "pch.h"
-#include "CommandListManager.h"
+
 #include "Color.h"
+#include "CommandListManager.h"
+#include "CommandSignature.h"
+#include "DynamicDescriptorHeap.h"
+#include "LinearAllocator.h"
+#include "GpuBuffer.h"
+#include "GraphicsCore.h"
 #include "PipelineState.h"
 #include "RootSignature.h"
-#include "Private/Core/GpuBuffer.h"
 #include "Texture.h"
 #include "PixelBuffer.h"
-#include "Private/Core/DynamicDescriptorHeap.h"
-#include "LinearAllocator.h"
-#include "Private/Core/CommandSignature.h"
-#include "GraphicsCore.h"
+
 #include <vector>
 
 namespace Playground

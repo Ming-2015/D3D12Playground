@@ -14,17 +14,17 @@
 
 // From Core
 #include "pch.h"
-#include "Public/Core/GraphicsCore.h"
-#include "Private/Core/BufferManager.h"
+#include "ParticleEffects.h"
 #include "Public/Core/Camera.h"
 #include "Public/Core/CommandContext.h"
-#include "Public/Core/TemporalEffects.h"
+#include "Public/Core/BufferManager.h"
+#include "Public/Core/GraphicsCore.h"
+#include "Public/Core/ShadowCamera.h"
 #include "Public/Core/SSAO.h"
 #include "Public/Core/SystemTime.h"
-#include "Public/Core/ShadowCamera.h"
-#include "ParticleEffects.h"
-#include "SponzaRenderer.h"
+#include "Public/Core/TemporalEffects.h"
 #include "Renderer.h"
+#include "SponzaRenderer.h"
 
 // From Model
 #include "ModelH3D.h"

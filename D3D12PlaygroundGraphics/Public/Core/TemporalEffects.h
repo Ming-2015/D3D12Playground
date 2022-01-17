@@ -13,7 +13,7 @@
 
 #pragma once
 
-#include "Private/Core/EngineTuning.h"
+#include "Public/Core/EngineTuning.h"
 #include "D3D12PlaygroundGraphics/libdefs.h"
 
 namespace Playground

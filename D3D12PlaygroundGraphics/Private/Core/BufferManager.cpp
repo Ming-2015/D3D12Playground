@@ -12,10 +12,10 @@
 //
 
 #include "pch.h"
-#include "BufferManager.h"
-#include "Display.h"
+#include "Public/Core/BufferManager.h"
 #include "Public/Core/CommandContext.h"
-#include "EsramAllocator.h"
+#include "Public/Core/Display.h"
+#include "Public/Core/EsramAllocator.h"
 #include "Public/Core/TemporalEffects.h"
 
 namespace Playground::Graphics

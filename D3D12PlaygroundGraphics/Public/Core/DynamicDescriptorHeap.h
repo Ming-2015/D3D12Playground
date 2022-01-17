@@ -13,7 +13,7 @@
 
 #pragma once
 
-#include "DescriptorHeap.h"
+#include "Public/Core/DescriptorHeap.h"
 #include "Public/Core/RootSignature.h"
 #include <vector>
 #include <queue>

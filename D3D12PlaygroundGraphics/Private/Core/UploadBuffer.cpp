@@ -12,8 +12,8 @@
 //
 
 #include "pch.h"
-#include "UploadBuffer.h"
 #include "Public/Core/GraphicsCore.h"
+#include "Public/Core/UploadBuffer.h"
 
 using namespace Playground::Graphics;
 

@@ -12,7 +12,7 @@
 //
 
 #include "pch.h"
-#include "CommandSignature.h"
+#include "Public/Core/CommandSignature.h"
 #include "Public/Core/RootSignature.h"
 #include "Public/Core/GraphicsCore.h"
 

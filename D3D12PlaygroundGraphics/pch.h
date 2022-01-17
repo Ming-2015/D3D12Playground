@@ -77,10 +77,10 @@
 
 #include <D3D12PlaygroundCommon/Utils/Utility.h>
 #include <D3D12PlaygroundCommon/Math/VectorMath.h>
+#include <D3D12PlaygroundCommon/Utils/CommandLineArg.h>
 
-#include "Private/Core/EngineTuning.h"
-#include "Private/Core/EngineProfiling.h"
-#include "Private/Core/Util/CommandLineArg.h"
+#include "Public/Core/EngineTuning.h"
+#include "Public/Core/EngineProfiling.h"
 
 #define D3D12_GPU_VIRTUAL_ADDRESS_NULL      ((D3D12_GPU_VIRTUAL_ADDRESS)0)
 #define D3D12_GPU_VIRTUAL_ADDRESS_UNKNOWN   ((D3D12_GPU_VIRTUAL_ADDRESS)-1)

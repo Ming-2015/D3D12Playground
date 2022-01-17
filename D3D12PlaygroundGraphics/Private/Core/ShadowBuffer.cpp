@@ -13,7 +13,7 @@
 
 #include "pch.h"
 #include "Public/Core/ShadowBuffer.h"
-#include "EsramAllocator.h"
+#include "Public/Core/EsramAllocator.h"
 #include "Public/Core/CommandContext.h"
 
 namespace Playground

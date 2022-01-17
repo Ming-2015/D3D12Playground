@@ -17,11 +17,11 @@
 #include "Public/Core/TextureManager.h"
 #include "ConstantBuffers.h"
 #include "LightManager.h"
-#include "Private/Core/DescriptorHeap.h"
+#include "Public/Core/DescriptorHeap.h"
 #include "Public/Core/RootSignature.h"
 #include "Public/Core/PipelineState.h"
 #include "Public/Core/GraphicsCommon.h"
-#include "Private/Core/BufferManager.h"
+#include "Public/Core/BufferManager.h"
 #include "Public/Core/ShadowCamera.h"
 
 #include "CompiledShaders/DefaultVS.h"

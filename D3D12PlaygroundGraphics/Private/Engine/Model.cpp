@@ -12,9 +12,9 @@
 //
 
 #include "pch.h"
+#include "ConstantBuffers.h"
 #include "Model.h"
 #include "Renderer.h"
-#include "ConstantBuffers.h"
 
 namespace Playground
 {

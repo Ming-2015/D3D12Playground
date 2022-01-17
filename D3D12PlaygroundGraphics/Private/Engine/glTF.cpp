@@ -16,9 +16,9 @@
 #include "glTF.h"
 
 #include "Public/Core/CommandContext.h"
-#include "Public/Core/SamplerManager.h"
-#include "Private/Core/UploadBuffer.h"
 #include "Public/Core/GraphicsCore.h"
+#include "Public/Core/SamplerManager.h"
+#include "Public/Core/UploadBuffer.h"
 
 #include <D3D12PlaygroundCommon/Utils/FileUtility.h>
 #include <fstream>

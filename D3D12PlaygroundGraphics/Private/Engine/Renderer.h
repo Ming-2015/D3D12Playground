@@ -15,11 +15,12 @@
 
 #include <D3D12PlaygroundCommon/Math/VectorMath.h>
 
-#include "Private/Core/GpuBuffer.h"
 #include "Public/Core/Camera.h"
 #include "Public/Core/CommandContext.h"
-#include "Private/Core/UploadBuffer.h"
+#include "Public/Core/GpuBuffer.h"
 #include "Public/Core/TextureManager.h"
+#include "Public/Core/UploadBuffer.h"
+
 #include <cstdint>
 #include <vector>
 

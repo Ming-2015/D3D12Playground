@@ -15,12 +15,12 @@
 #include <D3D12PlaygroundCommon/Math/Random.h>
 
 #include "pch.h"
-#include "Public/Core/ParticleEffect.h"
+#include "Public/Core/BufferManager.h"
 #include "Public/Core/CommandContext.h"
-#include "Public/Core/GraphicsCore.h"
-#include "BufferManager.h"
-#include "Public/Core/ParticleEffectManager.h"
 #include "Public/Core/GameInput.h"
+#include "Public/Core/GraphicsCore.h"
+#include "Public/Core/ParticleEffect.h"
+#include "Public/Core/ParticleEffectManager.h"
 
 namespace Playground
 {

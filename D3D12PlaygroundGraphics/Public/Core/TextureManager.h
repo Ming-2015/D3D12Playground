@@ -14,11 +14,13 @@
 #pragma once
 
 #include "pch.h"
-#include "Private/Core/GpuResource.h"
-#include "D3D12PlaygroundCommon/Utils/Utility.h"
+
 #include "D3D12PlaygroundGraphics/libdefs.h"
-#include "Texture.h"
+#include "GpuResource.h"
 #include "GraphicsCommon.h"
+#include "Texture.h"
+
+#include <D3D12PlaygroundCommon/Utils/Utility.h>
 
 namespace Playground
 {

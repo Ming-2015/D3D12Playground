@@ -13,10 +13,11 @@
 
 #pragma once
 #include "pch.h"
-#include "Private/Core/GpuBuffer.h"
+#include "D3D12PlaygroundGraphics/libdefs.h"
+
+#include "GpuBuffer.h"
 #include "ParticleEffectProperties.h"
 #include "ParticleShaderStructs.h"
-#include "D3D12PlaygroundGraphics/libdefs.h"
 
 namespace Playground
 {

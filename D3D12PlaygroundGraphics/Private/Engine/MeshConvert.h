@@ -16,8 +16,8 @@
 #include "glTF.h"
 
 #include <cstdint>
-#include <D3D12PlaygroundCommon/Math/BoundingSphere.h>
 #include <D3D12PlaygroundCommon/Math/BoundingBox.h>
+#include <D3D12PlaygroundCommon/Math/BoundingSphere.h>
 #include <string>
 
 namespace Playground
