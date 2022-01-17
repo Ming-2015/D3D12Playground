@@ -13,7 +13,7 @@
 
 #pragma once
 
-#include "pch.h"
+#include "D3D12PlaygroundGraphics/libdefs.h"
 
 namespace Playground
 {
@@ -44,6 +44,6 @@ namespace GameCore
         virtual void RenderUI();
     };
 
-    int D3D12PLAYGROUNDGRAPHICS_API RunApplication(IGameApp& app, const wchar_t* className, HINSTANCE hInst, int nCmdShow);
+    D3D12PLAYGROUNDGRAPHICS_API int RunApplication(IGameApp& app, const wchar_t* className, HINSTANCE hInst, int nCmdShow);
 }
 }

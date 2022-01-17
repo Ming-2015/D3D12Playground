@@ -15,10 +15,11 @@
 
 #include "pch.h"
 #include "Color.h"
+#include "D3D12PlaygroundGraphics/libdefs.h"
 
 namespace Playground
 {
-class SamplerDesc : public D3D12_SAMPLER_DESC
+class D3D12PLAYGROUNDGRAPHICS_API SamplerDesc : public D3D12_SAMPLER_DESC
 {
 public:
     // These defaults match the default values for HLSL-defined root

@@ -14,10 +14,11 @@
 #pragma once
 
 #include "GpuBuffer.h"
+#include "D3D12PlaygroundGraphics/libdefs.h"
 
 namespace Playground
 {
-class ReadbackBuffer : public GpuBuffer
+class D3D12PLAYGROUNDGRAPHICS_API ReadbackBuffer : public GpuBuffer
 {
 public:
     virtual ~ReadbackBuffer() { Destroy(); }

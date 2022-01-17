@@ -13,6 +13,8 @@
 
 #pragma once
 
+#include "D3D12PlaygroundGraphics/libdefs.h"
+
 namespace Playground
 {
 namespace Math { class Camera;  }
@@ -22,11 +24,11 @@ class BoolVar;
 
 namespace SSAO
 {
-    void Initialize( void );
-    void Shutdown( void );
-    void Render(GraphicsContext& Context, const float* ProjMat, float NearClipDist, float FarClipDist );
-    void Render(GraphicsContext& Context, const Math::Camera& camera );
-    void LinearizeZ(ComputeContext& Context, const Math::Camera& camera, uint32_t FrameIndex);
+    D3D12PLAYGROUNDGRAPHICS_API void Initialize( void );
+    D3D12PLAYGROUNDGRAPHICS_API void Shutdown( void );
+    D3D12PLAYGROUNDGRAPHICS_API void Render(GraphicsContext& Context, const float* ProjMat, float NearClipDist, float FarClipDist );
+    D3D12PLAYGROUNDGRAPHICS_API void Render(GraphicsContext& Context, const Math::Camera& camera );
+    D3D12PLAYGROUNDGRAPHICS_API void LinearizeZ(ComputeContext& Context, const Math::Camera& camera, uint32_t FrameIndex);
 
     extern BoolVar Enable;
     extern BoolVar DebugDraw;

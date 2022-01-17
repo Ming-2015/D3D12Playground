@@ -13,7 +13,8 @@
 
 #pragma once
 
-#include "EngineTuning.h"
+#include "Private/Core/EngineTuning.h"
+#include "D3D12PlaygroundGraphics/libdefs.h"
 
 namespace Playground
 {
@@ -25,24 +26,24 @@ namespace TemporalEffects
     // effectively supersample the image.
     extern BoolVar EnableTAA;
 
-    void Initialize( void );
+    D3D12PLAYGROUNDGRAPHICS_API void Initialize( void );
 
-    void Shutdown( void );
+    D3D12PLAYGROUNDGRAPHICS_API void Shutdown( void );
 
     // Call once per frame to increment the internal frame counter and, in the case of TAA, choosing the next
     // jittered sample position.
-    void Update( uint64_t FrameIndex );
+    D3D12PLAYGROUNDGRAPHICS_API void Update( uint64_t FrameIndex );
 
     // Returns whether the frame is odd or even, relevant to checkerboard rendering.
-    uint32_t GetFrameIndexMod2( void );
+    D3D12PLAYGROUNDGRAPHICS_API uint32_t GetFrameIndexMod2( void );
 
     // Jitter values are neutral at 0.5 and vary from [0, 1).  Jittering only occurs when temporal antialiasing
     // is enabled.  You can use these values to jitter your viewport or projection matrix.
-    void GetJitterOffset( float& JitterX, float& JitterY );
+    D3D12PLAYGROUNDGRAPHICS_API void GetJitterOffset( float& JitterX, float& JitterY );
 
-    void ClearHistory(CommandContext& Context);
+    D3D12PLAYGROUNDGRAPHICS_API void ClearHistory(CommandContext& Context);
 
-    void ResolveImage(CommandContext& Context);
+    D3D12PLAYGROUNDGRAPHICS_API void ResolveImage(CommandContext& Context);
 
 }
 }

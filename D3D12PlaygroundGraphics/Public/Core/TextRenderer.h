@@ -14,7 +14,8 @@
 #pragma once
 
 #include "Color.h"
-#include "Math/Vector.h"
+#include "D3D12PlaygroundCommon/Math/Vector.h"
+#include "D3D12PlaygroundGraphics/libdefs.h"
 #include <string>
 
 class Color;
@@ -29,13 +30,13 @@ namespace Playground
         // the viewport.  Instead they create a coordinate space for placing text within the
         // viewport.  For instance, if you specify a ViewWidth of 2.0f, then CursorX = 1.0f marks
         // the middle of the viewport.
-        void Initialize(void);
-        void Shutdown(void);
+        D3D12PLAYGROUNDGRAPHICS_API void Initialize(void);
+        D3D12PLAYGROUNDGRAPHICS_API void Shutdown(void);
 
-        class Font;
+        D3D12PLAYGROUNDGRAPHICS_API class Font;
     }
 
-    class TextContext
+    class D3D12PLAYGROUNDGRAPHICS_API TextContext
     {
     public:
         TextContext(GraphicsContext& CmdContext, float CanvasWidth = 1920.0f, float CanvasHeight = 1080.0f);

@@ -13,14 +13,16 @@
 
 #pragma once
 
-#include "VectorMath.h"
-#include "Math/Frustum.h"
+#include "pch.h"
+#include <D3D12PlaygroundCommon/Math/VectorMath.h>
+#include <D3D12PlaygroundCommon/Math/Frustum.h>
+#include "D3D12PlaygroundGraphics/libdefs.h"
 
 namespace Playground
 {
 namespace Math
 {
-    class BaseCamera
+    class D3D12PLAYGROUNDGRAPHICS_API BaseCamera
     {
     public:
 
@@ -84,10 +86,9 @@ namespace Math
 
         Frustum m_FrustumVS;		// View-space view frustum
         Frustum m_FrustumWS;		// World-space view frustum
-
     };
 
-    class Camera : public BaseCamera
+    class D3D12PLAYGROUNDGRAPHICS_API Camera : public BaseCamera
     {
     public:
         Camera();
@@ -136,7 +137,7 @@ namespace Math
 
     inline void BaseCamera::SetRotation( Quaternion basisRotation )
     {
-        m_CameraToWorld.SetRotation(Normalize(basisRotation));
+        m_CameraToWorld.SetRotation(Quaternion::Normalize(basisRotation));
         m_Basis = Matrix3(m_CameraToWorld.GetRotation());
     }
 

@@ -14,14 +14,15 @@
 
 #pragma once
 
-#include "VectorMath.h"
+#include "D3D12PlaygroundGraphics/libdefs.h"
+#include "D3D12PlaygroundCommon/Math/VectorMath.h"
 #include "Color.h"
 #include <cstdint>
 
 // Emission Properties and other particle structs
 namespace Playground
 {
-__declspec(align(16)) struct EmissionProperties
+__declspec(align(16)) struct D3D12PLAYGROUNDGRAPHICS_API EmissionProperties
 {
     XMFLOAT3 LastEmitPosW;
     float EmitSpeed;
@@ -40,9 +41,9 @@ __declspec(align(16)) struct EmissionProperties
     XMUINT4 RandIndex[64];
 };
 
-EmissionProperties* CreateEmissionProperties();
+D3D12PLAYGROUNDGRAPHICS_API EmissionProperties* CreateEmissionProperties();
 
-struct ParticleSpawnData
+struct D3D12PLAYGROUNDGRAPHICS_API ParticleSpawnData
 {
     float AgeRate;
     float RotationSpeed;
@@ -55,7 +56,7 @@ struct ParticleSpawnData
 };
 
 
-struct ParticleMotion
+struct D3D12PLAYGROUNDGRAPHICS_API ParticleMotion
 {
     XMFLOAT3 Position;
     float Mass;	
@@ -65,7 +66,7 @@ struct ParticleMotion
     std::uint32_t ResetDataIndex;
 };
 
-struct ParticleVertex
+struct D3D12PLAYGROUNDGRAPHICS_API ParticleVertex
 {
     XMFLOAT3 Position;
     XMFLOAT4 Color;
@@ -73,7 +74,7 @@ struct ParticleVertex
     std::uint32_t TextureID;
 };
 
-struct ParticleScreenData
+struct D3D12PLAYGROUNDGRAPHICS_API ParticleScreenData
 {
     float Corner[2];
     float RcpSize[2];

@@ -20,10 +20,10 @@ namespace Playground
 
     namespace ImageScaling
     {
-        void Initialize(DXGI_FORMAT DestFormat);
+        D3D12PLAYGROUNDGRAPHICS_API void Initialize(DXGI_FORMAT DestFormat);
 
-        enum eScalingFilter { kBilinear, kSharpening, kBicubic, kLanczos, kFilterCount };
+        D3D12PLAYGROUNDGRAPHICS_API enum eScalingFilter { kBilinear, kSharpening, kBicubic, kLanczos, kFilterCount };
 
-        void Upscale(GraphicsContext& Context, ColorBuffer& dest, ColorBuffer& source, eScalingFilter tech = kLanczos);
+        D3D12PLAYGROUNDGRAPHICS_API void Upscale(GraphicsContext& Context, ColorBuffer& dest, ColorBuffer& source, eScalingFilter tech = kLanczos);
     }
 }

@@ -15,11 +15,12 @@
 #pragma once
 #include "ParticleShaderStructs.h"
 #include "Color.h"
+#include "D3D12PlaygroundGraphics/libdefs.h"
 #include <string>
 
 namespace Playground
 {
-struct ParticleEffectProperties
+struct D3D12PLAYGROUNDGRAPHICS_API ParticleEffectProperties
 {	
     ParticleEffectProperties() 
     {

@@ -13,6 +13,10 @@
 
 #pragma once
 
+#include <d3d12.h>
+#include <wrl.h>
+#include "D3D12PlaygroundGraphics/pch.h"
+
 namespace Playground
 {
 class GpuResource

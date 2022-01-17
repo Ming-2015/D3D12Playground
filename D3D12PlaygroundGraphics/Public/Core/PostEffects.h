@@ -39,11 +39,11 @@ namespace PostEffects
     extern NumVar BloomThreshold;
     extern NumVar BloomStrength;
 
-    void Initialize( void );
-    void Shutdown( void );
-    void Render( void );
+    D3D12PLAYGROUNDGRAPHICS_API void Initialize( void );
+    D3D12PLAYGROUNDGRAPHICS_API void Shutdown( void );
+    D3D12PLAYGROUNDGRAPHICS_API void Render( void );
 
     // Copy the contents of the post effects buffer onto the main scene buffer
-    void CopyBackPostBuffer( ComputeContext& Context );
+    D3D12PLAYGROUNDGRAPHICS_API void CopyBackPostBuffer( ComputeContext& Context );
 }
 }

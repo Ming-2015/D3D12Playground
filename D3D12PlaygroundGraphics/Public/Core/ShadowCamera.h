@@ -14,11 +14,12 @@
 #pragma once
 
 #include "Camera.h"
-#include "VectorMath.h"
+#include "D3D12PlaygroundGraphics/libdefs.h"
+#include "D3D12PlaygroundCommon/Math/VectorMath.h"
 
 namespace Playground
 {
-class ShadowCamera : public Math::BaseCamera
+class D3D12PLAYGROUNDGRAPHICS_API ShadowCamera : public Math::BaseCamera
 {
 public:
 

@@ -26,8 +26,8 @@ namespace Playground
 
 namespace Playground::Graphics
 {
-    void InitializeCommonState(void);
-    void DestroyCommonState(void);
+    D3D12PLAYGROUNDGRAPHICS_API void InitializeCommonState(void);
+    D3D12PLAYGROUNDGRAPHICS_API void DestroyCommonState(void);
 
     extern SamplerDesc SamplerLinearWrapDesc;
     extern SamplerDesc SamplerAnisoWrapDesc;
@@ -73,7 +73,7 @@ namespace Playground::Graphics
     extern CommandSignature DispatchIndirectCommandSignature;
     extern CommandSignature DrawIndirectCommandSignature;
 
-    enum eDefaultTexture
+    enum D3D12PLAYGROUNDGRAPHICS_API eDefaultTexture
     {
         kMagenta2D,  // Useful for indicating missing textures
         kBlackOpaque2D,
@@ -85,10 +85,10 @@ namespace Playground::Graphics
 
         kNumDefaultTextures
     };
-    D3D12_CPU_DESCRIPTOR_HANDLE GetDefaultTexture( eDefaultTexture texID );
+    D3D12PLAYGROUNDGRAPHICS_API D3D12_CPU_DESCRIPTOR_HANDLE GetDefaultTexture( eDefaultTexture texID );
 
-    extern RootSignature g_CommonRS;
-    extern ComputePSO g_GenerateMipsLinearPSO[4];
-    extern ComputePSO g_GenerateMipsGammaPSO[4];
-    extern GraphicsPSO g_DownsampleDepthPSO;
+    D3D12PLAYGROUNDGRAPHICS_API extern RootSignature g_CommonRS;
+    D3D12PLAYGROUNDGRAPHICS_API extern ComputePSO g_GenerateMipsLinearPSO[4];
+    D3D12PLAYGROUNDGRAPHICS_API extern ComputePSO g_GenerateMipsGammaPSO[4];
+    D3D12PLAYGROUNDGRAPHICS_API extern GraphicsPSO g_DownsampleDepthPSO;
 }

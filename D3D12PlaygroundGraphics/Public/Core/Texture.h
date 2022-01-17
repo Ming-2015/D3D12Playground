@@ -15,10 +15,11 @@
 
 #include "pch.h"
 #include "Private/Core/GpuResource.h"
+#include "D3D12PlaygroundGraphics/libdefs.h"
 
 namespace Playground
 {
-    class Texture : public GpuResource
+    class D3D12PLAYGROUNDGRAPHICS_API Texture : public GpuResource
     {
         friend class CommandContext;
 

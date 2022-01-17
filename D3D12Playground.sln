@@ -6,9 +6,15 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "D3D12PlaygroundGame", "D3D12PlaygroundGame\D3D12PlaygroundGame.vcxproj", "{49EB746A-0FE8-47E8-B61F-A5C68BB21A45}"
 	ProjectSection(ProjectDependencies) = postProject
 		{F116C177-25D6-4C06-ACB0-A9AD931CF418} = {F116C177-25D6-4C06-ACB0-A9AD931CF418}
+		{48963EAC-BF20-4D97-96CB-A1D702081418} = {48963EAC-BF20-4D97-96CB-A1D702081418}
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "D3D12PlaygroundGraphics", "D3D12PlaygroundGraphics\D3D12PlaygroundGraphics.vcxproj", "{F116C177-25D6-4C06-ACB0-A9AD931CF418}"
+	ProjectSection(ProjectDependencies) = postProject
+		{48963EAC-BF20-4D97-96CB-A1D702081418} = {48963EAC-BF20-4D97-96CB-A1D702081418}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "D3D12PlaygroundCommon", "D3D12PlaygroundCommon\D3D12PlaygroundCommon.vcxproj", "{48963EAC-BF20-4D97-96CB-A1D702081418}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,6 +50,18 @@ Global
 		{F116C177-25D6-4C06-ACB0-A9AD931CF418}.Release|x64.Build.0 = Release|x64
 		{F116C177-25D6-4C06-ACB0-A9AD931CF418}.Release|x86.ActiveCfg = Release|Win32
 		{F116C177-25D6-4C06-ACB0-A9AD931CF418}.Release|x86.Build.0 = Release|Win32
+		{48963EAC-BF20-4D97-96CB-A1D702081418}.Debug|x64.ActiveCfg = Debug|x64
+		{48963EAC-BF20-4D97-96CB-A1D702081418}.Debug|x64.Build.0 = Debug|x64
+		{48963EAC-BF20-4D97-96CB-A1D702081418}.Debug|x86.ActiveCfg = Debug|Win32
+		{48963EAC-BF20-4D97-96CB-A1D702081418}.Debug|x86.Build.0 = Debug|Win32
+		{48963EAC-BF20-4D97-96CB-A1D702081418}.Profile|x64.ActiveCfg = Debug|x64
+		{48963EAC-BF20-4D97-96CB-A1D702081418}.Profile|x64.Build.0 = Debug|x64
+		{48963EAC-BF20-4D97-96CB-A1D702081418}.Profile|x86.ActiveCfg = Debug|Win32
+		{48963EAC-BF20-4D97-96CB-A1D702081418}.Profile|x86.Build.0 = Debug|Win32
+		{48963EAC-BF20-4D97-96CB-A1D702081418}.Release|x64.ActiveCfg = Release|x64
+		{48963EAC-BF20-4D97-96CB-A1D702081418}.Release|x64.Build.0 = Release|x64
+		{48963EAC-BF20-4D97-96CB-A1D702081418}.Release|x86.ActiveCfg = Release|Win32
+		{48963EAC-BF20-4D97-96CB-A1D702081418}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

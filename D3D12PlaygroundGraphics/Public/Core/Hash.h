@@ -12,7 +12,7 @@
 
 #pragma once
 
-#include "Math/Common.h"
+#include <D3D12PlaygroundCommon/Math/Common.h>
 
 // This requires SSE4.2 which is present on Intel Nehalem (Nov. 2008)
 // and AMD Bulldozer (Oct. 2011) processors.  I could put a runtime
@@ -31,7 +31,7 @@
 
 namespace Playground::Utility
 {
-    inline size_t HashRange(const uint32_t* const Begin, const uint32_t* const End, size_t Hash)
+    D3D12PLAYGROUNDGRAPHICS_API inline size_t HashRange(const uint32_t* const Begin, const uint32_t* const End, size_t Hash)
     {
 #if ENABLE_SSE_CRC32
         const uint64_t* Iter64 = (const uint64_t*)Math::AlignUp(Begin, 8);
@@ -57,7 +57,7 @@ namespace Playground::Utility
         return Hash;
     }
 
-    template <typename T> inline size_t HashState( const T* StateDesc, size_t Count = 1, size_t Hash = 2166136261U )
+    template <typename T> D3D12PLAYGROUNDGRAPHICS_API inline size_t HashState( const T* StateDesc, size_t Count = 1, size_t Hash = 2166136261U )
     {
         static_assert((sizeof(T) & 3) == 0 && alignof(T) >= 4, "State object is not word-aligned");
         return HashRange((uint32_t*)StateDesc, (uint32_t*)(StateDesc + Count), Hash);

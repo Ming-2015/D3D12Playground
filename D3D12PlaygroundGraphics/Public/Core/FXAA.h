@@ -22,14 +22,14 @@ class ComputeContext;
 
 namespace FXAA
 {
-    extern BoolVar Enable;
-    extern BoolVar DebugDraw;
-    extern NumVar ContrastThreshold;	// Default = 0.20
-    extern NumVar SubpixelRemoval;		// Default = 0.75
+    D3D12PLAYGROUNDGRAPHICS_API extern BoolVar Enable;
+    D3D12PLAYGROUNDGRAPHICS_API extern BoolVar DebugDraw;
+    D3D12PLAYGROUNDGRAPHICS_API extern NumVar ContrastThreshold;	// Default = 0.20
+    D3D12PLAYGROUNDGRAPHICS_API extern NumVar SubpixelRemoval;		// Default = 0.75
 
-    void Initialize( void );
-    void Shutdown( void );
-    void Render( ComputeContext& Context, bool bUsePreComputedLuma );
+    D3D12PLAYGROUNDGRAPHICS_API void Initialize( void );
+    D3D12PLAYGROUNDGRAPHICS_API void Shutdown( void );
+    D3D12PLAYGROUNDGRAPHICS_API void Render( ComputeContext& Context, bool bUsePreComputedLuma );
 
 } // namespace FXAA
 } // namespace Playground

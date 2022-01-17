@@ -14,10 +14,12 @@
 
 #pragma once
 
+#include <D3D12PlaygroundCommon/Math/Random.h>
+
+#include "CommandContext.h"
 #include "ParticleEffectProperties.h"
 #include "ParticleEffect.h"
-#include "CommandContext.h"
-#include "Math/Random.h"
+#include "D3D12PlaygroundGraphics/libdefs.h"
 
 namespace Playground
 {
@@ -28,19 +30,19 @@ namespace Math
 
 namespace ParticleEffectManager
 {
-    void Initialize( uint32_t MaxDisplayWidth, uint32_t MaxDisplayHeight );
-    void Shutdown();
-    void ClearAll();
+    D3D12PLAYGROUNDGRAPHICS_API void Initialize( uint32_t MaxDisplayWidth, uint32_t MaxDisplayHeight );
+    D3D12PLAYGROUNDGRAPHICS_API void Shutdown();
+    D3D12PLAYGROUNDGRAPHICS_API void ClearAll();
 
-    void Update(ComputeContext& Context, float timeDelta );
+    D3D12PLAYGROUNDGRAPHICS_API void Update(ComputeContext& Context, float timeDelta );
 
-    typedef uint32_t EffectHandle;
-    EffectHandle InstantiateEffect( ParticleEffectProperties& effectProperties );
-    void Update(ComputeContext& Context, float timeDelta );
-    void Render(CommandContext& Context, const Math::Camera& Camera, ColorBuffer& ColorTarget, DepthBuffer& DepthTarget, ColorBuffer& LinearDepth);
-    void ResetEffect(EffectHandle EffectID);
-    float GetCurrentLife(EffectHandle EffectID);
-    void RegisterTexture(uint32_t index, const Texture& texture);
+    D3D12PLAYGROUNDGRAPHICS_API typedef uint32_t EffectHandle;
+    D3D12PLAYGROUNDGRAPHICS_API EffectHandle InstantiateEffect( ParticleEffectProperties& effectProperties );
+    D3D12PLAYGROUNDGRAPHICS_API void Update(ComputeContext& Context, float timeDelta );
+    D3D12PLAYGROUNDGRAPHICS_API void Render(CommandContext& Context, const Math::Camera& Camera, ColorBuffer& ColorTarget, DepthBuffer& DepthTarget, ColorBuffer& LinearDepth);
+    D3D12PLAYGROUNDGRAPHICS_API void ResetEffect(EffectHandle EffectID);
+    D3D12PLAYGROUNDGRAPHICS_API float GetCurrentLife(EffectHandle EffectID);
+    D3D12PLAYGROUNDGRAPHICS_API void RegisterTexture(uint32_t index, const Texture& texture);
 
     extern BoolVar Enable;
     extern BoolVar PauseSim;

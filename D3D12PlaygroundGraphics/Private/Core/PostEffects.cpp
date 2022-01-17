@@ -23,7 +23,8 @@
 #include "Public/Core/MotionBlur.h"
 #include "DepthOfField.h"
 #include "Public/Core/FXAA.h"
-#include "Public/Core/Math/Random.h"
+
+#include <D3D12PlaygroundCommon/Math/Random.h>
 
 #include "CompiledShaders/ToneMapCS.h"
 #include "CompiledShaders/ToneMap2CS.h"

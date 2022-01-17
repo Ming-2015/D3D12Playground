@@ -22,10 +22,11 @@
 
 #pragma once
 
-#include "GpuResource.h"
+#include "Private/Core/GpuResource.h"
 #include <vector>
 #include <queue>
 #include <mutex>
+#include "D3D12PlaygroundGraphics/libdefs.h"
 
 // Constant blocks must be multiples of 16 constants @ 16 bytes each
 #define DEFAULT_ALIGN 256
@@ -45,7 +46,7 @@ struct DynAlloc
     D3D12_GPU_VIRTUAL_ADDRESS GpuAddress;	// The GPU-visible address
 };
 
-class LinearAllocationPage : public GpuResource
+class D3D12PLAYGROUNDGRAPHICS_API LinearAllocationPage : public GpuResource
 {
 public:
     LinearAllocationPage(ID3D12Resource* pResource, D3D12_RESOURCE_STATES Usage) : GpuResource()
@@ -98,7 +99,7 @@ enum
     kCpuAllocatorPageSize = 0x200000	// 2MB
 };
 
-class LinearAllocatorPageManager
+class D3D12PLAYGROUNDGRAPHICS_API LinearAllocatorPageManager
 {
 public:
 
@@ -127,7 +128,7 @@ private:
     std::mutex m_Mutex;
 };
 
-class LinearAllocator
+class D3D12PLAYGROUNDGRAPHICS_API LinearAllocator
 {
 public:
 

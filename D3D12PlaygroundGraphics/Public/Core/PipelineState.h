@@ -14,6 +14,7 @@
 #pragma once
 
 #include "pch.h"
+#include "D3D12PlaygroundGraphics/libdefs.h"
 
 namespace Playground
 {
@@ -26,7 +27,7 @@ class DomainShader;
 class PixelShader;
 class ComputeShader;
 
-class PSO
+class D3D12PLAYGROUNDGRAPHICS_API PSO
 {
 public:
 
@@ -56,7 +57,7 @@ protected:
     ID3D12PipelineState* m_PSO;
 };
 
-class GraphicsPSO : public PSO
+class D3D12PLAYGROUNDGRAPHICS_API GraphicsPSO : public PSO
 {
     friend class CommandContext;
 
@@ -99,7 +100,7 @@ private:
 };
 
 
-class ComputePSO : public PSO
+class D3D12PLAYGROUNDGRAPHICS_API ComputePSO : public PSO
 {
     friend class CommandContext;
 

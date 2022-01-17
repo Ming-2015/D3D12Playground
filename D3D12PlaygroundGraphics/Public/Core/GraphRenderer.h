@@ -15,19 +15,19 @@
 
 namespace Playground::GraphRenderer
 {
-    void Initialize();
-    void Shutdown();
+    D3D12PLAYGROUNDGRAPHICS_API void Initialize();
+    D3D12PLAYGROUNDGRAPHICS_API void Shutdown();
 
-    enum class GraphType { Global, Profile };
-    typedef uint32_t GraphHandle;
+    D3D12PLAYGROUNDGRAPHICS_API enum class GraphType { Global, Profile };
+    D3D12PLAYGROUNDGRAPHICS_API typedef uint32_t GraphHandle;
 
-    bool ManageGraphs( GraphHandle graphID, GraphType Type );
-    GraphHandle InitGraph( GraphType Type );
-    Color GetGraphColor( GraphHandle GraphID, GraphType Type);
-    XMFLOAT4 GetMaxAvg( GraphType Type );
-    void Update( XMFLOAT2 InputNode, GraphHandle GraphID, GraphType Type);
-    void RenderGraphs( GraphicsContext& Context, GraphType Type );
+    D3D12PLAYGROUNDGRAPHICS_API bool ManageGraphs( GraphHandle graphID, GraphType Type );
+    D3D12PLAYGROUNDGRAPHICS_API GraphHandle InitGraph( GraphType Type );
+    D3D12PLAYGROUNDGRAPHICS_API Color GetGraphColor( GraphHandle GraphID, GraphType Type);
+    D3D12PLAYGROUNDGRAPHICS_API XMFLOAT4 GetMaxAvg( GraphType Type );
+    D3D12PLAYGROUNDGRAPHICS_API void Update( XMFLOAT2 InputNode, GraphHandle GraphID, GraphType Type);
+    D3D12PLAYGROUNDGRAPHICS_API void RenderGraphs( GraphicsContext& Context, GraphType Type );
 
-    void SetSelectedIndex(uint32_t selectedIndex);
+    D3D12PLAYGROUNDGRAPHICS_API void SetSelectedIndex(uint32_t selectedIndex);
 
 } // namespace GraphRenderer

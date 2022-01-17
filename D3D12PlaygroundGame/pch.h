@@ -41,9 +41,3 @@
 #include <memory>
 #include <stdexcept>
 #include <system_error>
-
-#ifdef D3D12PLAYGROUNDGRAPHICS_EXPORTS
-#define D3D12PLAYGROUNDGRAPHICS_API __declspec(dllexport)
-#else
-#define D3D12PLAYGROUNDGRAPHICS_API __declspec(dllimport)
-#endif

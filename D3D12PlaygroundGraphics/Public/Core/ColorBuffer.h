@@ -21,7 +21,7 @@ namespace Playground
 {
 class EsramAllocator;
 
-class ColorBuffer : public PixelBuffer
+class D3D12PLAYGROUNDGRAPHICS_API ColorBuffer : public PixelBuffer
 {
 public:
     ColorBuffer( Color ClearColor = Color(0.0f, 0.0f, 0.0f, 0.0f)  )

@@ -14,6 +14,7 @@
 #pragma once
 
 #include "DepthBuffer.h"
+#include "D3D12PlaygroundGraphics/libdefs.h"
 
 namespace Playground
 {
@@ -21,7 +22,7 @@ class EsramAllocator;
 
 class GraphicsContext;
 
-class ShadowBuffer : public DepthBuffer
+class D3D12PLAYGROUNDGRAPHICS_API ShadowBuffer : public DepthBuffer
 {
 public:
     ShadowBuffer() {}

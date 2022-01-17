@@ -13,13 +13,14 @@
 
 #pragma once
 #include "pch.h"
-#include "GpuBuffer.h"
+#include "Private/Core/GpuBuffer.h"
 #include "ParticleEffectProperties.h"
 #include "ParticleShaderStructs.h"
+#include "D3D12PlaygroundGraphics/libdefs.h"
 
 namespace Playground
 {
-class ParticleEffect 
+class D3D12PLAYGROUNDGRAPHICS_API ParticleEffect
 {
 public:
     ParticleEffect(ParticleEffectProperties& effectProperties);

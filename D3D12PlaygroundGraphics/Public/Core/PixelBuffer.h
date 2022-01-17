@@ -13,13 +13,14 @@
 
 #pragma once
 
-#include "GpuResource.h"
+#include "Private/Core/GpuResource.h"
+#include "D3D12PlaygroundGraphics/libdefs.h"
 
 namespace Playground
 {
 class EsramAllocator;
 
-class PixelBuffer : public GpuResource
+class D3D12PLAYGROUNDGRAPHICS_API PixelBuffer : public GpuResource
 {
 public:
     PixelBuffer() : m_Width(0), m_Height(0), m_ArraySize(0), m_Format(DXGI_FORMAT_UNKNOWN), m_BankRotation(0) {}

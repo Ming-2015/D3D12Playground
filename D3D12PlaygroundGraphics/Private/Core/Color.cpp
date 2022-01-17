@@ -13,7 +13,7 @@
 
 #include "pch.h"
 #include "Public/Core/Color.h"
-#include "Public/Core/VectorMath.h"
+#include <D3D12PlaygroundCommon/Math/VectorMath.h>
 
 using DirectX::XMVECTORU32;
 

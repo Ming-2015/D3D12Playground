@@ -14,12 +14,13 @@
 #pragma once
 
 #include <DirectXMath.h>
+#include "D3D12PlaygroundGraphics/libdefs.h"
 
 using namespace DirectX;
 
 namespace Playground
 {
-class Color
+class D3D12PLAYGROUNDGRAPHICS_API Color
 {
 public:
     Color( ) : m_value(g_XMOne) {}
@@ -66,9 +67,9 @@ private:
     XMVECTORF32 m_value;
 };
 
-INLINE Color Max( Color a, Color b ) { return Color(XMVectorMax(a, b)); }
-INLINE Color Min( Color a, Color b ) { return Color(XMVectorMin(a, b)); }
-INLINE Color Clamp( Color x, Color a, Color b ) { return Color(XMVectorClamp(x, a, b)); }
+INLINE D3D12PLAYGROUNDGRAPHICS_API Color Max( Color a, Color b ) { return Color(XMVectorMax(a, b)); }
+INLINE D3D12PLAYGROUNDGRAPHICS_API Color Min( Color a, Color b ) { return Color(XMVectorMin(a, b)); }
+INLINE D3D12PLAYGROUNDGRAPHICS_API Color Clamp( Color x, Color a, Color b ) { return Color(XMVectorClamp(x, a, b)); }
 
 
 inline Color::Color( FXMVECTOR vec )

@@ -15,7 +15,8 @@
 
 #include "pch.h"
 #include "Private/Core/GpuResource.h"
-#include "Utility.h"
+#include "D3D12PlaygroundCommon/Utils/Utility.h"
+#include "D3D12PlaygroundGraphics/libdefs.h"
 #include "Texture.h"
 #include "GraphicsCommon.h"
 
@@ -35,13 +36,13 @@ namespace Playground
         using Graphics::eDefaultTexture;
         using Graphics::kMagenta2D;
 
-        void Initialize(const std::wstring& RootPath);
-        void Shutdown(void);
+        D3D12PLAYGROUNDGRAPHICS_API void Initialize(const std::wstring& RootPath);
+        D3D12PLAYGROUNDGRAPHICS_API void Shutdown(void);
 
         // Load a texture from a DDS file.  Never returns null references, but if a 
         // texture cannot be found, ref->IsValid() will return false.
-        TextureRef LoadDDSFromFile(const std::wstring& filePath, eDefaultTexture fallback = kMagenta2D, bool sRGB = false);
-        TextureRef LoadDDSFromFile(const std::string& filePath, eDefaultTexture fallback = kMagenta2D, bool sRGB = false);
+        D3D12PLAYGROUNDGRAPHICS_API TextureRef LoadDDSFromFile(const std::wstring& filePath, eDefaultTexture fallback = kMagenta2D, bool sRGB = false);
+        D3D12PLAYGROUNDGRAPHICS_API TextureRef LoadDDSFromFile(const std::string& filePath, eDefaultTexture fallback = kMagenta2D, bool sRGB = false);
     }
 
     // Forward declaration; private implementation
@@ -52,7 +53,7 @@ namespace Playground
     // count.  When the last reference is destroyed, the TextureManager is informed that
     // the texture should be deleted.
     //
-    class TextureRef
+    class D3D12PLAYGROUNDGRAPHICS_API TextureRef
     {
     public:
 

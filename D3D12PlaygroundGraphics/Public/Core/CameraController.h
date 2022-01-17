@@ -14,8 +14,8 @@
 #pragma once
 
 #include "Public/Core/GameCore.h"
-#include "VectorMath.h"
-#include "Public/Core/Math/BoundingSphere.h"
+#include "D3D12PlaygroundCommon/Math/VectorMath.h"
+#include "D3D12PlaygroundCommon/Math/BoundingSphere.h"
 
 namespace Playground 
 {
@@ -26,7 +26,7 @@ namespace Math
 
 using namespace Playground::Math;
 
-class CameraController
+class D3D12PLAYGROUNDGRAPHICS_API CameraController
 {
 public:
     // Assumes worldUp is not the X basis vector
@@ -44,7 +44,7 @@ private:
     CameraController& operator=( const CameraController& ) {return *this;}
 };
 
-class FlyingFPSCamera : public CameraController
+class D3D12PLAYGROUNDGRAPHICS_API FlyingFPSCamera : public CameraController
 {
 public:
     FlyingFPSCamera( Camera& camera, Vector3 worldUp );
@@ -84,7 +84,7 @@ private:
     float m_LastAscent;
 };
 
-class OrbitCamera : public CameraController
+class D3D12PLAYGROUNDGRAPHICS_API OrbitCamera : public CameraController
 {
 public:
     OrbitCamera( Math::Camera& camera, 

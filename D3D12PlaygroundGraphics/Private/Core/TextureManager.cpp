@@ -15,16 +15,16 @@
 #include "Public/Core/TextureManager.h"
 #include "DDSTextureLoader.h"
 #include "Public/Core/Texture.h"
-#include "Public/Core/Utility.h"
-#include "Public/Core/FileUtility.h"
 #include "Public/Core/GraphicsCommon.h"
 #include "Public/Core/CommandContext.h"
+
+#include <D3D12PlaygroundCommon/Utils/FileUtility.h>
+#include <D3D12PlaygroundCommon/Utils/Utility.h>
 #include <map>
 #include <thread>
 
 using namespace std;
 using namespace Playground::Graphics;
-using Playground::Utility::ByteArray;
 
 namespace Playground
 {
@@ -102,7 +102,7 @@ namespace TextureManager
             }
         }
 
-        Utility::ByteArray ba = Utility::ReadFileSync( s_RootPath + fileName );
+        ByteArray ba = Utility::ReadFileSync( s_RootPath + fileName );
         tex->CreateFromMemory(ba, fallback, forceSRGB);
 
         // This was the first time it was requested, so indicate that the caller must read the file

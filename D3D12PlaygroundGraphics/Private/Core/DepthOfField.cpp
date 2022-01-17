@@ -40,6 +40,8 @@
 #include "CompiledShaders/DoFDebugGreenCS.h"
 #include "CompiledShaders/DoFDebugBlueCS.h"
 
+#include <D3D12PlaygroundCommon/Math/Common.h>
+
 using namespace Playground::Graphics;
 
 namespace Playground::DepthOfField

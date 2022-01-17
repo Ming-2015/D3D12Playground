@@ -13,7 +13,6 @@
 
 #include "pch.h"
 #include "Public/Core/TextRenderer.h"
-#include "Public/Core/FileUtility.h"
 #include "Public/Core/Texture.h"
 #include "Public/Core/SystemTime.h"
 #include "Public/Core/GraphicsCore.h"
@@ -25,6 +24,8 @@
 #include "CompiledShaders/TextAntialiasPS.h"
 #include "CompiledShaders/TextShadowPS.h"
 #include "Fonts/consola24.h"
+
+#include <D3D12PlaygroundCommon/Utils/FileUtility.h>
 #include <map>
 #include <string>
 #include <cstdio>
@@ -105,7 +106,7 @@ namespace TextRenderer
 
         bool Load( const wstring& fileName )
         {
-            Utility::ByteArray ba = Utility::ReadFileSync( fileName );
+            ByteArray ba = Utility::ReadFileSync( fileName );
 
             if (ba->size() == 0)
             {

@@ -2,7 +2,6 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <None Include="cpp.hint" />
-    <None Include="Public\Core\Math\Functions.inl" />
     <None Include="packages.config" />
     <None Include="Shaders\AoBlurAndUpsampleCS.hlsli" />
     <None Include="Shaders\AoRenderCS.hlsli" />
@@ -44,18 +43,6 @@
       <Filter>Private\Internal</Filter>
     </ClInclude>
     <ClInclude Include="Private\Core\Fonts\consola24.h" />
-    <ClInclude Include="Public\Core\Math\BoundingBox.h" />
-    <ClInclude Include="Public\Core\Math\BoundingPlane.h" />
-    <ClInclude Include="Public\Core\Math\BoundingSphere.h" />
-    <ClInclude Include="Public\Core\Math\Common.h" />
-    <ClInclude Include="Public\Core\Math\Frustum.h" />
-    <ClInclude Include="Public\Core\Math\Matrix3.h" />
-    <ClInclude Include="Public\Core\Math\Matrix4.h" />
-    <ClInclude Include="Public\Core\Math\Quaternion.h" />
-    <ClInclude Include="Public\Core\Math\Random.h" />
-    <ClInclude Include="Public\Core\Math\Scalar.h" />
-    <ClInclude Include="Public\Core\Math\Transform.h" />
-    <ClInclude Include="Public\Core\Math\Vector.h" />
     <ClInclude Include="Private\Core\Util\CommandLineArg.h" />
     <ClInclude Include="Private\Core\BitonicSort.h" />
     <ClInclude Include="Private\Core\BuddyAllocator.h" />
@@ -80,7 +67,6 @@
     <ClInclude Include="Private\Core\EngineProfiling.h" />
     <ClInclude Include="Private\Core\EngineTuning.h" />
     <ClInclude Include="Private\Core\EsramAllocator.h" />
-    <ClInclude Include="Public\Core\FileUtility.h" />
     <ClInclude Include="Public\Core\FXAA.h" />
     <ClInclude Include="Public\Core\GameInput.h" />
     <ClInclude Include="Private\Core\GpuBuffer.h" />
@@ -112,9 +98,22 @@
     <ClInclude Include="Public\Core\Texture.h" />
     <ClInclude Include="Public\Core\TextureManager.h" />
     <ClInclude Include="Private\Core\UploadBuffer.h" />
-    <ClInclude Include="Public\Core\Utility.h" />
-    <ClInclude Include="Public\Core\VectorMath.h" />
     <ClInclude Include="Public\Core\GameCore.h" />
+    <ClInclude Include="Private\Engine\Animation.h" />
+    <ClInclude Include="Private\Engine\ConstantBuffers.h" />
+    <ClInclude Include="Private\Engine\glTF.h" />
+    <ClInclude Include="Private\Engine\IndexOptimizePostTransform.h" />
+    <ClInclude Include="Private\Engine\LightManager.h" />
+    <ClInclude Include="Private\Engine\MeshConvert.h" />
+    <ClInclude Include="Private\Engine\Model.h" />
+    <ClInclude Include="Private\Engine\ModelH3D.h" />
+    <ClInclude Include="Private\Engine\ModelLoader.h" />
+    <ClInclude Include="Private\Engine\ParticleEffects.h" />
+    <ClInclude Include="Private\Engine\Renderer.h" />
+    <ClInclude Include="Private\Engine\SponzaRenderer.h" />
+    <ClInclude Include="Private\Engine\TextureConvert.h" />
+    <ClInclude Include="Private\Internal\json.hpp" />
+    <ClInclude Include="libdefs.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
@@ -122,9 +121,6 @@
     <ClCompile Include="Private\Internal\D3D12MemAlloc.cpp">
       <Filter>Private\Internal</Filter>
     </ClCompile>
-    <ClCompile Include="Private\Core\Math\BoundingSphere.cpp" />
-    <ClCompile Include="Private\Core\Math\Frustum.cpp" />
-    <ClCompile Include="Private\Core\Math\Random.cpp" />
     <ClCompile Include="Private\Core\Util\CommandLineArg.cpp" />
     <ClCompile Include="Private\Core\BitonicSort.cpp" />
     <ClCompile Include="Private\Core\BuddyAllocator.cpp" />
@@ -146,7 +142,6 @@
     <ClCompile Include="Private\Core\DynamicDescriptorHeap.cpp" />
     <ClCompile Include="Private\Core\EngineProfiling.cpp" />
     <ClCompile Include="Private\Core\EngineTuning.cpp" />
-    <ClCompile Include="Private\Core\FileUtility.cpp" />
     <ClCompile Include="Private\Core\FXAA.cpp" />
     <ClCompile Include="Private\Core\GameInput.cpp" />
     <ClCompile Include="Private\Core\GpuBuffer.cpp" />
@@ -175,8 +170,22 @@
     <ClCompile Include="Private\Core\Texture.cpp" />
     <ClCompile Include="Private\Core\TextureManager.cpp" />
     <ClCompile Include="Private\Core\UploadBuffer.cpp" />
-    <ClCompile Include="Private\Core\Utility.cpp" />
     <ClCompile Include="Private\Core\GameCore.cpp" />
+    <ClCompile Include="Private\Engine\Animation.cpp" />
+    <ClCompile Include="Private\Engine\BuildH3D.cpp" />
+    <ClCompile Include="Private\Engine\glTF.cpp" />
+    <ClCompile Include="Private\Engine\IndexOptimizePostTransform.cpp" />
+    <ClCompile Include="Private\Engine\LightManager.cpp" />
+    <ClCompile Include="Private\Engine\MeshConvert.cpp" />
+    <ClCompile Include="Private\Engine\Model.cpp" />
+    <ClCompile Include="Private\Engine\ModelConvert.cpp" />
+    <ClCompile Include="Private\Engine\ModelH3D.cpp" />
+    <ClCompile Include="Private\Engine\ModelLoader.cpp" />
+    <ClCompile Include="Private\Engine\ParticleEffects.cpp" />
+    <ClCompile Include="Private\Engine\Renderer.cpp" />
+    <ClCompile Include="Private\Engine\SponzaRenderer.cpp" />
+    <ClCompile Include="Private\Engine\TextureConvert.cpp" />
+    <ClCompile Include="libdefs.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Public">

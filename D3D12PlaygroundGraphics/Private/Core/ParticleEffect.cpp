@@ -12,6 +12,8 @@
 //             James Stanard
 //
 
+#include <D3D12PlaygroundCommon/Math/Random.h>
+
 #include "pch.h"
 #include "Public/Core/ParticleEffect.h"
 #include "Public/Core/CommandContext.h"
@@ -19,7 +21,6 @@
 #include "BufferManager.h"
 #include "Public/Core/ParticleEffectManager.h"
 #include "Public/Core/GameInput.h"
-#include "Public/Core/Math/Random.h"
 
 namespace Playground
 {

@@ -15,6 +15,8 @@
 
 #pragma once
 
+#include "D3D12PlaygroundGraphics/libdefs.h"
+
 namespace Playground
 {
 class SystemTime
@@ -22,24 +24,24 @@ class SystemTime
 public:
 
     // Query the performance counter frequency
-    static void Initialize( void );
+    D3D12PLAYGROUNDGRAPHICS_API static void Initialize( void );
 
     // Query the current value of the performance counter
-    static int64_t GetCurrentTick( void );
+    D3D12PLAYGROUNDGRAPHICS_API static int64_t GetCurrentTick( void );
 
-    static void BusyLoopSleep( float SleepTime );
+    D3D12PLAYGROUNDGRAPHICS_API static void BusyLoopSleep( float SleepTime );
 
-    static inline double TicksToSeconds( int64_t TickCount )
+    D3D12PLAYGROUNDGRAPHICS_API static inline double TicksToSeconds( int64_t TickCount )
     {
         return TickCount * sm_CpuTickDelta;
     }
 
-    static inline double TicksToMillisecs( int64_t TickCount )
+    D3D12PLAYGROUNDGRAPHICS_API static inline double TicksToMillisecs( int64_t TickCount )
     {
         return TickCount * sm_CpuTickDelta * 1000.0;
     }
 
-    static inline double TimeBetweenTicks( int64_t tick1, int64_t tick2 )
+    D3D12PLAYGROUNDGRAPHICS_API static inline double TimeBetweenTicks( int64_t tick1, int64_t tick2 )
     {
         return TicksToSeconds(tick2 - tick1);
     }
@@ -51,7 +53,7 @@ private:
 };
 
 
-class CpuTimer
+class D3D12PLAYGROUNDGRAPHICS_API CpuTimer
 {
 public:
 

@@ -20,10 +20,11 @@
 #include "Public/Core/CommandContext.h"
 #include "Public/Core/GameCore.h"
 #include "Public/Core/GraphicsCore.h"
-#include "Public/Core/Math/Random.h"
 #include "Public/Core/ParticleEffectManager.h"
 #include "Public/Core/ParticleEffect.h"
 #include "Public/Core/ParticleEffectProperties.h"
+
+#include <D3D12PlaygroundCommon/Math/Random.h>
 #include <mutex>
 
 #include "CompiledShaders/ParticleSpawnCS.h"

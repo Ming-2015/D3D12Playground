@@ -15,11 +15,11 @@
 
 namespace Playground::GameInput
 {
-    void Initialize();
-    void Shutdown();
-    void Update( float frameDelta );
+    D3D12PLAYGROUNDGRAPHICS_API void Initialize();
+    D3D12PLAYGROUNDGRAPHICS_API void Shutdown();
+    D3D12PLAYGROUNDGRAPHICS_API void Update( float frameDelta );
 
-    enum DigitalInput
+    enum D3D12PLAYGROUNDGRAPHICS_API DigitalInput
     {
         // keyboard
         // kKey must start at zero, see s_DXKeyMapping
@@ -159,7 +159,7 @@ namespace Playground::GameInput
         kNumDigitalInputs
     };
 
-    enum AnalogInput
+    enum D3D12PLAYGROUNDGRAPHICS_API AnalogInput
     {
         // gamepad
         kAnalogLeftTrigger,
@@ -177,17 +177,17 @@ namespace Playground::GameInput
         kNumAnalogInputs
     };
 
-    bool IsAnyPressed( void );
+    D3D12PLAYGROUNDGRAPHICS_API bool IsAnyPressed( void );
 
-    bool IsPressed( DigitalInput di );
-    bool IsFirstPressed( DigitalInput di );
-    bool IsReleased( DigitalInput di );
-    bool IsFirstReleased( DigitalInput di );
+    D3D12PLAYGROUNDGRAPHICS_API bool IsPressed( DigitalInput di );
+    D3D12PLAYGROUNDGRAPHICS_API bool IsFirstPressed( DigitalInput di );
+    D3D12PLAYGROUNDGRAPHICS_API bool IsReleased( DigitalInput di );
+    D3D12PLAYGROUNDGRAPHICS_API bool IsFirstReleased( DigitalInput di );
 
-    float GetDurationPressed( DigitalInput di );
+    D3D12PLAYGROUNDGRAPHICS_API float GetDurationPressed( DigitalInput di );
 
-    float GetAnalogInput( AnalogInput ai );
-    float GetTimeCorrectedAnalogInput( AnalogInput ai );
+    D3D12PLAYGROUNDGRAPHICS_API float GetAnalogInput( AnalogInput ai );
+    D3D12PLAYGROUNDGRAPHICS_API float GetTimeCorrectedAnalogInput( AnalogInput ai );
 
 #if !WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_TV_TITLE | WINAPI_PARTITION_DESKTOP)
     void SetKeyState(Windows::System::VirtualKey key, bool IsDown);

@@ -18,12 +18,12 @@
 #include "Color.h"
 #include "PipelineState.h"
 #include "RootSignature.h"
-#include "GpuBuffer.h"
+#include "Private/Core/GpuBuffer.h"
 #include "Texture.h"
 #include "PixelBuffer.h"
-#include "DynamicDescriptorHeap.h"
+#include "Private/Core/DynamicDescriptorHeap.h"
 #include "LinearAllocator.h"
-#include "CommandSignature.h"
+#include "Private/Core/CommandSignature.h"
 #include "GraphicsCore.h"
 #include <vector>
 
@@ -37,7 +37,7 @@ class ComputeContext;
 class UploadBuffer;
 class ReadbackBuffer;
 
-struct DWParam
+struct D3D12PLAYGROUNDGRAPHICS_API DWParam
 {
     DWParam( FLOAT f ) : Float(f) {}
     DWParam( UINT u ) : Uint(u) {}
@@ -61,7 +61,7 @@ struct DWParam
     | D3D12_RESOURCE_STATE_COPY_DEST \
     | D3D12_RESOURCE_STATE_COPY_SOURCE )
 
-class ContextManager
+class D3D12PLAYGROUNDGRAPHICS_API ContextManager
 {
 public:
     ContextManager(void) {}
@@ -76,14 +76,14 @@ private:
     std::mutex sm_ContextAllocationMutex;
 };
 
-struct NonCopyable
+struct D3D12PLAYGROUNDGRAPHICS_API NonCopyable
 {
     NonCopyable() = default;
     NonCopyable(const NonCopyable&) = delete;
     NonCopyable & operator=(const NonCopyable&) = delete;
 };
 
-class CommandContext : NonCopyable
+class D3D12PLAYGROUNDGRAPHICS_API CommandContext : NonCopyable
 {
     friend ContextManager;
 private:
@@ -193,7 +193,7 @@ protected:
     D3D12_COMMAND_LIST_TYPE m_Type;
 };
 
-class GraphicsContext : public CommandContext
+class D3D12PLAYGROUNDGRAPHICS_API GraphicsContext : public CommandContext
 {
 public:
 
@@ -269,7 +269,7 @@ public:
 private:
 };
 
-class ComputeContext : public CommandContext
+class D3D12PLAYGROUNDGRAPHICS_API ComputeContext : public CommandContext
 {
 public:
 

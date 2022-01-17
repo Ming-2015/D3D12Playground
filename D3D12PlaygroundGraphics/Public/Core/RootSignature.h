@@ -13,13 +13,13 @@
 
 #pragma once
 
-#include "pch.h"
+#include "D3D12PlaygroundGraphics/libdefs.h"
 
 namespace Playground
 {
 class DescriptorCache;
 
-class RootParameter
+class D3D12PLAYGROUNDGRAPHICS_API RootParameter
 {
     friend class RootSignature;
 public:
@@ -112,7 +112,7 @@ protected:
 // Root descriptor (CBV, SRV, or UAV) = 2 DWORDs each
 // Descriptor table pointer = 1 DWORD
 // Static samplers = 0 DWORDS (compiled into shader)
-class RootSignature
+class D3D12PLAYGROUNDGRAPHICS_API RootSignature
 {
     friend class DynamicDescriptorHeap;
 

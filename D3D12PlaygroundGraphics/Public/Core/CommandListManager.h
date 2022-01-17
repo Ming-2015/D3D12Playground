@@ -17,7 +17,7 @@
 #include <queue>
 #include <mutex>
 #include <stdint.h>
-#include "CommandAllocatorPool.h"
+#include "Private/Core/CommandAllocatorPool.h"
 
 namespace Playground
 {

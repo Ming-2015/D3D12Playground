@@ -196,6 +196,12 @@ namespace Playground
 {
 void Display::Resize(uint32_t width, uint32_t height)
 {
+    // likely minimalizing
+    if (width == 0 || height == 0)
+    {
+        return;
+    }
+
     g_CommandManager.IdleGPU();
 
     g_DisplayWidth = width;

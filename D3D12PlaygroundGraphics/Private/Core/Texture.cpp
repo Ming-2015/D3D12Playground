@@ -14,9 +14,10 @@
 #include "pch.h"
 #include "Public/Core/Texture.h"
 #include "DDSTextureLoader.h"
-#include "Public/Core/FileUtility.h"
 #include "Public/Core/GraphicsCore.h"
 #include "Public/Core/CommandContext.h"
+
+#include "D3D12PlaygroundCommon/Utils/FileUtility.h"
 #include <map>
 #include <thread>
 
