@@ -13,7 +13,8 @@
 //
 
 #include "pch.h"
-#include "LightManager.h"
+#include "Public/Engine/LightManager.h"
+
 #include "Public/Core/BufferManager.h"
 #include "Public/Core/Camera.h"
 #include "Public/Core/CommandContext.h"

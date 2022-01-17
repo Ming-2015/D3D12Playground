@@ -13,7 +13,7 @@
 
 #include "pch.h"
 
-#include "ModelH3D.h"
+#include "Public/Engine/ModelH3D.h"
 
 #include "Public/Core/CommandContext.h"
 #include "Public/Core/DescriptorHeap.h"

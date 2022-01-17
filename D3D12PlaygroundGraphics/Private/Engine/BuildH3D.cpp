@@ -1,10 +1,10 @@
 #include "pch.h"
 
-#include "glTF.h"
-#include "MeshConvert.h"
-#include "ModelH3D.h"
-#include "ModelLoader.h"
-#include "TextureConvert.h"
+#include "Public/Engine/glTF.h"
+#include "Public/Engine/MeshConvert.h"
+#include "Public/Engine/ModelH3D.h"
+#include "Public/Engine/ModelLoader.h"
+#include "Public/Engine/TextureConvert.h"
 
 #include <map>
 #include <locale>

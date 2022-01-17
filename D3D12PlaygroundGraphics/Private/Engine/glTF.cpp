@@ -13,7 +13,7 @@
 
 #include "pch.h"
 
-#include "glTF.h"
+#include "Public/Engine/glTF.h"
 
 #include "Public/Core/CommandContext.h"
 #include "Public/Core/GraphicsCore.h"

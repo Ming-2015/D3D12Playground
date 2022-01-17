@@ -18,8 +18,7 @@
 
 
 #include "pch.h"
-#include "IndexOptimizePostTransform.h"
-
+#include "Public/Engine/IndexOptimizePostTransform.h"
 
 #include <algorithm>
 #include <ASSERT.h>

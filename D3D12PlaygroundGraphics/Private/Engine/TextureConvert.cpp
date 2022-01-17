@@ -15,9 +15,9 @@
 //
 
 #include "pch.h"
+#include "Public/Engine/TextureConvert.h"
 
 #include "DirectXTex.h"
-#include "TextureConvert.h"
 
 #include <D3D12PlaygroundCommon/Utils/Utility.h>
 

@@ -14,7 +14,8 @@
 
 // From Core
 #include "pch.h"
-#include "ParticleEffects.h"
+#include "Public/Engine/SponzaRenderer.h"
+
 #include "Public/Core/Camera.h"
 #include "Public/Core/CommandContext.h"
 #include "Public/Core/BufferManager.h"
@@ -23,14 +24,10 @@
 #include "Public/Core/SSAO.h"
 #include "Public/Core/SystemTime.h"
 #include "Public/Core/TemporalEffects.h"
-#include "Renderer.h"
-#include "SponzaRenderer.h"
-
-// From Model
-#include "ModelH3D.h"
-
-// From ModelViewer
-#include "LightManager.h"
+#include "Public/Engine/LightManager.h"
+#include "Public/Engine/ModelH3D.h"
+#include "Public/Engine/ParticleEffects.h"
+#include "Public/Engine/Renderer.h"
 
 #include <D3D12PlaygroundCommon/Utils/Utility.h>
 

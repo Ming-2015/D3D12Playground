@@ -15,14 +15,15 @@
 //
 
 #include "pch.h"
-#include "glTF.h"
-#include "Model.h"
-#include "ModelH3D.h"
-#include "ModelLoader.h"
+#include "Public/Engine/ModelLoader.h"
+
 #include "Public/Core/TextureManager.h"
 #include "Public/Core/GraphicsCommon.h"
-#include "Renderer.h"
-#include "TextureConvert.h"
+#include "Public/Engine/glTF.h"
+#include "Public/Engine/Model.h"
+#include "Public/Engine/ModelH3D.h"
+#include "Public/Engine/Renderer.h"
+#include "Public/Engine/TextureConvert.h"
 
 #include <fstream>
 #include <unordered_map>

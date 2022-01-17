@@ -12,7 +12,7 @@
 //
 
 #include "pch.h"
-#include "ParticleEffects.h"
+#include "Public/Engine/ParticleEffects.h"
 #include "Public/Core/ParticleEffectManager.h"
 #include "Public/Core/TextureManager.h"
 

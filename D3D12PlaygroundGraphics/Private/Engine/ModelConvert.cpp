@@ -15,13 +15,14 @@
 //
 
 #include "pch.h"
-#include "ModelLoader.h"
-#include "Renderer.h"
-#include "glTF.h"
-#include "TextureConvert.h"
-#include "MeshConvert.h"
+
 #include "Public/Core/TextureManager.h"
 #include "Public/Core/GraphicsCommon.h"
+#include "Public/Engine/ModelLoader.h"
+#include "Public/Engine/Renderer.h"
+#include "Public/Engine/glTF.h"
+#include "Public/Engine/TextureConvert.h"
+#include "Public/Engine/MeshConvert.h"
 
 #include <D3D12PlaygroundCommon/Utils/Utility.h>
 #include <D3D12PlaygroundCommon/Math/Common.h>

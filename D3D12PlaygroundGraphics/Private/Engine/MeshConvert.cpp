@@ -15,13 +15,13 @@
 //
 
 #include "pch.h"
+#include "Public/Engine/MeshConvert.h"
 
 #include "DirectXMesh.h"
-#include "glTF.h"
-#include "IndexOptimizePostTransform.h"
-#include "MeshConvert.h"
-#include "Model.h"
-#include "TextureConvert.h"
+#include "Public/Engine/glTF.h"
+#include "Public/Engine/IndexOptimizePostTransform.h"
+#include "Public/Engine/Model.h"
+#include "Public/Engine/TextureConvert.h"
 
 #include <D3D12PlaygroundCommon/Math/VectorMath.h>
 

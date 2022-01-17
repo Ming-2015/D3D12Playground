@@ -13,8 +13,8 @@
 
 #include "pch.h"
 
-#include "Animation.h"
-#include "Model.h"
+#include "Public/Engine/Animation.h"
+#include "Public/Engine/Model.h"
 
 #include <D3D12PlaygroundCommon/Math/Common.h>
 #include <D3D12PlaygroundCommon/Math/Quaternion.h>
