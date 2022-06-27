@@ -27,7 +27,7 @@
 
 #include <direct.h> // for _getcwd() to check data root path
 
-#define LEGACY_RENDERER
+// #define LEGACY_RENDERER
 
 using namespace std;
 using namespace Playground;
@@ -94,7 +94,7 @@ void LoadIBLTextures()
     Utility::Printf("Loading IBL environment maps\n");
 
     WIN32_FIND_DATA ffd;
-    HANDLE hFind = FindFirstFile(L"Textures/*_diffuseIBL.dds", &ffd);
+    HANDLE hFind = FindFirstFile(L"Assets/Textures/*_diffuseIBL.dds", &ffd);
 
     g_IBLSet.AddEnum(L"None");
 
@@ -108,10 +108,10 @@ void LoadIBLTextures()
         baseFile.resize(baseFile.rfind(L"_diffuseIBL.dds"));
         std::wstring specularFile = baseFile + L"_specularIBL.dds";
 
-        TextureRef diffuseTex = TextureManager::LoadDDSFromFile(L"Textures/" + diffuseFile);
+        TextureRef diffuseTex = TextureManager::LoadDDSFromFile(L"Assets/Textures/" + diffuseFile);
         if (diffuseTex.IsValid())
         {
-            TextureRef specularTex = TextureManager::LoadDDSFromFile(L"Textures/" + specularFile);
+            TextureRef specularTex = TextureManager::LoadDDSFromFile(L"Assets/Textures/" + specularFile);
             if (specularTex.IsValid())
             {
                 g_IBLSet.AddEnum(baseFile);
