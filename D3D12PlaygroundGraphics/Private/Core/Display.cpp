@@ -12,14 +12,14 @@
 //
 
 #include "pch.h"
-#include "Display.h"
-#include "Public/Core/GraphicsCore.h"
-#include "BufferManager.h"
+#include "Public/Core/BufferManager.h"
 #include "Public/Core/ColorBuffer.h"
-#include "Public/Core/SystemTime.h"
 #include "Public/Core/CommandContext.h"
-#include "Public/Core/RootSignature.h"
+#include "Public/Core/Display.h"
+#include "Public/Core/GraphicsCore.h"
 #include "Public/Core/ImageScaling.h"
+#include "Public/Core/RootSignature.h"
+#include "Public/Core/SystemTime.h"
 #include "Public/Core/TemporalEffects.h"
 
 #pragma comment(lib, "dxgi.lib") 

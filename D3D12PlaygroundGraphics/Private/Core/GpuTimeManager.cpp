@@ -12,7 +12,7 @@
 //
 
 #include "pch.h"
-#include "GpuTimeManager.h"
+#include "Public/Core/GpuTimeManager.h"
 #include "Public/Core/GraphicsCore.h"
 #include "Public/Core/CommandContext.h"
 #include "Public/Core/CommandListManager.h"

@@ -12,12 +12,12 @@
 //
 
 #include "pch.h"
-#include "GpuBuffer.h"
+#include "Public/Core/GpuBuffer.h"
 #include "Public/Core/GraphicsCore.h"
-#include "EsramAllocator.h"
+#include "Public/Core/EsramAllocator.h"
 #include "Public/Core/CommandContext.h"
-#include "BufferManager.h"
-#include "UploadBuffer.h"
+#include "Public/Core/BufferManager.h"
+#include "Public/Core/UploadBuffer.h"
 
 using namespace Playground::Graphics;
 

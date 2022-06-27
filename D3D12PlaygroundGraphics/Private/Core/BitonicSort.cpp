@@ -12,13 +12,14 @@
 //
 
 #include "pch.h"
-#include "BitonicSort.h"
+#include "Public/Core/BitonicSort.h"
 #include "Public/Core/RootSignature.h"
 #include "Public/Core/PipelineState.h"
 #include "Public/Core/CommandContext.h"
 #include "Public/Core/ReadbackBuffer.h"
-#include "D3D12PlaygroundCommon/Math/Common.h"
-#include "D3D12PlaygroundCommon/Math/Random.h"
+
+#include <D3D12PlaygroundCommon/Math/Common.h>
+#include <D3D12PlaygroundCommon/Math/Random.h>
 
 #include "CompiledShaders/BitonicIndirectArgsCS.h"
 #include "CompiledShaders/Bitonic32PreSortCS.h"

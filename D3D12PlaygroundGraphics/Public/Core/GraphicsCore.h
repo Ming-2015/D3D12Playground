@@ -14,7 +14,7 @@
 #pragma once
 
 #include "PipelineState.h"
-#include "Private/Core/DescriptorHeap.h"
+#include "DescriptorHeap.h"
 #include "RootSignature.h"
 #include "GraphicsCommon.h"
 
@@ -31,12 +31,12 @@ namespace Playground
 
         using namespace Microsoft::WRL;
 
-        void Initialize(void);
-        void Shutdown(void);
+        D3D12PLAYGROUNDGRAPHICS_API void Initialize(void);
+        D3D12PLAYGROUNDGRAPHICS_API void Shutdown(void);
 
-        bool IsDeviceNvidia(ID3D12Device* pDevice);
-        bool IsDeviceAMD(ID3D12Device* pDevice);
-        bool IsDeviceIntel(ID3D12Device* pDevice);
+        D3D12PLAYGROUNDGRAPHICS_API bool IsDeviceNvidia(ID3D12Device* pDevice);
+        D3D12PLAYGROUNDGRAPHICS_API bool IsDeviceAMD(ID3D12Device* pDevice);
+        D3D12PLAYGROUNDGRAPHICS_API bool IsDeviceIntel(ID3D12Device* pDevice);
 
         extern ID3D12Device* g_Device;
         extern CommandListManager g_CommandManager;

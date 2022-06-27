@@ -16,15 +16,15 @@
 
 // modified from original source to improve performance (especially in debug builds), memory allocations, etc.
 
-#include "Public/Core/Utility.h"
 
 #include "pch.h"
-#include <stdint.h>
-#include <ASSERT.h>
-#include <math.h>
-#include <algorithm>
+#include "Public/Engine/IndexOptimizePostTransform.h"
 
-#include "IndexOptimizePostTransform.h"
+#include <algorithm>
+#include <ASSERT.h>
+#include <D3D12PlaygroundCommon/Utils/Utility.h>
+#include <math.h>
+#include <stdint.h>
 
 namespace
 {

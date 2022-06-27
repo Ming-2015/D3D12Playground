@@ -13,12 +13,12 @@
 
 
 #include "pch.h"
-#include "Public/Core/TextRenderer.h"
-#include "Public/Core/GameInput.h"
 #include "Public/Core/Color.h"
-#include "Display.h"
 #include "Public/Core/CommandContext.h"
+#include "Public/Core/Display.h"
+#include "Public/Core/GameInput.h"
 #include "Public/Core/GraphRenderer.h"
+#include "Public/Core/TextRenderer.h"
 
 namespace Playground
 {

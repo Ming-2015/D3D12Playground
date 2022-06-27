@@ -12,12 +12,14 @@
 //
 
 #include "pch.h"
-#include "DepthOfField.h"
-#include "Public/Core/RootSignature.h"
-#include "Public/Core/PipelineState.h"
+#include "Public/Core/BufferManager.h"
 #include "Public/Core/CommandContext.h"
-#include "BufferManager.h"
+#include "Public/Core/DepthOfField.h"
+#include "Public/Core/PipelineState.h"
+#include "Public/Core/RootSignature.h"
 #include "Public/Core/TemporalEffects.h"
+
+#include <D3D12PlaygroundCommon/Math/Common.h>
 
 #include "CompiledShaders/DoFPass1CS.h"
 #include "CompiledShaders/DoFTilePassCS.h"
@@ -39,8 +41,6 @@
 #include "CompiledShaders/DoFDebugRedCS.h"
 #include "CompiledShaders/DoFDebugGreenCS.h"
 #include "CompiledShaders/DoFDebugBlueCS.h"
-
-#include <D3D12PlaygroundCommon/Math/Common.h>
 
 using namespace Playground::Graphics;
 

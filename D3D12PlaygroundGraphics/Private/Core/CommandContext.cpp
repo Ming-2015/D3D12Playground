@@ -14,12 +14,12 @@
 #include "pch.h"
 #include "Public/Core/CommandContext.h"
 #include "Public/Core/ColorBuffer.h"
-#include "DepthBuffer.h"
+#include "Public/Core/DepthBuffer.h"
+#include "Public/Core/DescriptorHeap.h"
+#include "Public/Core/EngineProfiling.h"
 #include "Public/Core/GraphicsCore.h"
-#include "DescriptorHeap.h"
-#include "EngineProfiling.h"
-#include "UploadBuffer.h"
 #include "Public/Core/ReadbackBuffer.h"
+#include "Public/Core/UploadBuffer.h"
 
 #pragma warning(push)
 #pragma warning(disable:4100) // unreferenced formal parameters in PIXCopyEventArguments() (WinPixEventRuntime.1.0.200127001)

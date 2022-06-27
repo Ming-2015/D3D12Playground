@@ -13,7 +13,7 @@
 
 #include "pch.h"
 #include "Public/Core/ImageScaling.h"
-#include "BufferManager.h"
+#include "Public/Core/BufferManager.h"
 #include "Public/Core/CommandContext.h"
 
 #include "CompiledShaders/ScreenQuadPresentVS.h"

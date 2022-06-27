@@ -12,17 +12,19 @@
 //
 
 #include "pch.h"
-#include "Renderer.h"
-#include "Model.h"
-#include "Public/Core/TextureManager.h"
-#include "ConstantBuffers.h"
-#include "LightManager.h"
-#include "Private/Core/DescriptorHeap.h"
+#include "Public/Engine/Renderer.h"
+
+#include "Public/Core/BufferManager.h"
+#include "Public/Core/DescriptorHeap.h"
+#include "Public/Core/GraphicsCommon.h"
 #include "Public/Core/RootSignature.h"
 #include "Public/Core/PipelineState.h"
-#include "Public/Core/GraphicsCommon.h"
-#include "Private/Core/BufferManager.h"
 #include "Public/Core/ShadowCamera.h"
+#include "Public/Core/TextureManager.h"
+
+#include "Public/Engine/ConstantBuffers.h"
+#include "Public/Engine/LightManager.h"
+#include "Public/Engine/Model.h"
 
 #include "CompiledShaders/DefaultVS.h"
 #include "CompiledShaders/DefaultSkinVS.h"

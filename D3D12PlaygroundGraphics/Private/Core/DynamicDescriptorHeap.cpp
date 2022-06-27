@@ -12,7 +12,7 @@
 //
 
 #include "pch.h"
-#include "DynamicDescriptorHeap.h"
+#include "Public/Core/DynamicDescriptorHeap.h"
 #include "Public/Core/CommandContext.h"
 #include "Public/Core/GraphicsCore.h"
 #include "Public/Core/CommandListManager.h"

@@ -12,9 +12,10 @@
 //
 
 #include "pch.h"
-#include "ParticleEffects.h"
+#include "Public/Engine/ParticleEffects.h"
 #include "Public/Core/ParticleEffectManager.h"
 #include "Public/Core/TextureManager.h"
+
 #include <fstream>
 
 #pragma warning(push)
@@ -90,7 +91,13 @@ void ParticleEffects::InitFromJSON(const wstring& InitJsonFile)
     using json = nlohmann::json;
 
     json particle_setup;
-    ifstream(InitJsonFile) >> particle_setup;
+    ifstream particle_file(InitJsonFile);
+    if (!particle_file.is_open()) 
+    {
+        throw std::exception();
+    }
+
+    particle_file >> particle_setup;
 
     if (!particle_setup.is_object() || particle_setup.find("ParticleEmitters") == particle_setup.end())
         return;

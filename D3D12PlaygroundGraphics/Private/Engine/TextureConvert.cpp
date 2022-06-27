@@ -14,11 +14,12 @@
 // This code depends on DirectXTex
 //
 
-#include <D3D12PlaygroundCommon/Utils/Utility.h>
-
 #include "pch.h"
-#include "TextureConvert.h"
+#include "Public/Engine/TextureConvert.h"
+
 #include "DirectXTex.h"
+
+#include <D3D12PlaygroundCommon/Utils/Utility.h>
 
 using namespace DirectX;
 

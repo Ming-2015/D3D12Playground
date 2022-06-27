@@ -44,10 +44,10 @@ namespace ParticleEffectManager
     D3D12PLAYGROUNDGRAPHICS_API float GetCurrentLife(EffectHandle EffectID);
     D3D12PLAYGROUNDGRAPHICS_API void RegisterTexture(uint32_t index, const Texture& texture);
 
-    extern BoolVar Enable;
-    extern BoolVar PauseSim;
-    extern BoolVar EnableTiledRendering;
-    extern bool Reproducible; //If you want to repro set to true. When true, effect uses the same set of random numbers each run
-    extern UINT ReproFrame;
+    D3D12PLAYGROUNDGRAPHICS_API extern BoolVar Enable;
+    D3D12PLAYGROUNDGRAPHICS_API extern BoolVar PauseSim;
+    D3D12PLAYGROUNDGRAPHICS_API extern BoolVar EnableTiledRendering;
+    D3D12PLAYGROUNDGRAPHICS_API extern bool Reproducible; //If you want to repro set to true. When true, effect uses the same set of random numbers each run
+    D3D12PLAYGROUNDGRAPHICS_API extern UINT ReproFrame;
 } // namespace ParticleEffectManager
 }

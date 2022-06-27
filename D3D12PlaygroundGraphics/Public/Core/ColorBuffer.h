@@ -15,7 +15,7 @@
 
 #include "PixelBuffer.h"
 #include "Color.h"
-#include "Private/Core/GpuBuffer.h"
+#include "GpuBuffer.h"
 
 namespace Playground
 {

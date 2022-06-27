@@ -12,7 +12,7 @@
 //
 
 #include "pch.h"
-#include "Cube.h"
+#include "Public/Core/Cube.h"
 
 namespace Playground::Graphics
 {

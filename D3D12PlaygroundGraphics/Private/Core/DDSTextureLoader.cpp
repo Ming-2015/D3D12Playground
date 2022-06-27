@@ -19,14 +19,13 @@
 //--------------------------------------------------------------------------------------
 
 #include "pch.h"
-
-#include "DDSTextureLoader.h"
+#include "D3D12PlaygroundCommon/Utils/Utility.h"
 
 #include "Private/Internal/dds.h"
-#include "GpuResource.h"
-#include "Public/Core/GraphicsCore.h"
 #include "Public/Core/CommandContext.h"
-#include "D3D12PlaygroundCommon/Utils/Utility.h"
+#include "Public/Core/DDSTextureLoader.h"
+#include "Public/Core/GpuResource.h"
+#include "Public/Core/GraphicsCore.h"
 
 struct handle_closer { void operator()(HANDLE h) { if (h) CloseHandle(h); } };
 typedef public std::unique_ptr<void, handle_closer> ScopedHandle;

@@ -12,16 +12,18 @@
 //
 
 #include "pch.h"
-#include "Public/Core/SystemTime.h"
-#include "Display.h"
-#include "Public/Core/TextRenderer.h"
-#include "Public/Core/GraphRenderer.h"
-#include "Public/Core/GameInput.h"
-#include "GpuTimeManager.h"
+
 #include "Public/Core/CommandContext.h"
-#include <vector>
-#include <unordered_map>
+#include "Public/Core/Display.h"
+#include "Public/Core/GameInput.h"
+#include "Public/Core/GpuTimeManager.h"
+#include "Public/Core/GraphRenderer.h"
+#include "Public/Core/SystemTime.h"
+#include "Public/Core/TextRenderer.h"
+
 #include <array>
+#include <unordered_map>
+#include <vector>
 
 using namespace Playground::Graphics;
 using namespace Playground::GraphRenderer;

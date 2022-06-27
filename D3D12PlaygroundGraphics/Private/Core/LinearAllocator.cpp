@@ -13,9 +13,9 @@
 //
 
 #include "pch.h"
+#include "Public/Core/CommandListManager.h"
 #include "Public/Core/LinearAllocator.h"
 #include "Public/Core/GraphicsCore.h"
-#include "Public/Core/CommandListManager.h"
 #include <thread>
 
 namespace Playground

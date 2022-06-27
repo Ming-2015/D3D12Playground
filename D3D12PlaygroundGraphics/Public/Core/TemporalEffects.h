@@ -13,7 +13,7 @@
 
 #pragma once
 
-#include "Private/Core/EngineTuning.h"
+#include "Public/Core/EngineTuning.h"
 #include "D3D12PlaygroundGraphics/libdefs.h"
 
 namespace Playground
@@ -24,7 +24,7 @@ namespace TemporalEffects
 {
     // Temporal antialiasing involves jittering sample positions and accumulating color over time to 
     // effectively supersample the image.
-    extern BoolVar EnableTAA;
+    D3D12PLAYGROUNDGRAPHICS_API extern BoolVar EnableTAA;
 
     D3D12PLAYGROUNDGRAPHICS_API void Initialize( void );
 

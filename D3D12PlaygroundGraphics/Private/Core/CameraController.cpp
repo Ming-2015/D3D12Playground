@@ -12,8 +12,8 @@
 //
 
 #include "pch.h"
-#include "Public/Core/CameraController.h"
 #include "Public/Core/Camera.h"
+#include "Public/Core/CameraController.h"
 #include "Public/Core/GameInput.h"
 
 using namespace Playground::Math;

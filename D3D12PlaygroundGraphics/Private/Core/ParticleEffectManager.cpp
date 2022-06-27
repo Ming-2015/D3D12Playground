@@ -13,8 +13,8 @@
 //
 
 #include "pch.h"
-#include "BufferManager.h"
-#include "BitonicSort.h"
+#include "Public/Core/BufferManager.h"
+#include "Public/Core/BitonicSort.h"
 #include "Public/Core/Camera.h"
 #include "Public/Core/ColorBuffer.h"
 #include "Public/Core/CommandContext.h"

@@ -13,7 +13,7 @@
 
 #pragma once
 
-#include "Private/Core/GpuResource.h"
+#include "GpuResource.h"
 #include "D3D12PlaygroundGraphics/libdefs.h"
 
 namespace Playground

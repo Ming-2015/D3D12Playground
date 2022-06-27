@@ -12,10 +12,10 @@
 //
 
 #include "pch.h"
-#include "Public/Core/FXAA.h"
-#include "Public/Core/GraphicsCore.h"
-#include "BufferManager.h"
+#include "Public/Core/BufferManager.h"
 #include "Public/Core/CommandContext.h"
+#include "Public/Core/GraphicsCore.h"
+#include "Public/Core/FXAA.h"
 
 #include "CompiledShaders/FXAAPass1_RGB_CS.h"
 #include "CompiledShaders/FXAAPass1_Luma_CS.h"

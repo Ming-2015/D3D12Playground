@@ -12,16 +12,16 @@
 //
 #include "pch.h"
 
-#include "Public/Core/GameCore.h"
-
-#include "Public/Core/GraphicsCore.h"
-#include "Public/Core/SystemTime.h"
-#include "Public/Core/GameInput.h"
-#include "Private/Core/BufferManager.h"
+#include "Public/Core/BufferManager.h"
 #include "Public/Core/CommandContext.h"
+#include "Public/Core/Display.h"
+#include "Public/Core/GameCore.h"
+#include "Public/Core/GameInput.h"
+#include "Public/Core/GraphicsCore.h"
 #include "Public/Core/PostEffects.h"
-#include "Private/Core/Display.h"
-#include "Private/Core/Util/CommandLineArg.h"
+#include "Public/Core/SystemTime.h"
+
+#include <D3D12PlaygroundCommon/Utils/CommandLineArg.h>
 #include <shellapi.h>
 
 #pragma comment(lib, "runtimeobject.lib") 

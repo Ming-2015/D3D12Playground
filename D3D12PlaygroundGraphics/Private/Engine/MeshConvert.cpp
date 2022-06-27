@@ -15,15 +15,15 @@
 //
 
 #include "pch.h"
+#include "Public/Engine/MeshConvert.h"
+
+#include "DirectXMesh.h"
+#include "Public/Engine/glTF.h"
+#include "Public/Engine/IndexOptimizePostTransform.h"
+#include "Public/Engine/Model.h"
+#include "Public/Engine/TextureConvert.h"
 
 #include <D3D12PlaygroundCommon/Math/VectorMath.h>
-
-#include "MeshConvert.h"
-#include "TextureConvert.h"
-#include "glTF.h"
-#include "Model.h"
-#include "IndexOptimizePostTransform.h"
-#include "DirectXMesh.h"
 
 namespace Playground
 {

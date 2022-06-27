@@ -12,11 +12,11 @@
 //
 
 #include "pch.h"
-#include "Public/Core/TextureManager.h"
-#include "DDSTextureLoader.h"
-#include "Public/Core/Texture.h"
-#include "Public/Core/GraphicsCommon.h"
+#include "Public/Core/DDSTextureLoader.h"
 #include "Public/Core/CommandContext.h"
+#include "Public/Core/GraphicsCommon.h"
+#include "Public/Core/TextureManager.h"
+#include "Public/Core/Texture.h"
 
 #include <D3D12PlaygroundCommon/Utils/FileUtility.h>
 #include <D3D12PlaygroundCommon/Utils/Utility.h>
