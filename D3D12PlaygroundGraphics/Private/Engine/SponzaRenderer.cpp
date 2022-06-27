@@ -130,7 +130,7 @@ void Sponza::Startup( Camera& Camera )
     m_CutoutModelPSO.SetRasterizerState(RasterizerTwoSided);
     m_CutoutModelPSO.Finalize();
 
-    ASSERT(m_Model.Load(L"Sponza/sponza.h3d"), "Failed to load model");
+    ASSERT(m_Model.Load(L"Assets/Sponza/sponza.h3d"), "Failed to load model");
     ASSERT(m_Model.GetMeshCount() > 0, "Model contains no meshes");
 
     // The caller of this function can override which materials are considered cutouts
@@ -150,7 +150,7 @@ void Sponza::Startup( Camera& Camera )
         }
     }
 
-    ParticleEffects::InitFromJSON(L"Sponza/particles.json");
+    ParticleEffects::InitFromJSON(L"Assets/Sponza/particles.json");
 
     float modelRadius = Length(m_Model.GetBoundingBox().GetDimensions()) * 0.5f;
     const Vector3 eye = m_Model.GetBoundingBox().GetCenter() + Vector3(modelRadius * 0.5f, 0.0f, 0.0f);

@@ -25,9 +25,10 @@ namespace Playground::Display
 
 namespace Playground::Graphics
 {
-    extern uint32_t g_DisplayWidth;
-    extern uint32_t g_DisplayHeight;
-    extern bool g_bEnableHDROutput;
+    D3D12PLAYGROUNDGRAPHICS_API extern EnumVar DebugZoom;
+    D3D12PLAYGROUNDGRAPHICS_API extern uint32_t g_DisplayWidth;
+    D3D12PLAYGROUNDGRAPHICS_API extern uint32_t g_DisplayHeight;
+    D3D12PLAYGROUNDGRAPHICS_API extern bool g_bEnableHDROutput;
 
     // Returns the number of elapsed frames since application start
     D3D12PLAYGROUNDGRAPHICS_API uint64_t GetFrameCount(void);
@@ -40,5 +41,5 @@ namespace Playground::Graphics
     // The total number of frames per second
     D3D12PLAYGROUNDGRAPHICS_API float GetFrameRate(void);
 
-    extern bool g_bEnableHDROutput;
+    D3D12PLAYGROUNDGRAPHICS_API extern bool g_bEnableHDROutput;
 }

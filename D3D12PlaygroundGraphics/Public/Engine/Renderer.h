@@ -40,15 +40,15 @@ struct Joint;
 
 namespace Renderer
 {
-    extern BoolVar SeparateZPass;
+    D3D12PLAYGROUNDGRAPHICS_API extern BoolVar SeparateZPass;
 
     using namespace Math;
 
-    extern std::vector<GraphicsPSO> sm_PSOs;
-    extern RootSignature m_RootSig;
-    extern DescriptorHeap s_TextureHeap;
-    extern DescriptorHeap s_SamplerHeap;
-    extern DescriptorHandle m_CommonTextures;
+    D3D12PLAYGROUNDGRAPHICS_API extern std::vector<GraphicsPSO> sm_PSOs;
+    D3D12PLAYGROUNDGRAPHICS_API extern RootSignature m_RootSig;
+    D3D12PLAYGROUNDGRAPHICS_API extern DescriptorHeap s_TextureHeap;
+    D3D12PLAYGROUNDGRAPHICS_API extern DescriptorHeap s_SamplerHeap;
+    D3D12PLAYGROUNDGRAPHICS_API extern DescriptorHandle m_CommonTextures;
 
     enum D3D12PLAYGROUNDGRAPHICS_API RootBindings
     {

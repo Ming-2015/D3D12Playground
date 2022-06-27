@@ -18,11 +18,11 @@
 #include "D3D12PlaygroundGraphics/libdefs.h"
 #include <string>
 
-class Color;
-class GraphicsContext;
-
 namespace Playground
 {
+    class Color;
+    class GraphicsContext;
+
     namespace TextRenderer
     {
         // Initialize the text renderer's resources and designate the dimensions of the drawable

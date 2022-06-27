@@ -30,9 +30,9 @@ namespace SSAO
     D3D12PLAYGROUNDGRAPHICS_API void Render(GraphicsContext& Context, const Math::Camera& camera );
     D3D12PLAYGROUNDGRAPHICS_API void LinearizeZ(ComputeContext& Context, const Math::Camera& camera, uint32_t FrameIndex);
 
-    extern BoolVar Enable;
-    extern BoolVar DebugDraw;
-    extern BoolVar AsyncCompute;
-    extern BoolVar ComputeLinearZ;
+    D3D12PLAYGROUNDGRAPHICS_API extern BoolVar Enable;
+    D3D12PLAYGROUNDGRAPHICS_API extern BoolVar DebugDraw;
+    D3D12PLAYGROUNDGRAPHICS_API extern BoolVar AsyncCompute;
+    D3D12PLAYGROUNDGRAPHICS_API extern BoolVar ComputeLinearZ;
 }
 }

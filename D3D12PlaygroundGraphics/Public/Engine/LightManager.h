@@ -33,7 +33,7 @@ namespace Math
 
 namespace Lighting
 {
-    extern IntVar LightGridDim;
+    D3D12PLAYGROUNDGRAPHICS_API extern IntVar LightGridDim;
 
     enum { MaxLights = 128 };
 

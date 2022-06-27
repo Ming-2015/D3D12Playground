@@ -1,7 +1,7 @@
 {
     "ParticleEmitters": [
         {
-            "TexturePath": "Sponza/sparkTex.dds",
+            "TexturePath": "Assets/Sponza/sparkTex.dds",
             "MinStartColor": [ 1, 1, 1, 0 ],
             "MaxStartColor": [ 1, 1, 1, 0 ],
             "MinEndColor": [ 1, 1, 1, 0 ],
@@ -23,7 +23,7 @@
         },
 
         {
-            "TexturePath": "Sponza/smoke.dds",
+            "TexturePath": "Assets/Sponza/smoke.dds",
             "TotalActiveLifetime": 0.0,
             "EmitProperties": {
                 "MaxParticles": 25,
@@ -39,7 +39,7 @@
         },
 
         {
-            "TexturePath": "Sponza/fire.dds",
+            "TexturePath": "Assets/Sponza/fire.dds",
             "TotalActiveLifetime": 0.0,
             "MinStartColor": [ 8, 8, 8, 0 ],
             "MaxStartColor": [ 8, 8, 8, 0 ],

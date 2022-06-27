@@ -43,9 +43,9 @@ namespace Sponza
 
     D3D12PLAYGROUNDGRAPHICS_API const ModelH3D& GetModel();
 
-    extern Math::Vector3 m_SunDirection;
-    extern ShadowCamera m_SunShadow;
-    extern ExpVar m_AmbientIntensity;
-    extern ExpVar m_SunLightIntensity;
+    D3D12PLAYGROUNDGRAPHICS_API extern Math::Vector3 m_SunDirection;
+    D3D12PLAYGROUNDGRAPHICS_API extern ShadowCamera m_SunShadow;
+    D3D12PLAYGROUNDGRAPHICS_API extern ExpVar m_AmbientIntensity;
+    D3D12PLAYGROUNDGRAPHICS_API extern ExpVar m_SunLightIntensity;
 }
 }

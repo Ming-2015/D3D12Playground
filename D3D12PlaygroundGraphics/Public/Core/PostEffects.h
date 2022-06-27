@@ -22,22 +22,22 @@ class ComputeContext;
 
 namespace PostEffects
 {
-    extern BoolVar EnableHDR;			// Turn on tone mapping features
+    D3D12PLAYGROUNDGRAPHICS_API extern BoolVar EnableHDR;			// Turn on tone mapping features
 
     // Tone mapping parameters
-    extern ExpVar Exposure;				// Brightness scaler when adapative exposure is disabled
-    extern BoolVar EnableAdaptation;	// Automatically adjust brightness based on perceived luminance
+    D3D12PLAYGROUNDGRAPHICS_API extern ExpVar Exposure;				// Brightness scaler when adapative exposure is disabled
+    D3D12PLAYGROUNDGRAPHICS_API extern BoolVar EnableAdaptation;	// Automatically adjust brightness based on perceived luminance
 
     // Adapation parameters
-    extern ExpVar MinExposure;
-    extern ExpVar MaxExposure;
-    extern NumVar TargetLuminance;
-    extern NumVar AdaptationRate;
+    D3D12PLAYGROUNDGRAPHICS_API extern ExpVar MinExposure;
+    D3D12PLAYGROUNDGRAPHICS_API extern ExpVar MaxExposure;
+    D3D12PLAYGROUNDGRAPHICS_API extern NumVar TargetLuminance;
+    D3D12PLAYGROUNDGRAPHICS_API extern NumVar AdaptationRate;
 
     // Bloom parameters
-    extern BoolVar BloomEnable;
-    extern NumVar BloomThreshold;
-    extern NumVar BloomStrength;
+    D3D12PLAYGROUNDGRAPHICS_API extern BoolVar BloomEnable;
+    D3D12PLAYGROUNDGRAPHICS_API extern NumVar BloomThreshold;
+    D3D12PLAYGROUNDGRAPHICS_API extern NumVar BloomStrength;
 
     D3D12PLAYGROUNDGRAPHICS_API void Initialize( void );
     D3D12PLAYGROUNDGRAPHICS_API void Shutdown( void );
